@@ -45,8 +45,6 @@
     padding: 1.5rem;
     color: rgb(119 119 119);
     cursor: pointer;
-    box-shadow:  18px 18px 35px #d3d3d3,
-             -18px -18px 35px #ffffff;
     transition: .5s;
     background-color: rgba(223, 223, 223, 0.6);
     opacity: .6;

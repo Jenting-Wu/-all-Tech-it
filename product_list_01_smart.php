@@ -24,14 +24,14 @@
         <!--兩大分頁-->
         <div class="lgbtn">
             <div class="btn-group btn-group-lg col-12" style="padding: 0;">
-                <a href="./product_list_01_smart.php?cate_id=10&sub_cate_id=21" class="btn btn-light active" aria-current="page">智慧家電</a>
-                <a href="./product_list_02_ai.php?cate_id=1&sub_cate_id=3" class="btn btn-light">AI機器人</a>
+                <a href="./product_list_01_smart.php?cate_id=10&sub_cate_id=21" class="btn btn-light active display_1" aria-current="page">智慧家電</a>
+                <a href="./product_list_02_ai.php?cate_id=1&sub_cate_id=3" class="btn btn-light display_1">AI機器人</a>
             </div>
         </div>
 
         <!-- title : 熱門商品 -->
         <div class="lgtitle">
-            <h4>熱門商品</h4>
+            <h4 class="display_title_2">熱門商品</h4>
         </div>
 
         <!-- 路徑 / 排序方式 -->
@@ -251,7 +251,8 @@
 
                                                 <h4 class="card-title"><?= $obj['brand_name'] ?></h4>
 
-                                                <button class="compare" data-prod-id="<?= $obj['prod_id'] ?>" alt="">比較</button>
+                                                <button class="compare" data-prod-id="<?= $obj['prod_id'] ?>" alt="">
+                                                    比較</button>
 
                                                 <button class="saved" data-prod-id="<?= $obj['prod_id'] ?>" data-prod-name="<?= $obj['prod_name'] ?>" data-prod-thumbnail="<?= $obj['prod_thumbnail'] ?>" data-prod-price="<?= $obj['prod_price'] ?>" data-brand_id="<?= $obj['brand_id'] ?>">
                                                     <img src="img/icon_saved.svg" alt="">喜愛清單
