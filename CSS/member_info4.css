@@ -1,0 +1,179 @@
+p,
+ul {
+  margin: 0px;
+}
+.page {
+  display: flex;
+}
+
+/* 左半部 */
+.photo {
+  display: inline-block;
+  /* width: 200px;
+    height: 200px;
+    border: 1px solid gray;
+    border-radius: 50%;
+    overflow: hidden; */
+}
+
+.photo img {
+  object-fit: cover;
+  /* width: 100%; */
+  width: 200px;
+  height: 200px;
+  border: 1px solid gray;
+  border-radius: 50%;
+}
+
+.personal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.personal > a {
+  color: black;
+}
+
+.personal div {
+  margin-bottom: 20px;
+}
+
+.personal h4 {
+  margin: 10px 0 20px 0;
+}
+
+.member_level {
+  background-color: #fa8873;
+  color: white;
+  border-radius: 20px;
+  padding: 5px 20px;
+  width: 150px;
+  margin: 0px auto;
+}
+.d-flex.center {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+/* 右半部 */
+.main a {
+  color: black;
+}
+
+.bar i {
+  font-size: 60px;
+  padding-bottom: 20px;
+}
+
+/* bar */
+.bar {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.bar a {
+  align-self: flex-end;
+  text-align: center;
+}
+
+form {
+  width: 80%;
+  margin-left: 30%;
+}
+
+/* 評價上方提示框 */
+.order_intro .box {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  background-color: #ffe1ce;
+}
+
+/* 尚未/已評價標題 */
+.main h4 {
+  text-align: center;
+}
+
+/* 評價卡片 */
+.com_card1 {
+  display: flex;
+  background-color: white;
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+ul {
+  padding-left: 20px;
+}
+.com_card1 h5 {
+  padding: 20px 0 0 20px;
+}
+.com_card-intro {
+  margin-left: 50px;
+}
+
+.com_card_photo img {
+  width: 150px;
+}
+
+.com_card_intro {
+  float: right;
+  /* width: 80%; */
+}
+
+.com_card_intro p {
+  text-align: center;
+}
+
+/* 星級 */
+.give_stars p {
+  color: gray;
+}
+
+.stars li {
+  display: inline-block;
+  color: #adadad;
+  font-size: 30px;
+  cursor: pointer;
+  list-style: none;
+}
+
+/* .stars ul{
+    list-style: none;
+} */
+/* span::before {
+    content: "您給出了";
+}
+span::after {
+    content: "顆星";
+} */
+
+/* 評價按鈕 */
+.btn_com_send {
+  padding: 2px 50px;
+  box-shadow: 0 10px 20px #cacaca;
+}
+
+.com_card_bottom {
+  margin-top: 10px;
+}
+
+.com_card_bottom a {
+  color: grey;
+  margin-left: 60px;
+}
+@media screen and (max-width: 500px) {
+  .com_card-intro {
+    width: 100%;
+  }
+  .com_card1 {
+    flex-direction: column;
+  }
+  .com_card_photo {
+    text-align: center;
+  }
+}

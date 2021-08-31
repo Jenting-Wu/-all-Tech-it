@@ -1,0 +1,609 @@
+.title{
+    margin-top: 4.5vh;
+    width: 100%;
+    height: 7vh;
+    background-color: #3d3d58c0;
+    color: white;
+    text-align: center;
+}
+
+/* 左上半部 */
+.up{
+    display: flex;
+    justify-content: space-between;
+}
+
+.up1 img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.up2 img{
+    width: 700px;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* 左下半部 */
+.down{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.down img{
+    width: 360px;
+    height: 360px;
+    object-fit: cover;
+}
+
+/* 右半部收藏文章 */
+.news_part{
+    margin-top: 4vh;
+    width: 100%;
+    height: 2350px;
+    background-color: #242e532a;
+    border-radius: 20px 20px 0 0;
+}
+
+.news_part i{
+    display: inline-block;
+    color: #f79584;
+    font-size: 90px;
+    margin-left: 430px;
+}
+
+.mainnews_text{
+    color: white;
+    padding: 0 0 10px 50px;
+}
+
+.main_news img{
+    width: 450px;
+    display:block;
+    margin:auto;
+}
+
+.mainnews_text h5{
+    display: inline-block;
+    width: 450px;
+    padding: 20px 20px 0 20px;
+}
+
+/* 新聞列表 */
+.other_news{
+    margin-top: 20px;
+}
+
+.news_card{
+    background-color: #ffffff80;
+    width: 450px;
+    height: 580px;
+    display:block;
+    margin:20px auto;
+}
+
+.news_card h4{
+    padding-top: 20px;
+    text-align: center;
+    line-height: 36px;
+    color: #454545;
+}
+
+.news_card img{
+    width: 100%;
+}
+
+.news_card_text p{
+    display: inline-block;
+    width: 450px;
+    padding: 20px 20px 0 20px;
+    color: #888888;
+}
+
+/* 日曆 */
+.review_card{
+    display:block;
+    margin: 20px auto;
+    width: 80%;
+    height: 360px;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+.review_card h4{
+    color: #9393a2;
+    padding: 10px 0 0 20px;
+    margin: 0 auto;
+}
+
+* {box-sizing:border-box;}
+ul {list-style-type: none;}
+body {font-family: Verdana,sans-serif;}
+
+.month {
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 80%;
+    background: #FFFFFF;
+    
+}
+
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month ul li {
+    color: black;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.month .prev {
+    float: left;
+    /* padding-top: 0px; */
+}
+
+.month .next {
+    float: right;
+    /* padding-top: 10px; */
+}
+
+.weekdays {
+    width: 90%;
+    margin: 0;
+    padding: 1px 0;
+    background-color: #ffffff;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 12%;
+    color: #9393a2;
+    text-align: center;
+    padding-left: 6px;
+}
+
+.days {
+    padding: 10px 10px;
+    background: #ffffff;
+    margin: 0;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 12%;
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 10px 10px;
+    font-size:12px;
+    background: #9393a2;
+    color:white;
+    border-radius: 5px;
+}
+
+li.active {
+    /* padding: 5px; */
+    background: #f79584;
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:1920px) {
+    .weekdays li, .days li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+    .weekdays li, .days li {width: 12.5%;}
+    .days li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+    .weekdays li, .days li {width: 12.2%;}
+}
+
+/* 左上遮罩 */
+.art1{
+    position: relative;
+}
+
+.layer1{
+    width: 400px;
+    height: 200px;
+    background-color: #00000048;
+    position: absolute;
+    top: 10px;
+    }
+
+.layer_text_down{
+    margin: 0 auto;
+    display: block;
+    width: 300px;
+    color: #dedede;
+    margin-top: 19px;
+}
+
+.layer_text_down h4{
+    text-align: center;
+    color: white;
+}
+
+/* 卡片底部 */
+.card_down{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+}
+
+.card_down i {
+    color: tomato;
+}
+
+.heart i{
+    padding-left: 20px;
+}
+
+/* 右上遮罩 */
+.layer2{
+    width: 700px;
+    height: 200px;
+    background-color: #00000048;
+    position: absolute;
+    top: 10px;
+}
+
+/* 下半部遮罩 */
+.art2{
+    position: relative;
+}
+
+.layer3{
+    width: 360px;
+    height: 180px;
+    background-color: #00000048;
+    position: absolute;
+    top: 178px;
+}
+
+
+.layer_text_down h5{
+    text-align: center;
+    color: white;
+}
+
+/* 手機 */
+/* 首圖 */
+.banner img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.banner{
+    position: relative;
+    
+}
+.m_main_layer{
+    left: 40px;
+    width: 250px;
+    height: 120px;
+    background-color: #00000048;
+    position: absolute;
+    top: 30px;
+}
+
+.m_banner_text{
+    padding-top: 10px;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.m_banner_text h6{
+    text-align: center;
+    color: white;
+}
+.m_banner_text hr{
+    margin-top: -3px;
+}
+
+.m_banner_text p{
+    margin-top: -5px;
+    color: white;
+    font-size: 8px;
+    text-align: center;
+}
+
+.m_banner_text a{
+    /* padding-top: 5px; */
+    color: white;
+}
+
+/* 置頂文章 */
+.m_up{
+    display: flex;
+    flex-direction: column;
+}
+
+.m_title{
+    margin-top: 4.5vh;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 5vh;
+    background-color: #3d3d58c0;
+    color: white;
+    text-align: center;
+}
+
+.m_art{
+    position: relative;
+    margin-top: 10px;
+}
+
+.m_art img{
+    width: 100%;
+    height: 224.86px;
+}
+
+.m_layer1{
+    width: 100%;
+    height: 100px;
+    background-color: #00000048;
+    position: absolute;
+    top: 124px;
+    }
+
+.m_layer_text1{
+    margin: 0 auto;
+    display: block;
+    width: 300px;
+    color: #dedede;
+    padding-top: 10px;
+}
+
+.m_layer_text1 h6{
+    /* text-align: center; */
+    color: white;
+}
+
+.m_layer_text1 p{
+    font-size: 8px;
+}
+
+/* 卡片底部 */
+.m_card_down{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    margin:  0 auto;
+    margin-top: -10px;
+}
+
+.m_card_down i {
+    color: tomato;
+}
+
+.m_heart i{
+    padding-left: 20px;
+}
+
+.m_heart p{
+    font-size: 8px;
+}
+
+.m_card_down p{
+    font-size: 8px;
+}
+
+/* 更多文章 */
+.m_down{
+    display: flex;
+    flex-direction: column;
+}
+
+/* 新聞主題 */
+.m_news_part{
+    margin-top: 60px;
+    width: 100%;
+    height: 1700px;
+    background-color: #242e532a;
+    border-radius: 20px 20px 0 0;
+}
+
+.m_news_part i{
+    display: inline-block;
+    color: #f79584;
+    font-size: 55px;
+    margin-left: 250px;
+}
+
+.m_mainnews_text{
+    color: white;
+    padding: 0 0 10px 50px;
+}
+
+.m_main_news img{
+    width: 80%;
+    display:block;
+    margin:auto;
+}
+
+.m_mainnews_text h5{
+    display: inline-block;
+    width: 4px;
+    padding: 20px 20px 0 20px;
+}
+
+/* 新聞列表 */
+.m_other_news{
+    margin-top: 10px;
+}
+
+.m_news_card{
+    background-color: #ffffff80;
+    width: 80%;
+    height: 390px;
+    display:block;
+    margin:20px auto;
+    
+}
+
+.m_news_card h6{
+    padding-top: 10px;
+    text-align: center;
+    line-height: 24px;
+    color: #454545;
+}
+
+.m_news_card img{
+    width: 100%;
+}
+
+.m_news_card_text p{
+    display: inline-block;
+    width: 100%;
+    padding: 20px 20px 0 20px;
+    color: #888888;
+    font-size: 8px;
+}
+
+/* 日曆 */
+.m_review_card{
+    display:block;
+    margin: 20px auto;
+    width: 80%;
+    height: 360px;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+.m_review_card h6{
+    color: #9393a2;
+    padding: 10px 0 0 20px;
+    margin: 0 auto;
+}
+
+* {box-sizing:border-box;}
+ul {list-style-type: none;}
+body {font-family: Verdana,sans-serif;}
+
+.m_month {
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 80%;
+    background: #FFFFFF;
+    
+}
+
+.m_month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.m_month ul li {
+    color: black;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.m_month .prev {
+    float: left;
+    /* padding-top: 0px; */
+}
+
+.m_month .next {
+    float: right;
+    /* padding-top: 10px; */
+}
+
+.m_weekdays {
+    width: 90%;
+    margin: 0;
+    padding: 1px 0;
+    background-color: #ffffff;
+}
+
+.m_weekdays li {
+    display: inline-block;
+    width: 12%;
+    color: #9393a2;
+    text-align: center;
+    padding-left: 6px;
+}
+
+.m_days {
+    padding: 10px 10px;
+    background: #ffffff;
+    margin: 0;
+}
+
+.m_days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 12%;
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 10px 10px;
+    font-size:12px;
+    background: #9393a2;
+    color:white;
+    border-radius: 5px;
+}
+
+li.active {
+    /* padding: 5px; */
+    background: #f79584;
+}
+
+/* 搜尋欄 */
+.m_search{
+    width: 80%;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.52);
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px #cacaca;
+}
+
+.m_search h6{
+    padding-left: 40px;
+    padding-top: 20px;
+}
+
+.m_search hr{
+    margin-top: 30px;
+}
+
+.m_search a{
+    margin-top: -40px;
+    margin-left: -50px;
+}
+
+.m_search i{
+    color: black;
+    font-size: 1.5rem;
+}
+
+.m_search form{
+    margin-left: 40px;
+    width: 60%;
+}
+
+
+
+/* RWD */
+@media screen and (min-width:1025px){   
+    .mobile{
+        display: none;
+    }
+ }
+ 
+
+@media screen and (max-width:375px){
+    .desktop{
+        display: none;
+    }
+ }

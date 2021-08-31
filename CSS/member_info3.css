@@ -1,0 +1,155 @@
+* {
+  /* outline: 1px solid red; */
+}
+p {
+  margin: 5px !important;
+}
+.page {
+  display: flex;
+}
+
+/* 左半部 */
+.photo {
+  display: inline-block;
+  /* width: 200px;
+    height: 200px;
+    border: 1px solid gray;
+    border-radius: 50%;
+    overflow: hidden; */
+}
+
+.photo img {
+  object-fit: cover;
+  /* width: 100%; */
+  width: 200px;
+  height: 200px;
+  border: 1px solid gray;
+  border-radius: 50%;
+}
+
+.personal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.personal > a {
+  color: black;
+}
+
+.personal div {
+  margin-bottom: 20px;
+}
+
+.personal h4 {
+  margin: 10px 0 20px 0;
+}
+
+.member_level {
+  background-color: #fa8873;
+  color: white;
+  border-radius: 20px;
+  padding: 5px 20px;
+  width: 150px;
+  margin: 0px auto;
+}
+
+/* 右半部 */
+.main a {
+  color: black;
+}
+
+.bar i {
+  font-size: 60px;
+  padding-bottom: 20px;
+}
+
+/* bar */
+.bar {
+  display: flex;
+  margin-top: 20px;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: center;
+}
+
+form {
+  width: 80%;
+  margin-left: 30%;
+}
+
+/* 訂單上方提示框 */
+.order_intro .box {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  background-color: #ffe1ce;
+}
+
+/* 訂單記錄card */
+.order_card {
+  margin-top: 30px;
+  /* border: 1px solid gray; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.card1 {
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.card_photo {
+  margin-right: 50px;
+}
+
+.card_photo img {
+  width: 150px;
+}
+
+.card_intro {
+  float: right;
+  width: 70%;
+}
+
+.card_intro p {
+  font-size: 12px;
+  text-align: center;
+  margin: 35px;
+  padding: 35px;
+}
+
+.to-com p {
+  color: gray;
+}
+
+.btn-to-com {
+  background-color: #a4a0cc;
+  padding: 10px 30px 10px 30px;
+  color: white;
+}
+
+/* RWD */
+@media screen and (max-width: 500px) {
+  .card_photo {
+    margin-right: 0px !important;
+  }
+
+  .card_photo img {
+    width: 100px;
+  }
+  .d-flex {
+    display: flex;
+    flex-direction: column;
+  }
+  .d-flex p {
+    margin: 0px !important;
+  }
+  a.col-3 {
+    padding: 0px !important;
+  }
+}

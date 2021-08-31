@@ -1,0 +1,238 @@
+.display_1{
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.5rem;
+}
+
+.display_2{
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.3rem;
+    line-height: 1.2rem;
+}
+.display_3{
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 0.3rem;
+    line-height: 1.5rem;
+}
+
+.display_title{
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: 0.4rem;
+    font-family: 'Fira Sans', sans-serif;
+}
+.display_title_2{
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.4rem;
+}
+
+/* text guide */
+
+
+/* .cate_00{
+    margin: 2rem 0;
+    padding: 1.5rem;
+    color: rgb(119 119 119);
+    cursor: pointer;
+    box-shadow:  18px 18px 35px #d3d3d3,
+             -18px -18px 35px #ffffff;
+    transition: .5s;
+}
+
+.cate .cate_00:nth-child(1){
+    border-radius: 20px 0px 0px 20px;
+}
+.cate .cate_00:nth-child(2){
+    border-radius: 0 20px 20px 0;
+}
+
+.btn_touch{
+    background-color: white;
+}
+
+.btn_notouch{
+    background-color: rgba(223, 223, 223, 0.6);
+    opacity: .6;
+    box-shadow: 0 15px 20px rgba(204, 204, 204, 0.2);
+} */
+
+
+/* --cate_btn--- */
+
+.section_1 .brand_title{
+    background-color: #f3f3f2be;
+    margin-top: 1%;
+
+}
+.section_1 .brand_CH{
+    background-image:linear-gradient(180deg,  #fff 16px, #f5ecbd 0) ;
+    width: 18%;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0 auto;
+}
+
+.section_1 .brand_img>img{
+    width: 100%;
+}
+
+.brand_text>p{
+    line-height: 2rem;
+    font-size: 1.2rem;
+}
+
+.prod_thumbnail>img{
+    width: 100%;
+}
+
+.prod_list{
+    margin: 5rem 0;
+    transform: translateY(50%);
+    transition: all 1s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.prod_list.prod_show{
+    transform: translateY(0);
+}
+
+.prod_list>h3{
+    position: relative;
+    margin-bottom: 3rem;
+    width:fit-content;
+}
+
+
+.prod_list>h3::after{
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    content: "";
+    background-color: rgb(110, 110, 110);
+    bottom: -100%;
+    left: 0;
+}
+
+.btn_back{
+    padding: 1.5rem;
+    margin-bottom: 10rem;
+    background-color: #FA8873;
+    border-radius: 999em;
+    box-shadow:  18px 18px 56px #bcbcbc,
+             -18px -18px 56px #ffffff;
+}
+.btn_back>a{
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+    letter-spacing: .5rem;
+}
+
+/* .section_AI .prod_list .row{
+    outline: 1px solid blue;
+
+} */
+.section_AI .prod_thumbnail{
+    /* outline: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section_AI a.thumbail_link{
+    width: 100%;
+    height: 100%;
+    /* outline: 2px solid purple; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section_AI a.thumbail_link img{
+    /* outline: 4px solid orange; */
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+.section_AI a.thumbail_link p{
+    font-size: 1.2rem;
+    color: #000;
+    text-align: center;
+}
+.section_AI a.thumbail_link:hover{
+    text-decoration: none;
+    color: #000;
+}
+
+@media screen and (max-width: 575.98px) {
+    .display_1{
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 0.5rem;
+    }
+    .display_3{
+        font-size: 1rem;
+        font-weight: 300;
+        letter-spacing: 0.3rem;
+        line-height: 1rem;
+    }
+
+    h3{
+        margin: 3rem auto;
+    }
+
+    .section_1 .brand_CH{
+    background-image:linear-gradient(180deg,  #fff 12px, #f5ecbd 0) ;
+        width: 70%;
+        font-size: 1.2rem;
+        margin: 0 auto;
+    }
+
+    /* .cate_00{
+        margin: 2rem 0;
+        padding: 1rem;
+        color: rgb(119 119 119);
+        cursor: pointer;
+        box-shadow: 0 15px 20px rgba(136, 136, 136, 0.2);
+    }
+    
+    .cate .cate_00:nth-child(1){
+        border-radius: 0;
+    }
+    .cate .cate_00:nth-child(2){
+        border-radius: 0;
+    } */
+
+    .brand_text>p{
+        line-height: 2rem;
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+    .prod_list>h3::after{
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        content: "";
+        background-color: rgb(110, 110, 110);
+        bottom: -50%;
+        left: 0;
+    }
+
+    .prod_list{
+        margin: 3rem 0;
+    }
+
+    .btn_back{
+        padding: 1rem;
+        margin-bottom: 5rem;
+    }
+    .btn_back>a{
+        font-size: 1rem;
+        font-weight: 300;
+    }
+ }

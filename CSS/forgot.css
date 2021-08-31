@@ -1,0 +1,139 @@
+body {
+  background-color: #fafafa;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.head {
+  text-align: center;
+  margin-top: 20px;
+  border-bottom: 2px solid #8b8b8b;
+  padding-bottom: 5px;
+  display: inline-block;
+  width: 200px;
+  margin: 30px auto;
+}
+a {
+  text-decoration: none;
+  color: #7b7b7b;
+}
+button {
+  cursor: pointer;
+}
+.promotion {
+  height: 60px;
+  background-color: #fff8e2;
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  word-spacing: 10px;
+  margin-top: 150px;
+}
+input {
+  width: 400px;
+  height: 50px;
+  border-radius: 10px;
+  border: 0;
+  box-shadow: inset 0px 5px 8px #a2a2a2;
+  margin-top: 20px;
+  text-indent: 60px;
+}
+input:focus {
+  outline: none;
+}
+form {
+  text-align: center;
+  margin-top: 20px;
+  min-height: calc(100vh - 300px);
+}
+/* placeholder img */
+#ac {
+  position: relative;
+  display: inline-block;
+}
+form img {
+  width: 15px;
+  position: absolute;
+  left: 30px;
+  top: 33%;
+}
+#pw {
+  position: relative;
+  display: inline-block;
+}
+
+#eye {
+  left: 350px;
+  top: 55%;
+}
+/* end */
+.aa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+input[type="checkbox"] {
+  /* appearance: none; */
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  border: 1px solid grey;
+  margin-right: 10px;
+}
+
+.member_none a {
+  text-decoration: underline;
+  color: #fa8873;
+}
+.login {
+  width: 150px;
+  height: 50px;
+  box-shadow: 0 5px 8px #aaaaaa;
+  border: 0;
+  border-radius: 10px;
+  background-color: #fa8873;
+  font-size: 16px;
+  color: white;
+  margin: 20px 0;
+}
+.login:focus {
+  outline: none;
+}
+.back {
+  margin: 20px;
+  border-radius: 10px;
+  width: 150px;
+  height: 50px;
+  box-shadow: 0 5px 8px #aaaaaa;
+}
+.back {
+  margin: 20px;
+  width: 150px;
+  height: 50px;
+  box-shadow: 0 5px 8px #aaaaaa;
+  border: 0;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+/* rwd */
+@media screen and (max-width: 500px) {
+  .promotion {
+    font-size: 14px;
+    margin-top: 100px;
+  }
+  input {
+    width: 300px;
+    height: 40px;
+  }
+  .head {
+    margin: 15px auto;
+  }
+  a {
+    font-size: 14px;
+  }
+  .aa {
+    margin: 10px;
+    font-size: 14px;
+  }
+}

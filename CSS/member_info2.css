@@ -1,0 +1,135 @@
+* {
+    /* outline: 1px solid red; */
+}
+
+.page {
+    display: flex;
+}
+
+/* 左半部 */
+.photo {
+    display: inline-block;
+    /* width: 200px;
+    height: 200px;
+    border: 1px solid gray;
+    border-radius: 50%;
+    overflow: hidden; */
+}
+
+.photo img {
+    object-fit: cover;
+    /* width: 100%; */
+    width: 200px;
+    height: 200px;
+    border: 1px solid gray;
+    border-radius: 50%;
+}
+
+.personal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.personal>a {
+    color: black;
+}
+
+.personal div {
+    margin-bottom: 20px;
+}
+
+.personal h4 {
+    margin: 10px 0 20px 0;
+}
+
+.member_level {
+    background-color: #fa8873;
+    color: white;
+    border-radius: 20px 20px;
+    display: inline;
+    padding: 5px 20px;
+    width: 20%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 右半部 */
+.main a {
+    color: black;
+}
+
+.bar i {
+    font-size: 60px;
+    padding-bottom: 20px;
+}
+
+/* bar */
+.bar {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.bar a {
+    align-self: flex-end;
+    text-align: center;
+}
+
+form {
+    width: 80%;
+    margin-left: 30%;
+}
+
+/* 購物金 */
+.voucher_rec h5 {
+    color: gray;
+    padding-left: 40%;
+}
+
+.v_rec_pt {
+    margin-bottom: 30px;
+}
+
+.rec_card {
+    color: gray;
+    background-color: white;
+    text-align: center;
+    padding: 15px 0 15px 0;
+    margin-left: 20%;
+    margin-right: 30%;
+    margin-top: 10px;
+}
+
+.rec_card a {
+    color: #6862a3;
+}
+
+/* RWD */
+@media screen and (max-width: 375px) {
+    .voucher {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 0 30% 0 10%;
+        
+    }
+
+    .voucher_rec h5 {
+        color: black;
+        padding-right: 25%;
+        font-size: 1rem;
+        padding-bottom: 10px;
+    }
+
+    .v_rec_pt {
+        width: 100%;
+    }
+
+    .rec_card{
+        width: 100%;
+        margin: 0 auto;
+    }
+}

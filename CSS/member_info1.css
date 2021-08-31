@@ -1,0 +1,153 @@
+* {
+    /* outline: 1px solid red; */
+}
+
+.page {
+    display: flex;
+}
+
+/* 左半部 */
+.photo {
+    display: inline-block;
+    /* width: 200px;
+    height: 200px;
+    border: 1px solid gray;
+    border-radius: 50%; */
+    /* overflow: hidden; */
+    /* margin-left: 50%;
+    transform: translateX(-50%); */
+}
+
+.photo img {
+    object-fit: cover;
+    /* width: 100%; */
+    width: 200px;
+    height: 200px;
+    border: 1px solid gray;
+    border-radius: 50%;
+}
+
+.personal {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.personal>a {
+    color: black;
+}
+
+.personal div {
+    margin-bottom: 20px;
+}
+
+.personal h4 {
+    margin: 10px 0 20px 0;
+
+}
+
+.member_level {
+    background-color: #fa8873;
+    color: white;
+    border-radius: 20px 20px;
+    display: inline;
+    padding: 5px 20px;
+    width: 20%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 右半部 */
+.main a {
+    color: black;
+}
+
+.bar i {
+    font-size: 60px;
+    padding-bottom: 20px;
+}
+
+/* bar */
+.bar {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.bar a {
+    align-self: flex-end;
+    text-align: center;
+}
+
+form {
+    width: 80%;
+    margin-left: 30%;
+}
+
+/* Mobile */
+.m_personal {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+
+.m_member_level {
+    background-color: #fa8873;
+    color: white;
+    border-radius: 20px 20px;
+    /* padding: 4px 20px; */
+    margin-left: 10px
+}
+
+/* .address_btn{
+  
+}
+
+input#btn_address{
+   margin: 0 auto;
+} */
+
+/* 儲存按鈕 */
+.address_btn {
+    width: 150px;
+    height: 50px;
+    box-shadow: 0 5px 8px #aaaaaa;
+    border: 0;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #7b7b7b;
+    font-size: 16px;
+    margin-bottom: 50px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+  .address_btn:hover {
+    background-color: #fa8873;
+    color: white;
+  }
+
+/* RWD */
+@media screen and (max-width: 375px) {
+    form {
+        width: 100%;
+        /* display: flex; */
+        justify-content: center;
+        margin: 0 10% 0 10%;
+    }
+
+    .member_input {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .saved_address {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}

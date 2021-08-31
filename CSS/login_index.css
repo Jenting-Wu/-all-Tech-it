@@ -1,0 +1,170 @@
+/* button css */
+:root{
+  --button-inner:inset 0px 5px 8px #dededea3;
+  --button-outer:5px 5px 15px #bebebeab;
+  --grey-text:#7B7B7B;
+  --main-orange:#FA8873;
+  --main-purple:#5D5D71;
+}
+
+.display_1{
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 0.5rem;
+    }
+
+.display_2{
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    line-height: 1.2rem;
+    }
+.display_3{
+    font-size: .8rem;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    line-height: 1.5rem;
+    }
+.display_title{
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    font-family: 'Fira Sans', sans-serif;
+    }
+    .display_title_2{
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    }
+
+  /*--------------rules----------------------------------------------- */
+
+body {
+  background-color: #fafafa;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.promotion {
+  height: 60px;
+  margin-top: 150px;
+  background-color: rgba(255, 248, 226, .6);
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  word-spacing: 10px;
+}
+.login_page {
+  width: 700px;
+  text-align: center;
+  margin: 50px auto;
+}
+.login_page > div {
+  width: 50%;
+  margin: 0px auto;
+}
+
+.login_page img {
+  width: 225px;
+  height: 225px;
+  border-radius: 50%;
+}
+
+.login_page button {
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  box-shadow:  5px 5px 15px #bebebeab;
+  border: 0px;
+  margin: 10px 10px;
+  cursor: pointer;
+  color: white;
+}
+
+.login_page button:focus {
+  outline: none;
+}
+
+.login_page a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+.signup {
+  background-color: #ffffff;
+  color: rgb(85, 84, 84) !important;
+}
+.page_footer {
+  margin: 50px 0;
+}
+.login {
+  background-color: #fa8873;
+}
+.login a {
+  color: white;
+}
+button#tool.btn.btn_coupon {
+  cursor: none;
+  width: 100%;
+  background-color: var(--main-purple);
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.btn_coupon:after{
+    content: "";
+    height: 0px;
+    bottom: -29px;
+    left: 88px;
+    position: absolute;
+    width: 0px;
+    border-color: var(--main-purple) transparent transparent;
+    border-style: solid;
+    border-width: 15px 10px;
+    transition: .5s;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* rwd */
+@media screen and (max-width: 500px) {
+  .promotion {
+    font-size: 14px;
+  }
+  .login_page {
+    width: 350px;
+  }
+  .login_page div {
+    width: 80%;
+  }
+  .dialog {
+    left: 9%;
+    font-size: 14px;
+    width: 260px;
+    height: 50px;
+    line-height: 40px;
+  }
+  .dialog:before,
+  .dialog:after {
+    left: 100px;
+  }
+  .forgot_pw {
+    margin: 30px 0 0 100px;
+  }
+  .login_page button {
+    width: 151px;
+    height: 48px;
+    margin: 10px 10px;
+    border: 10px;
+  }
+  .login_page a {
+    font-size: 14px;
+  }
+  .page_footer {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+  }
+}

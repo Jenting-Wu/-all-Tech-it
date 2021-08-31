@@ -1,0 +1,231 @@
+body {
+  margin: 0px;
+  box-sizing: border-box;
+  height: 2000px;
+  background-color: #fafafa;
+}
+.wrap {
+  min-height: auto !important;
+}
+input[type="text"],
+select:focus {
+  outline: none;
+}
+.a {
+  width: 300px;
+  border-bottom: 1px solid gray;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px auto;
+  align-items: center;
+}
+.circle {
+  width: 30px;
+  height: 30px;
+  background-color: #e8e8e8;
+  border-radius: 50%;
+  position: relative;
+  top: 25px;
+}
+
+.circle1 {
+  background-color: #d6d4e9;
+  width: 50px;
+  height: 50px;
+}
+.circle h6 {
+  margin-top: 50px;
+  text-align: center;
+}
+.container {
+  width: 800px !important;
+  margin: 0px auto;
+}
+.container h4 {
+  text-align: center;
+}
+.option_method {
+  margin-top: 100px;
+}
+.product_list {
+  border-bottom: 1px solid gray;
+  margin-top: 50px;
+}
+.product_info {
+  display: flex;
+  justify-content: flex-start;
+}
+.product_list h4 {
+  text-align: right;
+}
+.l_part {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.center {
+  margin-left: 30px;
+}
+.right {
+  text-align: right !important;
+  color: #fa8873;
+  font-size: 24px;
+  margin: 0 0 10px 0;
+}
+/* 第一個select */
+select {
+  width: 30%;
+  height: 40px;
+  padding: 0px 10px;
+  border: none;
+  outline: none;
+  appearance: none;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 2px;
+  box-shadow: 0 3px 6px #959595;
+}
+.select_tri {
+  position: relative;
+}
+.tri {
+  width: 40px;
+  height: 100%;
+  display: block;
+  background-color: #a4a0cc;
+  position: absolute;
+  top: 0;
+  left: 191px;
+  pointer-events: none;
+  background-image: url(../img/angle-down-solid.svg);
+  color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.4s;
+  background-size: 30%;
+  border-radius: 0px 3px 3px 0px;
+}
+.tri::after {
+  transform: rotateY(180deg);
+}
+.credit {
+  display: none;
+  margin-top: 50px;
+}
+.invoice_type {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 100%;
+  margin: 30px 20px 10px 0;
+}
+.invoice_type h6 {
+  margin-right: 15px;
+}
+.invoice_type select {
+  width: 220px;
+  margin-left: 10px;
+}
+.invoice_type .tri {
+  position: absolute;
+  top: 0;
+  left: 190px;
+}
+
+/* 配送資料 */
+.logistics_info {
+  background-color: #f4f4f4;
+  color: #959595;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+}
+.info {
+  margin-top: 30px;
+}
+.info h5 {
+  margin-top: 0px;
+}
+input[type="text"] {
+  margin: 8px;
+  width: 100px;
+  height: 38px;
+}
+
+.back {
+  background-color: #e8e8e8;
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  border: 0px;
+  color: gray;
+  box-shadow: 2px 4px 7px #9d9d9d;
+}
+.next {
+  background-color: #fa8873;
+  box-shadow: 2px 4px 7px #9d9d9d;
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  border: 0px;
+  color: white;
+  margin-left: 20px;
+}
+.bill_2,
+.bill_3 {
+  display: none;
+  /* margin-top: 5px; */
+}
+/* credit card */
+form input[type="text"] {
+  width: 300px;
+  margin: 0px auto;
+}
+.jp-card-front {
+  background: linear-gradient(45deg, #f7cdcd, #a4a0cc) !important;
+}
+.jp-card-back {
+  background: linear-gradient(45deg, #a4a0cc, #f7cdcd) !important;
+}
+/* rwd */
+@media screen and (max-width: 500px) {
+  .container {
+    width: 98% !important;
+    padding: 0px !important;
+  }
+  .datpayment-form {
+    width: 340px;
+  }
+  h5 {
+    font-size: 18px !important;
+  }
+  h6 {
+    font-size: 16px !important;
+  }
+  .right {
+    font-size: 22px;
+  }
+
+  .product_info h4 {
+    margin: 20px 0;
+    font-size: 20px;
+  }
+  .product_list {
+    margin-top: 20px;
+  }
+  select {
+    width: 50%;
+  }
+  .tri {
+    left: 125px;
+  }
+  .invoice_type {
+    display: block;
+  }
+  .invoice_type .bill_3 {
+    margin-left: 10px;
+  }
+  .invoice_type .tri {
+    left: 191px;
+  }
+}

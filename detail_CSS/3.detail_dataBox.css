@@ -1,0 +1,385 @@
+/* detail dataBox 詳細介紹欄 ------------------------*/
+.detail_dataBox{
+    background-color: #EFF2F4;
+    width: 100%;
+    padding: 5%;
+  }
+
+/* 分頁標籤 */
+.detail_page{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+
+}
+
+.page{
+  padding:5px 0;
+  font-size: .8rem;
+  color: #797979;
+  letter-spacing: .2rem;
+  box-shadow:1px 2px 1px rgb(143, 143, 143);
+
+}
+
+.p1_button{
+  color: #181818;
+  background-color: white;
+  box-shadow:1px 1px 1px rgb(143, 143, 143);
+}
+
+.p2_button{
+  color: #181818;
+  background-color: white;
+  box-shadow: 1px 1px 1px rgb(143, 143, 143);
+}
+
+.p3_button{
+  color: #181818;
+  background-color: white;
+  box-shadow:1px 1px 1px rgb(143, 143, 143);
+}
+
+/* p1:商品介紹 */
+
+.p1_prod_AD{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  margin: 15px 0;
+  background-color: rgb(248, 245, 238);
+}
+
+.p1_prod_AD>img{
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* p2:商品規格 */
+.p2_prod_spec{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin: 15px 0;
+  background-color: white;
+  box-shadow: 0px 1px 3px rgb(194, 194, 194);
+}
+
+.p2_prod_name{
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+
+  font-size: 1rem;
+  font-weight: 00;
+  letter-spacing: .2rem;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.p2_prod_item{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.p2_prod_text_title{
+  padding: 10px;
+  font-size: .8rem;
+  letter-spacing: .2rem;
+}
+
+.p2_prod_text{
+  padding: 10px;
+  font-size: .8rem;
+  letter-spacing: .2rem;
+}
+
+/* p3:商品評論 */
+
+.p3_prod_comment{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin: 15px 0;
+  /* background-color: rgb(255, 215, 215); */
+}
+
+/* 雷達圖 radar chart */
+.p3_prod_radar{
+  font-size: .8rem;
+  letter-spacing: .2rem;
+
+  margin-bottom: 15px;
+}
+
+.p3_radar_chart{
+  height: 300px;
+  width: 100%;
+  background-color: aquamarine;
+}
+
+/* 顧客評論區 customer comment */
+.p3_customer_comment{
+  font-size: .8rem;
+  letter-spacing: .2rem;
+  color: #1a1a1a;
+  padding: 0 5%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.p3_comment_card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0px 1px 3px rgb(194, 194, 194);
+
+  letter-spacing: .2rem;
+}
+
+.p3_comment_card_title{
+  font-size: 1rem;
+}
+
+.comt{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: .8rem;
+  font-weight: 300;
+  margin: 3px 0;
+}
+
+.comt>img{
+  width: 50%;
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  margin-left: -10%;
+  /* justify-content: end; */
+}
+
+.p3_customer_text{
+  margin-top: 10px;
+  text-align: left;
+  font-size: .8rem;
+  font-weight: 300;
+  line-height: 1.6rem;
+}
+
+/* pc star --------------------------------- */
+@media (min-width: 1024px), print {
+
+  /* detail dataBox 詳細介紹欄 ------------------------*/
+  .detail_dataBox{
+    background-color: #EFF2F4;
+    width: 100%;
+    padding: 5%;
+    }
+
+    /* 分頁標籤 */
+    .detail_page{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+
+    }
+
+    .page{
+    padding:10px 0;
+    font-size: 1rem;
+    color: #797979;
+    letter-spacing: .3rem;
+    box-shadow:1px 2px 1px rgb(143, 143, 143);
+
+    }
+
+    .p1_button{
+    color: #181818;
+    background-color: white;
+    box-shadow:1px 1px 1px rgb(143, 143, 143);
+    }
+
+    .p2_button{
+    color: #181818;
+    background-color: white;
+    box-shadow: 1px 1px 1px rgb(143, 143, 143);
+    }
+
+    .p3_button{
+    color: #181818;
+    background-color: white;
+    box-shadow:1px 1px 1px rgb(143, 143, 143);
+    }
+
+    /* p1:商品介紹 */
+
+    .p1_prod_AD{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    margin: 15px 0;
+    background-color: rgb(248, 245, 238);
+    }
+
+    .p1_prod_AD>img{
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    }
+
+    /* p2:商品規格 */
+    .p2_prod_spec{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 15px 0;
+    background-color: white;
+    box-shadow: 0px 1px 3px rgb(194, 194, 194);
+    }
+
+    .p2_prod_name{
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: .3rem;
+    border-bottom: 1px solid #e2e2e2;
+    }
+
+    .p2_prod_item{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    border-bottom: 1px solid #e2e2e2;
+    }
+
+    .p2_prod_text{
+    padding: 15px 15px 15px 0;
+    font-size: 1rem;
+    letter-spacing: .2rem;
+    }
+
+    .p2_prod_text_title{
+      padding: 15px 5px 15px 20px;
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: .2rem;
+    }
+
+    /* p3:商品評論 */
+
+    .p3_prod_comment{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 15px 0;
+    /* background-color: rgb(255, 215, 215); */
+    }
+
+    /* 雷達圖 radar chart */
+    .p3_prod_radar{
+    font-size: 1rem;
+    letter-spacing: .2rem;
+
+    margin-bottom: 15px;
+    }
+
+    .p3_radar_chart{
+    height: 300px;
+    width: 100%;
+    background-color: aquamarine;
+    }
+
+    /* 顧客評論區 customer comment */
+    .p3_customer_comment{
+    font-size: 1rem;
+    letter-spacing: .2rem;
+    color: #1a1a1a;
+    padding: 0 15px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    }
+
+    .p3_comment_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    width: 48%;
+
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 1px 3px rgb(194, 194, 194);
+
+    letter-spacing: .2rem;
+    }
+
+    .p3_comment_card_title{
+      font-size: 1rem;
+      letter-spacing: .2rem;
+    }
+
+    .p3_comment_card p{
+      font-size: 1.2rem;
+    }
+
+    .comt{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 5px 0;
+    }
+
+    .comt>img{
+    width:70px;
+    height: auto;
+    margin-left: 0;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* justify-content: end; */
+    }
+
+    .p3_customer_text{
+    margin-top: 15px;
+    text-align: left;
+    font-size: 1rem;
+    line-height: 2rem;
+    font-weight: 300;
+    }
+
+
+
+}

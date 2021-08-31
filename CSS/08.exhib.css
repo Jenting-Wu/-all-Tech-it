@@ -1,0 +1,1058 @@
+/* rule */
+:root{
+  --csscoke-red: #ea4930da;
+  --csscircle-blue: #3e6a9d77;
+}
+
+
+/* 手機版 */
+/* ---------- 選擇房間 ---------- */
+.exhib_room{
+width: 100%;
+margin: 0 auto;
+margin-top: 3%;
+}
+.exhib_room .wrap_ul{
+  width: 100%;
+  display: flex;
+}
+.exhib_room .wrap_ul .wrap_li{
+  width: 20%;
+  padding-right: 4px;
+  padding-left: 4px;
+  /* display: flex;
+  justify-content:center;
+  align-items: center; */
+}
+.exhib_room .wrap_ul .wrap_li .wrap_s {
+  /* outline: 1px solid red; */
+  position: relative;
+  height: 0;
+  padding:50% 0;
+  background-color: var(--csscircle-blue);
+  border-radius: 50%;
+  border: 1px solid white;
+}
+.exhib_room .wrap_ul .wrap_li .wrap_s.active {
+  background-color: #de6f337c;
+}
+.exhib_room .wrap_ul .wrap_li .wrap_s a {
+  /* outline: 1px solid pink; */
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content:center;
+  align-items: flex-start;
+  padding-top: 12%;
+  width: 100%;
+  height: 100%;
+}
+.exhib_room .wrap_ul .wrap_li .wrap_s a svg{
+  /* outline: 1px solid blue; */
+  width: 62%;
+  height: 62%;
+}
+.exhib_room .wrap_ul .wrap_li .wrap_s a p{
+  position: absolute;
+  top: 72%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 0.6rem;
+  line-height: 0.6rem;
+  color: #fff;
+  font-weight: 400;
+}
+/* ---------- 展示各個房間 ---------- */
+
+.title{
+  display: none;
+}
+.exhib_space{
+  width: 100%;
+  height: 50vh;
+  overflow: scroll;
+  margin-top: 3%; 
+}
+.exhib_space .wrapForPosition{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.exhib_space .wrapForPosition img{
+  width: auto;
+  height: 100%;
+  transition: 5s;
+  position: relative;
+  /* transform: translateX(-50%); */
+}
+.exhib_space div.wrapForPosition a>div{
+  position: absolute;
+  background: #e7e2e2c0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  transform: scale(0.8);
+  opacity: 0.7;
+  animation: bubble 3s linear infinite;
+}
+.exhib_space div.wrapForPosition a>div::after{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  content: "";
+  width: 50%;
+  height: 50%;
+  background: var(--csscoke-red);
+  border-radius:50%;
+  z-index: 3;
+}
+.exhib_space div.wrapForPosition a>div::before{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  content: "";
+  width: 80%;
+  height: 80%;
+  background: #fa8773c0;
+  border-radius:50%;
+  z-index: 2;
+}
+
+@keyframes bubble {
+  0% {
+      box-shadow: 0 0 0 0 #ff533579, 0 0 0 0 #ff53353f;
+  }
+
+  40% {
+      box-shadow: 0 0 0 50px rgba(55, 209, 201, 0), 0 0 0 0 #ff533579;
+  }
+
+  80% {
+      box-shadow: 0 0 0 50px rgba(55, 209, 201, 0), 0 0 0 30px rgba(55, 209, 201, 0);
+  }
+
+  100% {
+      box-shadow: 0 0 0 0 rgba(55, 209, 201, 0), 0 0 0 30px rgba(55, 209, 201, 0);
+  }
+}
+
+
+/* -----------------------allroom------------------------------------ */
+/* ----- 電視 ----- */
+  .exhib_space div.wrapForPosition.allroom a>div{
+    top: 9%;
+    left: 46%;
+  }
+/* ----- 掃地機器人 ----- */
+  .exhib_space div.wrapForPosition.allroom a:nth-child(2)>div{
+    top: 22%;
+    left: 34%;
+  }
+/* ----- 冷氣 ----- */
+  .exhib_space div.wrapForPosition.allroom a:nth-child(3)>div{
+    top: 32%;
+    left: 22%;
+  }
+/* ----- 智能音箱 ----- */
+  .exhib_space div.wrapForPosition.allroom a:nth-child(4)>div{
+    top: 50%;
+    left: 54%;
+  }
+/* ----- 木桌上的東西 ----- */
+  .exhib_space div.wrapForPosition.allroom a:nth-child(5)>div{
+    top: 10%;
+    left: 63%;
+  }
+/* ----- 浴室 ----- */
+  .exhib_space div.wrapForPosition.allroom a:nth-child(6)>div{
+    top: 80%;
+    left: 56%;
+  }
+/* ----- 廁所 ----- */
+  .exhib_space div.wrapForPosition.allroom a:nth-child(7)>div{
+  top: 76%;
+  left: 104%;
+  }
+/* ----- 房間桌上 ----- */
+  .exhib_space div.wrapForPosition.allroom a:nth-child(8)>div{
+  top: 16%;
+  left: 154%;
+  }
+/* ----- 房間地上 ----- */
+  .exhib_space div.wrapForPosition.allroom a:nth-child(9)>div{
+  top: 22%;
+  left: 130%;
+  }
+/* ----- 門口 ----- */
+  .exhib_space div.wrapForPosition.allroom a:nth-child(10)>div{
+    top: 52%;
+    left: 164%;
+  }
+
+/* -----------------------livingroom------------------------------------ */
+/* 客廳內的東西 */
+  .exhib_space div.wrapForPosition.living a>div{
+  top: 23%;
+  left: 55%;
+  }
+  /* ----- 冷氣 ----- */
+  .exhib_space div.wrapForPosition.living a:nth-child(2)>div{
+  top: 16%;
+  left: 80%;
+  }
+  /* ----- 掃地機器人 ----- */
+  .exhib_space div.wrapForPosition.living a:nth-child(3)>div{
+  top: 41%;
+  left: 132%;
+  }
+  /* ----- 電視 ----- */
+  .exhib_space div.wrapForPosition.living a:nth-child(4)>div{
+  top: 33%;
+  left: 160%;
+  }
+  /* ----- 右邊木桌上的東西 ----- */
+  .exhib_space div.wrapForPosition.living a:nth-child(5)>div{
+  top: 54%;
+  left: 200%;
+  }
+/* hidden區 */
+  .exhib_space div.wrapForPosition.living a:nth-child(6)>div{
+visibility: hidden;}
+  .exhib_space div.wrapForPosition.living a:nth-child(7)>div{
+visibility: hidden;}
+  .exhib_space div.wrapForPosition.living a:nth-child(8)>div{
+visibility: hidden;}
+  .exhib_space div.wrapForPosition.living a:nth-child(9)>div{
+visibility: hidden;}
+  .exhib_space div.wrapForPosition.living a:nth-child(10)>div{
+visibility: hidden;}
+
+/* -----------------------bedroom--------------------------------------- */
+/* 房間內的家電 */
+    /* 窗簾  */
+    .exhib_space div.wrapForPosition.bedroom a>div{
+      top: 32%;
+      left: 44%;
+    }
+    /* -----掃地機器人 ----- */
+    .exhib_space div.wrapForPosition.bedroom a:nth-child(2)>div{
+      top: 87%;
+      left: 41%;
+    }
+    /* -----自動調節燈  ----- */
+    .exhib_space div.wrapForPosition.bedroom a:nth-child(3)>div{
+      top: 48%;
+      left:198%;
+    }
+    /* -----  ----- */
+    .exhib_space div.wrapForPosition.bedroom a:nth-child(4)>div{
+      top: 43%;
+      left: 84%;
+    }
+/* hidden區 */
+    .exhib_space div.wrapForPosition.bedroom a:nth-child(5)>div{
+      visibility: hidden;}
+    .exhib_space div.wrapForPosition.bedroom a:nth-child(6)>div{
+      visibility: hidden;}
+    .exhib_space div.wrapForPosition.bedroom a:nth-child(7)>div{
+      visibility: hidden;}
+    .exhib_space div.wrapForPosition.bedroom a:nth-child(8)>div{
+      visibility: hidden;}  
+    .exhib_space div.wrapForPosition.bedroom a:nth-child(9)>div{
+      visibility: hidden;}
+    .exhib_space div.wrapForPosition.bedroom a:nth-child(10)>div{
+      visibility: hidden;
+    }
+
+/* ---------------------------kitchen------------------------------------------------------ */
+/* 廚房內的家電 */
+    /* 烹飪機器人 */
+    .exhib_space div.wrapForPosition.kitchen a>div{
+      top: 33%;
+      left: 90%;
+    }
+    /* ----- 氣炸鍋 ----- */
+    .exhib_space div.wrapForPosition.kitchen a:nth-child(2)>div{
+    top: 33%;
+    left: 105%;
+    }
+    /* -----智慧音箱  ----- */
+    .exhib_space div.wrapForPosition.kitchen a:nth-child(3)>div{
+      top: 17%;
+      left: 138%;
+    }
+/* hidden區 */
+    .exhib_space div.wrapForPosition.kitchen a:nth-child(4)>div{
+      visibility: hidden;}
+    .exhib_space div.wrapForPosition.kitchen a:nth-child(5)>div{
+      visibility: hidden;}
+    .exhib_space div.wrapForPosition.kitchen a:nth-child(6)>div{
+      /* display: none; */
+      visibility: hidden;}   
+    .exhib_space div.wrapForPosition.kitchen a:nth-child(7)>div{
+      /* display: none; */
+      visibility: hidden;}  
+    .exhib_space div.wrapForPosition.kitchen a:nth-child(8)>div{
+      /* display: none; */
+      visibility: hidden;}   
+    .exhib_space div.wrapForPosition.kitchen a:nth-child(9)>div{
+      /* display: none; */
+      visibility: hidden;}
+    .exhib_space div.wrapForPosition.kitchen a:nth-child(10)>div{
+      /* display: none; */
+      visibility: hidden;}
+
+
+
+/* ------所有對話框樣式------ */
+.exhib_space div.wrapForPosition #dialog{
+  position: absolute;
+  min-height: 160px;
+  background-color: #ea4930af;
+  border-radius: 20px;
+  margin-top: 1rem;
+  width: 60%;
+  padding: 1rem;
+  transform: scale(0.7);
+  transition: .5s;
+}
+.exhib_space div.wrapForPosition #dialog > p{
+  font-size: 1.2rem;
+  color: white;
+}
+.exhib_space div.wrapForPosition #dialog::after{
+  top: -30px;
+  content: "";
+  height: 0px;
+  left: 30px;
+  position: absolute;
+  width: 0px;
+  border-color: transparent transparent rgba(234, 73, 48, 0.596);
+  border-style: solid;
+  border-width: 15px 10px;
+  transition: .5s;
+}
+
+/* 我在客廳----------------------------------------------------- */
+
+/* 冷氣 */
+.exhib_space div.wrapForPosition #dialog.living.nth_1{
+  top: 21%;
+  left: 72%;
+}
+
+/* 掃地機器人 */
+.exhib_space div.wrapForPosition #dialog.living.nth_2{
+  top: 0%;
+  left: 104%;
+}
+
+.exhib_space div.wrapForPosition #dialog.living.nth_2::after{
+  top: 160px;
+  left: 135px;
+  border-color: rgba(234, 73, 48, 0.596) transparent transparent ;
+}
+
+/* 神奇的燈為什麼是10 */
+.exhib_space div.wrapForPosition #dialog.living.nth_10{
+  position: absolute;
+  top: 28%;
+  left: 49%;
+}
+
+/* 電視 */
+.exhib_space div.wrapForPosition #dialog.living.nth_3{
+  top: 35%;
+  left: 134%;
+}
+.exhib_space div.wrapForPosition #dialog.living.nth_3::after{
+  top: -10%;
+  left: 40%;
+  border-color:  transparent transparent rgba(234, 73, 48, 0.596);
+}
+
+/* 右邊桌上的東西 */
+.exhib_space div.wrapForPosition #dialog.living.nth_4{
+  top: 38%;
+  left: 145%;
+}
+.exhib_space div.wrapForPosition #dialog.living.nth_4::after{
+  top: 40px;
+  left: 203px;
+  border-color:transparent  transparent transparent rgba(234, 73, 48, 0.596);
+}
+
+/* 我在房間 */
+
+/* 掃地機器人  */
+.exhib_space div.wrapForPosition #dialog.bedroom.nth_1{
+  top: 49%;
+  left: 34%;
+}
+.exhib_space div.wrapForPosition #dialog.bedroom.nth_1::after{
+  top: 100%;
+  left: 40%;
+  border-color:rgba(234, 73, 48, 0.596)  transparent transparent ;
+}
+
+/* 音箱 */
+.exhib_space div.wrapForPosition #dialog.bedroom.nth_2{
+  top: 32%;
+  left: 146%;
+}
+.exhib_space div.wrapForPosition #dialog.bedroom.nth_2::after{
+  top: 40%;
+  left: 100%;
+  border-color:transparent  transparent transparent rgba(234, 73, 48, 0.596);
+}
+
+/* 燈 */
+.exhib_space div.wrapForPosition #dialog.bedroom.nth_3{
+  position: absolute;
+  top: 27%;
+  left: 87%;
+}
+.exhib_space div.wrapForPosition #dialog.bedroom.nth_3::after{
+  top: 30%;
+  left: -10%;
+  border-color:transparent rgba(234, 73, 48, 0.596) transparent transparent ;
+}
+
+/* 神奇的窗簾為什麼是10 */
+.exhib_space div.wrapForPosition #dialog.bedroom.nth_10{
+  top: 0%;
+  left: 12%;
+}
+.exhib_space div.wrapForPosition #dialog.bedroom.nth_10::after{
+  top: 0;
+  left: 20%;
+  border-color: rgba(234, 73, 48, 0.596) transparent transparent ;
+}
+
+/* 我在廚房 */
+/* 烹飪機器人 */
+.exhib_space div.wrapForPosition #dialog.kitchen.nth_1{
+  top: 39%;
+  left: 72%;
+}
+.exhib_space div.wrapForPosition #dialog.kitchen.nth_1::after{
+  top: -11%;
+  left: 70%;
+  border-color:  transparent transparent rgba(234, 73, 48, 0.596) ;
+}
+
+/* 智能冰箱 */
+.exhib_space div.wrapForPosition #dialog.kitchen.nth_2{
+  top: 6%;
+  left: 150%;
+}
+
+.exhib_space div.wrapForPosition #dialog.kitchen.nth_2::after{
+  top: 15%;
+  left: -10%;
+  border-color: transparent rgba(234, 73, 48, 0.596) transparent transparent ;
+}
+
+/* 神奇的智能氣炸鍋為什麼是10 */
+.exhib_space div.wrapForPosition #dialog.kitchen.nth_10{
+  position: absolute;
+  top: 16%;
+  left: 34%;
+}
+.exhib_space div.wrapForPosition #dialog.kitchen.nth_10::after{
+  top: 20%;
+  left: 100%;
+  border-color: transparent transparent transparent rgba(234, 73, 48, 0.596) ;
+}
+
+
+
+
+/* ---------- 左右拖曳選擇想查看的商品 ---------- */
+.drag_area{
+  width: 100%;
+  height: 6vh;
+  margin-top: 1%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.drag_area p{
+  margin: 0;
+  color: rgb(117, 117, 117);
+}
+.drag_area p span{
+  color: var(--csscoke-red);
+}
+.drag_area i{
+  color: rgb(117, 117, 117);
+}
+
+/* ---------- 查看商品區 ---------- */
+.click_area{
+  width: 100%;
+  height: 20vh;
+}
+.click_area p{
+  font-size: 1rem;
+  text-align: center;
+  margin: 0;
+  color: rgb(117, 117, 117);
+  line-height: 2rem;
+}
+.click_area p span{
+  color: var(--csscoke-red);
+}
+.click_area .wrap_area{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(20vh - 32px);
+}
+.click_area .wrap_area .wrap_item{
+  /* outline: 1px solid blue; */
+  width: 95%;
+  height: calc(20vh - 32px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+}
+.click_area .wrap_area i{
+  color: rgb(117, 117, 117);
+  width: 5%;
+}
+.click_area .wrap_area .wrap_item .item_button{
+  /* outline: 1px solid red; */
+  width: 40%;
+  height: calc(10vh - 36px);
+  padding-top:2px ;
+  padding-bottom:2px ;
+  background-color: #fff;
+  border-radius: 999rem;
+  text-align: center;
+  margin:0 4px;
+  box-shadow: 4px 4px 15px  #bbbbbb;
+
+}
+.click_area .wrap_area .wrap_item .item_button.top_row_button{
+  /* outline: 1px solid red; */
+  margin-top:10px
+}
+.click_area .wrap_area .wrap_item .item_button.bottom_row_button{
+  /* outline: 1px solid red; */
+  margin-bottom:10px
+}
+.click_area .wrap_area .wrap_item .item_button a{
+  width: 100%;
+  height: 100%;
+}
+.click_area .wrap_area .wrap_item .item_button a p{
+  /* outline: 1px solid red;  */
+  line-height:calc(10vh - 40px);
+  text-align: center;
+  font-size: 1rem;
+  color: rgb(117, 117, 117);
+  overflow:hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* -----------------------------推薦商品區------------------------------------- */
+p.click_p{
+  font-size: 1rem;
+  text-align: center;
+  margin: 0;
+  color: rgb(117, 117, 117);
+  line-height: 2rem;
+}
+.click_item_wrap{
+  width: 100%;
+  height: 20vh;
+  margin-bottom: 70px;
+}
+.click_item_area{
+  /* display: flex; */
+  /* width: 45%; */
+  height: 20vh;
+}
+.click_item_area .item{
+  width: 100%;
+  padding-right: 4px;
+  padding-left: 4px;
+  position: relative;
+}
+.click_item_area .item .hight{
+  position: relative;
+  height: 0;
+  padding:50% 0;
+  background-color: #ffffffd0;
+  /* border-radius: 2rem; */
+  box-shadow: 2px 2px 6px  #55555559;
+}
+.click_item_area .item .hight a {
+  /* outline: 1px solid pink; */
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content:center;
+  align-items: flex-start;
+  padding-top: 3%;
+  width: 100%;
+  height: 100%;
+}
+.click_item_area .item .hight a img{
+  width: 60;
+  height: 60%;
+  object-fit: contain;
+}
+.click_item_area .item .hight a .cardbody_area{
+  /* outline: 1px solid pink; */
+
+  position: absolute;
+  top: 63%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 33%;
+  display: flex;
+  flex-direction: column;
+}
+.click_item_area .item .hight a .cardbody_area h5{
+  text-align: center;
+  font-size: 0.6rem;
+  /* line-height: 1rem; */
+  color: #000;
+  font-weight: 400;
+  margin: 0;
+}
+.click_item_area .item .hight a .cardbody_area p{
+  text-align: center;
+  font-size: 0.6rem;
+  /* line-height:1rem; */
+  color: rgb(117, 117, 117);
+  font-weight: 400;
+  margin: 0;
+}
+ .wrap_svg:nth-child(1) .top_svg{
+  background: url(../img/icon_top1.png) no-repeat;
+  position: absolute;
+    top: 0;
+    left: 0;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+}
+
+/* 推薦商品 */
+.click_main p{
+  text-align: center;
+  margin: 1rem 0;
+}
+
+/* 網頁版 */
+@media (min-width: 768px) {
+
+  /* 黑色背景 */
+  .black::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 5;
+    transition: .5s;
+  }
+ 
+  .black.black_hide::after{
+    height: 150px;
+  }
+
+  .title{
+    display: block;
+    font-weight: 600;
+    font-size: 4rem;
+    letter-spacing: .5rem;
+    color: white;
+    position: absolute;
+    bottom: 50px;
+    right: 10%;
+    z-index: 5;
+  }
+  .title:after{
+    content: "";
+    position: absolute;
+    font-size: 1rem;
+    transition: .8s;
+  }
+
+  .title.sub_title:after{
+    content: "屬於我的智慧宅";
+    bottom: 5rem;
+    transform: translateY(7rem);
+    border-right: 1px solid white;
+  }
+
+  
+  .exhib_room .wrap_ul .wrap_li .wrap_s.hover_exhib_room {
+    transform: scale(1.5);
+    background-color: #fac27388;
+    transition: .2s;
+  }
+
+    /* 展示房間 */
+  /* 更改room尺寸 -> 滿版 */
+
+  .exhib_space{
+    height: 100vh;
+    overflow: hidden;
+    margin-top: 0%;  
+  }
+
+  .exhib_space .wrapForPosition img{
+    width: 100%;
+    height: auto;
+  }
+
+
+  /* 點選房間 */
+  .exhib_room{
+    position: absolute;
+    z-index: 10;
+  }
+
+  .exhib_room .wrap_ul>.wrap_li{
+    position: absolute;
+    width: 8%;
+    padding: 0;
+  }
+
+  /*------------------------------------------ allroom 選擇空間 */
+  .exhib_room .wrap_ul>.wrap_li:nth-child(1){
+    left: 24%;
+    top: 8rem;
+  }
+  .exhib_room .wrap_ul>.wrap_li:nth-child(2){
+    left: 48%;
+    top: 33rem;
+  }
+  .exhib_room .wrap_ul>.wrap_li:nth-child(3){
+    left: 15%;
+    top: 22rem;
+  }
+  .exhib_room .wrap_ul>.wrap_li:nth-child(4){
+    left: 30%;
+    top: 20rem;
+  }
+  .exhib_room .wrap_ul>.wrap_li:nth-child(5){
+    left: 65%;
+    top: 7rem;
+  }
+
+/* -----------------------------------------------圓圈的位子 */
+  /* 客廳內的家電 */
+  .exhib_space div.wrapForPosition.living a>div{
+    top: 26%;
+    left: 26%;
+  }
+  /* ----- 冷氣 ----- */
+  .exhib_space div.wrapForPosition.living a:nth-child(2)>div{
+    top: 18%;
+    left: 40%;
+  }
+  /* ----- 掃地機器人 ----- */
+  .exhib_space div.wrapForPosition.living a:nth-child(3)>div{
+    top: 45%;
+    left: 65%;
+  }
+  /* ----- 電視 ----- */
+  .exhib_space div.wrapForPosition.living a:nth-child(4)>div{
+    top: 37%;
+    left: 81%;
+  }
+  /* ----- 右邊木桌上的東西 ----- */
+  .exhib_space div.wrapForPosition.living a:nth-child(5)>div{
+    top: 60%;
+    left: 96%;
+  }
+/* hidden區 */
+  .exhib_space div.wrapForPosition.living a:nth-child(6)>div{
+    visibility: hidden;}
+  .exhib_space div.wrapForPosition.living a:nth-child(7)>div{
+      visibility: hidden;}
+  .exhib_space div.wrapForPosition.living a:nth-child(8)>div{
+      visibility: hidden;}
+  .exhib_space div.wrapForPosition.living a:nth-child(9){
+      visibility: hidden;}
+  .exhib_space div.wrapForPosition.living div:nth-child(10){
+      visibility: hidden;}
+
+
+
+
+      
+/*-----------------------房間內的家電------------------------- */
+    /* 窗簾 */
+  .exhib_space div.wrapForPosition.bedroom a>div{
+      top: 32%;
+      left: 26%;
+   }
+    /* ----- 掃地機器人 ----- */
+  .exhib_space div.wrapForPosition.bedroom a:nth-child(2)>div{
+      top: 93%;
+      left: 22%;
+   }
+    /* -----智慧音箱  ----- */
+  .exhib_space div.wrapForPosition.bedroom a:nth-child(3)>div{
+      top: 53%;
+    left: 94%;
+   }
+    /* ----- 燈 ----- */
+  .exhib_space div.wrapForPosition.bedroom a:nth-child(4)>div{
+      top: 44%;
+      left: 38%;
+   }
+
+/* ---------------------------kitchen------------------------------------------------------ */
+/* 廚房內的家電 */
+    /* 烹飪機器人 */
+    .exhib_space div.wrapForPosition.kitchen a>div{
+      top: 36%;
+      left: 43%;
+    }
+    /* ----- 氣炸鍋 ----- */
+    .exhib_space div.wrapForPosition.kitchen a:nth-child(2)>div{
+    top: 36%;
+    left: 50%;
+    }
+    /* -----智慧音箱  ----- */
+    .exhib_space div.wrapForPosition.kitchen a:nth-child(3)>div{
+      top: 17%;
+      left: 67%;
+    }
+
+/* ------------------#dialog----------------------------------------- */
+/* 對話框基本樣式 */
+  /* 我在客廳 */
+  .exhib_space div.wrapForPosition #dialog{
+    width: 20%;
+  }
+  /* 冷氣 */
+  .exhib_space div.wrapForPosition #dialog.living.nth_1{
+    top: 21%;
+    left: 35%;
+  }
+
+  /* 掃地機器人 */
+  .exhib_space div.wrapForPosition #dialog.living.nth_2{
+    top: 25%;
+    left: 55%;
+  }
+  .exhib_space div.wrapForPosition #dialog.living.nth_2::after{
+    top: 160px;
+    left: 135px;
+    border-color: rgba(234, 73, 48, 0.596) transparent transparent ;
+  }
+
+  /* 神奇的燈為什麼是10 */
+  .exhib_space div.wrapForPosition #dialog.living.nth_10{
+    position: absolute;
+    top: 32%;
+    left: 24%;
+  }
+
+  /* 電視 */
+  .exhib_space div.wrapForPosition #dialog.living.nth_3{
+    top: 55%;
+    left: 66%;
+  }
+  .exhib_space div.wrapForPosition #dialog.living.nth_3::after{
+    top: -10%;
+    left: 135px;
+    border-color:  transparent transparent rgba(234, 73, 48, 0.596) ;
+  }
+
+  /* 右邊桌上的東西 */
+  .exhib_space div.wrapForPosition #dialog.living.nth_4{
+    top: 55%;
+    left: 75%;
+  }
+  .exhib_space div.wrapForPosition #dialog.living.nth_4::after{
+    top: 40px;
+    left: 100%;
+    border-color:transparent  transparent transparent rgba(234, 73, 48, 0.596);
+  }
+
+
+/* ------------------------bedroom-------------------------------------- */
+/* 我在房間 */
+
+/* 掃地機器人  */
+.exhib_space div.wrapForPosition #dialog.bedroom.nth_1{
+  top: 70%;
+    left: 20%;
+}
+.exhib_space div.wrapForPosition #dialog.bedroom.nth_1::after{
+  top: 100%;
+  left: 68px;
+  border-color:rgba(234, 73, 48, 0.596)  transparent transparent ;
+}
+
+/* 音箱 */
+.exhib_space div.wrapForPosition #dialog.bedroom.nth_2{
+  top: 42%;
+    left: 77%;
+}
+.exhib_space div.wrapForPosition #dialog.bedroom.nth_2::after{
+  top: 42%;
+  left: 100%;
+  border-color:transparent  transparent transparent rgba(234, 73, 48, 0.596) ;
+}
+
+/* 燈 */
+.exhib_space div.wrapForPosition #dialog.bedroom.nth_3{
+  position: absolute;
+  top: 34%;
+  left: 41%;
+}
+.exhib_space div.wrapForPosition #dialog.bedroom.nth_3::after{
+  top: 50%;
+  left: -7%;
+  border-color:transparent rgba(234, 73, 48, 0.596)  transparent transparent ;
+}
+
+/* 神奇的窗簾為什麼是10 */
+.exhib_space div.wrapForPosition #dialog.bedroom.nth_10{
+  top: 17%;
+  left: 6%;
+}
+.exhib_space div.wrapForPosition #dialog.bedroom.nth_10::after{
+  top: 50%;
+  left: 100%;
+  border-color:transparent  transparent transparent rgba(234, 73, 48, 0.596) ;
+}
+
+/* 終於要進展到廚房 */
+/* 我在廚房 */
+/* 烹飪機器人 */
+.exhib_space div.wrapForPosition #dialog.kitchen.nth_1{
+  top: 39%;
+  left: 40%;
+}
+.exhib_space div.wrapForPosition #dialog.kitchen.nth_1::after{
+  top: -19%;
+  left: 135px;
+  border-color:  transparent transparent rgba(234, 73, 48, 0.596) ;
+}
+
+/* 智能冰箱 */
+.exhib_space div.wrapForPosition #dialog.kitchen.nth_2{
+  top: 6%;
+  left: 77%;
+}
+
+.exhib_space div.wrapForPosition #dialog.kitchen.nth_2::after{
+  top: 10%;
+  left: -10%;
+  border-color: transparent rgba(234, 73, 48, 0.596) transparent transparent ;
+}
+
+/* 神奇的智能氣炸鍋為什麼是10 */
+.exhib_space div.wrapForPosition #dialog.kitchen.nth_10{
+  position: absolute;
+  top: 25%;
+  left: 24%;
+}
+.exhib_space div.wrapForPosition #dialog.kitchen.nth_10::after{
+  top: 20%;
+  left: 100%;
+  border-color: transparent transparent transparent rgba(234, 73, 48, 0.596) ;
+}
+
+
+
+  /* ------------------------推薦商品--------------------------------------- */
+
+ .click_main{
+   overflow: hidden;
+   height: 100%;
+   padding: 0 2rem;
+   background-color: rgba(255, 255, 255, 0.2);
+   position: relative;
+   padding-bottom: 5%;
+   margin-bottom: 30px;
+ }
+
+ .click_main p{
+   text-align: center;
+   margin: 2rem 0;
+ }
+
+ .click_item_area{
+   margin-left: 12rem;
+ }
+
+ .click_item_area .item{
+   width: 90%;
+   margin: 0 auto;
+ }
+
+ #back{
+   width: 100%;
+   position: relative;
+ }
+ .back_wrap{
+  position: absolute;
+  top: 20px;
+  width: 120px;
+  height: 120px;
+  background: #fac273a2;
+  padding: 1rem;
+  border-radius: 999em;
+  cursor: pointer;
+ }
+
+ .back_wrap>svg{
+  width: 80%;
+  margin-left: 7px;
+ }
+
+ .back_wrap>p{
+   margin: 0%;
+   color: rgb(255, 255, 255);
+ }
+ #arrow_left{
+   position: absolute;
+   top: 150px;
+   color: rgb(131, 131, 131);
+ }
+
+ #arrow_left > span{
+  position: absolute;
+  width: 100px;
+  top: 0px;
+  left: 100px;
+ }
+
+ .fa-chevron-left::after{
+  position: absolute;
+  content: "";
+  width: 80px;
+  height: 2px;
+  background-color: rgb(131, 131, 131);
+  top: 8px;
+  left: 4px;
+ }
+
+
+
+}

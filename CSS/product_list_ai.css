@@ -1,0 +1,364 @@
+body {
+    /* height: 100vh; */
+}
+
+* {
+    /* outline: 1px solid red; */
+    /* justify-content: center; */
+}
+
+/* 兩大分頁 */
+.lgbtn {
+    box-shadow: 0 15px 20px #cacaca;
+}
+
+/* 熱門商品 */
+.lgtitle {
+    text-align: center;
+    padding-top: 5%;
+}
+
+/* 路徑 */
+.path a {
+    color: #212529;
+}
+
+.pathnfilter {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+/* sidebar */
+.l_part {
+    width: 216px;
+    height: 915px;
+    background-color: #F6F4EB;
+    border-radius: 0px 20px 20px 0px;
+    padding-left: 20px;
+}
+
+.l_part input {
+    margin: 10px;
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    cursor: pointer;
+
+}
+
+.l_part div {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.l_part img {
+    width: 1vh;
+    height: 1vh;
+}
+
+/* 右大半部 */
+.mainpart {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.r_part {
+    width: 100%;
+}
+
+/* 右上部分類選單 */
+.smbtn {
+    width: 100%;
+    text-align: center;
+}
+
+.smbtn a {
+    color: gray;
+}
+
+.smbtn.active {
+    color: black;
+}
+
+.minibtn {
+    justify-content: flex-start;
+}
+
+.minibtn a {
+    color: black;
+    margin: auto 10px;
+}
+
+/* 右下半部卡片 */
+
+.maincards {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.maincards .card {
+    padding: 15px;
+    border: none;
+    border-radius: 20px 20px;
+    margin: 20px 0px 10px 0px;
+}
+
+
+.maincards a {
+    /* margin-top: 10px; */
+    color: black;
+    text-decoration: underline;
+}
+
+.maincards a:hover {
+    text-decoration: none;
+}
+
+.maincards .card>svg {
+    margin-left: -15px
+}
+
+/* 卡片 */
+.firstline {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainpart .card-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainpart .card-body .price {
+
+    text-decoration: underline;
+    font-size: 1.2rem;
+}
+
+.mainpart .card-body .price:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.firstline a {
+    color: gray;
+}
+
+.firstline img {
+    color: gray;
+    width: 14px;
+    height: 14px;
+    padding-right: 2px;
+}
+
+.joincart {
+    text-decoration: underline;
+    font-size: 1.2rem;
+}
+
+.joincart:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.card>svg {
+    margin-top: 20px;
+}
+
+svg {
+    right: 0px;
+}
+
+/* MOBILES */
+@media screen and (max-width: 375px) {
+
+    .lgbtn .btn-group a {
+        font-size: 1rem;
+    }
+
+    .lgtitle h4 {
+        font-size: 1.5rem;
+    }
+
+    .path a {
+        font-size: 0.5rem;
+    }
+
+    .path {
+        text-align: center;
+    }
+
+    /* .card {
+        width: 100%;
+    }
+
+    .card img {
+        width: 80px;
+    } */
+
+    .web_part {
+        display: none;
+    }
+
+
+    div.l_part {
+        display: none;
+    }
+
+    div.smbtn {
+        display: none;
+    }
+
+
+    .head {
+        width: 80%;
+        margin: 20px auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        align-self: center;
+
+    }
+
+    .m_button {
+        background-color: white;
+        color: black;
+        text-align: center;
+        width: 80px;
+        min-height: 10px;
+        box-shadow: 0 3px 6px grey;
+        border-radius: 5px;
+        border: 0;
+        padding: 1px;
+        font-size: 10px;
+    }
+
+    .s_select {
+        position: absolute;
+        top: 43px;
+        right: 20px;
+        background-color: white;
+        box-shadow: 0 6px 12px #000000;
+        display: none;
+        margin-top: 120px;
+    }
+
+    .s_select label {
+        display: flex;
+        align-items: center;
+        margin: 5px;
+    }
+
+    .s_select input {
+        appearance: none;
+        height: 15px;
+        width: 15px;
+        border-radius: 10%;
+        border: 1px solid black;
+        margin: 5px;
+    }
+
+    .dropdown_btn {
+        background-color: white;
+        color: black;
+        text-align: center;
+        width: 80px;
+        min-height: 10px;
+        box-shadow: 0 3px 6px grey;
+        border-radius: 5px;
+        border: 0;
+        padding: 1px;
+        font-size: 10px;
+    }
+
+    /* 
+    .s_select h6 {
+        background-color: #F4F4F4;
+        padding: 10px 0px 10px 10px;
+    } */
+
+    /* m_card */
+    .m_card_head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+
+    .m_card_head img{
+    width: 15px;
+    margin-left: 10px;
+    }
+
+    .m_body{
+    width: 90%;
+    margin: 0px auto;
+    }
+
+    .m_card{
+        width: 320px;
+        height: 126px;
+        box-shadow:0 6px 8px #777777;
+        padding: 8px;
+        border-radius: 10px;
+    }
+    .card_center{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .card_center img{
+        width: 80px;
+    }
+    .r_rpart{
+        display: flex;
+        align-items: flex-end; 
+    }
+    .r_rpart img{
+        width: 10px;
+        margin-right: 10px;
+    }
+    .m_rpart{
+        display: flex;
+        flex-direction: column;  
+        align-items: flex-end; 
+        
+    }
+    
+    .m_button1{
+        min-width: 10px!important;
+        height: 25px;
+        text-align: center;
+        padding: 5px 10px;
+        border-radius: 10px!important;
+        border: none;
+        background-color: #FFFFFF;
+        box-shadow: 0 15px 20px #BEBEBE;
+        display: flex;
+        align-items: center;
+        font-size: 10px;
+       
+    }
+
+    .m_button2{
+        min-width: 10px!important;
+        height: 25px;
+        text-align: center;
+        padding: 5px 5px;
+        display: flex;
+        align-items: center;
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width:400px) {
+    .moblie_part {
+        display: none;
+    }
+}
