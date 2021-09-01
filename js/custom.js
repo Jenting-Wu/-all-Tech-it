@@ -358,7 +358,7 @@ $(function () {
     });
 
     //加入喜好清單
-    $('button.saved').click(function (event) {
+    $('.saved').click(function (event) {
         //避免元素的預設事件被觸發
         event.preventDefault();
 
@@ -547,7 +547,7 @@ $(function () {
         }, 'json');
     });
     //商品細節頁 加入follow
-    $('.go_follow').click(function () {
+    $('.go_follow ').click(function () {
         //取得 button 的 jQuery 物件
         let btn = $(this);
 

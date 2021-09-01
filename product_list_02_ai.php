@@ -476,11 +476,11 @@
                                     <div class="r_rpart">
 
                                         <!-- php : 加入喜好清單 -->
-                                        <div class="m_button2 mr-2" data-prod-id="<?= $obj['prod_id'] ?>" alt=""><img src="./img/icon_saved.svg" alt="">
+                                        <div class="m_button2 mr-2  saved" data-prod-id="<?= $obj['prod_id'] ?>" data-prod-name="<?= $obj['prod_name'] ?>" data-prod-thumbnail="<?= $obj['prod_thumbnail'] ?>" data-prod-price="<?= $obj['prod_price'] ?>" data-brand_id="<?= $obj['brand_id'] ?>"><img src="./img/icon_saved.svg" alt="">
                                         </div>
 
                                         <!-- php : 加入比較列表 -->
-                                        <div class="m_button2 mr-3" data-prod-id="<?= $obj['prod_id'] ?>" data-prod-name="<?= $obj['prod_name'] ?>" data-prod-thumbnail="<?= $obj['prod_thumbnail'] ?>" data-prod-price="<?= $obj['prod_price'] ?>"><img src="./img/icon_compare-list.svg" alt="">
+                                        <div class="m_button2 mr-3 compare" data-prod-id="<?= $obj['prod_id'] ?>" data-prod-name="<?= $obj['prod_name'] ?>" data-prod-thumbnail="<?= $obj['prod_thumbnail'] ?>" data-prod-price="<?= $obj['prod_price'] ?>"><img src="./img/icon_compare-list.svg" alt="">
                                             比較</div>
 
 
@@ -490,7 +490,7 @@
                                             <div class="m_price mb-2">$<?= $obj['prod_price'] ?></div>
 
                                             <!-- php : 加入購物車 -->
-                                            <button class="m_button1" data-prod-id="<?= $obj['prod_id'] ?>" data-prod-name="<?= $obj['prod_name'] ?>" data-prod-thumbnail="<?= $obj['prod_thumbnail'] ?>" data-prod-price="<?= $obj['prod_price'] ?>">
+                                            <button class="m_button1 joincart" data-brand_id="<?= $obj['brand_id'] ?>" data-prod-id="<?= $obj['prod_id'] ?>" data-prod-name="<?= $obj['prod_name'] ?>" data-prod-thumbnail="<?= $obj['prod_thumbnail'] ?>" data-prod-price="<?= $obj['prod_price'] ?>">
                                                 加入購物車</button>
                                         </div>
 

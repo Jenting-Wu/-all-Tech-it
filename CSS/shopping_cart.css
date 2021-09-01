@@ -302,10 +302,6 @@ input[type="text"] {
 }
 
 @media screen and (min-width: 500px) {
-  .mobile {
-    display: none;
-    background-color: #fafafa;
-  }
   .m_footer {
     display: none;
   }
