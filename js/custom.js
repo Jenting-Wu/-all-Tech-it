@@ -1,4 +1,55 @@
 $(function () {
+    function alertCompare() {
+        Swal.fire(
+            "成功加入比較清單!",
+            "",
+            "success"
+        );
+    };
+
+    function alertNoCompare() {
+        Swal.fire(
+            "此商品已在比較清單中",
+            "",
+            "error"
+        );
+    };
+    function noAddress() {
+        Swal.fire(
+            "請輸入地址",
+            "",
+            "warning"
+        );
+    };
+    function trueAddress() {
+        Swal.fire(
+            "地址儲存成功",
+            "",
+            "success"
+        );
+    };
+
+    function addFav() {
+        Swal.fire(
+            "加入喜好清單成功",
+            "",
+            "success"
+        );
+    };
+    function addCart() {
+        Swal.fire(
+            "加入購物車",
+            "",
+            "success"
+        );
+    };
+    function welcome() {
+        Swal.fire(
+            "歡迎加入TECH IT",
+            "",
+            "success"
+        );
+    };
     let input_email = $('input#email');
     let input_user_name = $('input#user_name');
     let input_birthday = $('input#birthday');
@@ -86,6 +137,7 @@ $(function () {
             $.post('insertUser.php', objUser, function (obj) {
                 console.log(obj)
                 if (obj.success) {
+                    // welcome();
                     alert('歡迎加入TECH IT');
                     location.href = 'success_signup.php';
                 } else {
@@ -299,8 +351,8 @@ $(function () {
         $.post("ShoppingCart.php", objProduct, function (obj) {
             if (obj['success']) {
                 //成功訊息
-                alert('加入購物車成功');
-
+                // alert('加入購物車成功');
+                addCart();
                 //將網頁上的購物車商品數量更新
                 $('span#count_products').text(obj['count_products']);
             } else {
@@ -349,7 +401,8 @@ $(function () {
         $.post("ShoppingCart.php", objProduct, function (obj) {
             if (obj['success']) {
                 //成功訊息
-                alert('加入購物車成功');
+                // alert('加入購物車成功');
+                addCart();
             }
             console.log(obj);
         }, 'json');
@@ -375,7 +428,8 @@ $(function () {
         $.post("toFollow.php", objProduct, function (obj) {
             if (obj['success']) {
                 //成功訊息
-                alert('商品追蹤成功');
+                // alert('商品追蹤成功');
+                addFav();
             } else {
                 alert(`${obj['info']}`);
             }
@@ -470,21 +524,7 @@ $(function () {
 
     // compare -------------------------------------------------------------
 
-    function alertCompare() {
-        Swal.fire(
-            "成功加入比較清單!",
-            "",
-            "success"
-        );
-    }
 
-    function alertNoCompare() {
-        Swal.fire(
-            "此商品已在比較清單中",
-            "",
-            "error"
-        );
-    }
 
 
     //加入比較列表
@@ -599,21 +639,8 @@ $(function () {
     isValid();
 
 
-    function noAddress() {
-        Swal.fire(
-            "請輸入地址",
-            "",
-            "warning"
-        );
-    };
-    function trueAddress() {
-        Swal.fire(
-            "地址儲存成功",
-            "",
-            "success"
-        );
-    };
 
+    // 會員修改地址
     $('#btn_address').click(function (event) {
         event.preventDefault();
         let input_address = $('input#inputF');
@@ -644,36 +671,11 @@ $(function () {
             }
         }, 'json')
     });
+
+
+
+
 });
 
-
-// $('.address_btn').click(function (event) {
-//     event.preventDefault();
-//     console.log("我想要儲存");
-
-//     let input_username = $('input#exampleInputUser1');
-//     let input_phonenumber = $('input#exampleInputPhone1');
-//     let input_address = $('input#exampleInputAddress1');
-
-
-
-//     let objUser = {
-//         user_name: input_username.val(),
-//         phone_number: input_phonenumber.val(),
-//         address: input_address.val()
-//     };
-//     // POST
-//     $.post('save_address.php', objUser, function (obj) {
-//         // console.log(obj11111111);
-//         if (obj.success) {
-//             alert('儲存成功');
-//             location.href = 'member_info1.php';
-//         } else {
-//             console.log(1)
-//             alert(obj.info);
-//         }
-
-//     }, 'json');
-// })
 
 

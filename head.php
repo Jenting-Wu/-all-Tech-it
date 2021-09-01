@@ -47,6 +47,9 @@
     <!-- follow js link -->
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
 
+    <!-- sweet aler -->
+    <script src="JS/alert.js"></script>
+
     <style>
         * {
             /* outline: 1px solid red; */
@@ -255,7 +258,7 @@
                     <!-- <a href="#"></a> -->
 
                     <div class="tog_icon_link">
-                        <img class="tog_icon" src="./img/icon_member.svg" alt="">
+                        <a href="member_info1.php"><img class="tog_icon" src="./img/icon_member.svg" alt=""></a>
                         <?php if (isset($_SESSION['user_name'])) { ?>
                             <?php echo $_SESSION['user_name'] ?>｜<a id="logout" class="btn btn-link">登出</a>
                         <?php } else { ?>

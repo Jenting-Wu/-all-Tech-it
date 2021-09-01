@@ -120,10 +120,10 @@
                     依金額
                 </h5>
                 <div>
-                    <input type="checkbox" name="product_name"> <label for="c1"><span></span>低→高</label>
+                    <input type="checkbox" name="product_name"> <label for="c1"><span></span>NT$ 5000以上</label>
                 </div>
                 <div>
-                    <input type="checkbox" name="product_name"> <label for="c1"><span></span>高→低</label>
+                    <input type="checkbox" name="product_name"> <label for="c1"><span></span>NT$ 5001以下</label>
                 </div>
 
 
@@ -132,10 +132,10 @@
                     優惠活動
                 </h5>
                 <div>
-                    <input type="checkbox" name="product_name"> <label for="c1"><span></span>新→舊</label>
+                    <input type="checkbox" name="product_name"> <label for="c1"><span></span>有活動優惠</label>
                 </div>
                 <div>
-                    <input type="checkbox" name="product_name"> <label for="c1"><span></span>舊→新</label>
+                    <input type="checkbox" name="product_name"> <label for="c1"><span></span>有免運優惠</label>
                 </div>
 
             </div>

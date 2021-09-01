@@ -1,3 +1,6 @@
+/* *{
+  outline:1px solid red;
+} */
 p,
 ul {
   margin: 0px;
@@ -175,5 +178,16 @@ span::after {
   }
   .com_card_photo {
     text-align: center;
+  }
+
+
+  ul{
+    display: flex;
+  }
+  .ul_wrap{
+    padding: 0;
+  }
+  .com_card1{
+
   }
 }

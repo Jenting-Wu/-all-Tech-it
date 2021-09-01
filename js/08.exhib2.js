@@ -206,7 +206,7 @@ $('.wrap_item').on('click', '.item_button', function (event) {
             cardhtml += `<div class="item wrap_svg" data-url="product_detail.php?prod_id=${obj.result[i].prod_id}">
                         <div class="hight">
                             <a href="product_detail.php">
-                                <img src="db_img/img_prod_thumbnail/${obj.result[i].prod_id}" alt="">
+                                <img src="db_img/img_prod_thumbnail/${obj.result[i].prod_thumbnail}" alt="">
                                 <div class="cardbody_area">
                                     <h5 class="card_name">${obj.result[i].prod_name}</h5>
                                     <p class="card_text">NT$ ${obj.result[i].prod_price}</p>

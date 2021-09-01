@@ -32,6 +32,7 @@
                             <div class="member_level  d-none d-lg-block">一般會員</div>
                         </div>
                     </div>
+                    <!-- </div> -->
         <?php
             }
         }
@@ -57,7 +58,7 @@
 
                 <!-- 未評價 -->
                 <br>
-                <h4>尚未評價商品</h4>
+                <h4>評價商品</h4>
                 <br>
                 <?php
                 if (isset($_SESSION['email']) && isset($_GET['prod_id']) && isset($_GET['order_id'])) {
@@ -83,7 +84,7 @@
                                     <h5><?= $obj['prod_name'] ?></h5>
                                     <div class="give_stars">
                                         <div class="row">
-                                            <div class="d-flex center col">
+                                            <div class="d-flex center col ul_wrap">
                                                 <p class="col-4"><?= $obj['rate_A_name'] ?>： </p>
                                                 <ul class="stars col-8" style="list-style: none;" id="ul_1">
                                                     <li>★</li>
@@ -93,7 +94,7 @@
                                                     <li>★</li>
                                                 </ul>
                                             </div>
-                                            <div class="d-flex center col">
+                                            <div class="d-flex center col ul_wrap">
                                                 <p class="col-4"><?= $obj['rate_B_name'] ?>： </p>
                                                 <ul class="stars col-8" style="list-style: none;" id="ul_2">
                                                     <li>★</li>
@@ -106,7 +107,7 @@
                                         </div>
 
                                         <div class="row">
-                                            <div class="d-flex center col">
+                                            <div class="d-flex center col ul_wrap">
                                                 <p class="col-4"><?= $obj['rate_C_name'] ?>： </p>
                                                 <ul class="stars col-8" style="list-style: none;" id="ul_3">
                                                     <li>★</li>
@@ -116,7 +117,7 @@
                                                     <li>★</li>
                                                 </ul>
                                             </div>
-                                            <div class="d-flex center col">
+                                            <div class="d-flex center col ul_wrap">
                                                 <p class="col-4"><?= $obj['rate_D_name'] ?>： </p>
                                                 <ul class="stars col-8" style="list-style: none;" id="ul_4">
                                                     <li>★</li>
@@ -128,7 +129,7 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="d-flex col-6">
+                                            <div class="d-flex col-6 ul_wrap">
                                                 <p class="col-4"><?= $obj['rate_E_name'] ?>： </p>
                                                 <ul class="stars col-8" style="list-style: none;" id="ul_5">
                                                     <li>★</li>
@@ -173,10 +174,10 @@
                                 </div>
 
                                 <div class="com_card-intro">
-                                    <h5><?= $obj['prod_name'] ?><small style="color:red;">　　已評論成功</small> </h5>
+                                    <h5><?= $obj['prod_name'] ?></h5>
                                     <div class="give_stars">
                                         <div class="row">
-                                            <div class="d-flex center col">
+                                            <div class="d-flex center col ul_wrap">
                                                 <p class="col-4"><?= $obj['rate_A_name'] ?>： </p>
                                                 <ul class="stars col-8" style="list-style: none;" id="ul_1">
                                                     <li>★</li>
@@ -186,7 +187,7 @@
                                                     <li>★</li>
                                                 </ul>
                                             </div>
-                                            <div class="d-flex center col">
+                                            <div class="d-flex center col ul_wrap">
                                                 <p class="col-4"><?= $obj['rate_B_name'] ?>： </p>
                                                 <ul class="stars col-8" style="list-style: none;" id="ul_2">
                                                     <li>★</li>
@@ -198,7 +199,7 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="d-flex center col">
+                                            <div class="d-flex center col ul_wrap">
                                                 <p class="col-4"><?= $obj['rate_C_name'] ?>： </p>
                                                 <ul class="stars col-8" style="list-style: none;" id="ul_3">
                                                     <li>★</li>
@@ -208,7 +209,7 @@
                                                     <li>★</li>
                                                 </ul>
                                             </div>
-                                            <div class="d-flex center col">
+                                            <div class="d-flex center col ul_wrap">
                                                 <p class="col-4"><?= $obj['rate_D_name'] ?>： </p>
                                                 <ul class="stars col-8" style="list-style: none;" id="ul_4">
                                                     <li>★</li>
@@ -220,7 +221,7 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="d-flex col-6">
+                                            <div class="d-flex col-6 ul_wrap">
                                                 <p class="col-4"><?= $obj['rate_E_name'] ?>： </p>
                                                 <ul class="stars col-8" style="list-style: none;" id="ul_5">
                                                     <li>★</li>

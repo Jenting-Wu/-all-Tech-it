@@ -16,10 +16,11 @@
 
     <!-- ↓↓↓ 內容開始 ↓↓↓ -->
     <?php
-    if (isset($_SESSION['email'])) {
+    if (isset($_SESSION['email']) && isset($_SESSION['user_name'])) {
         $sql = "SELECT `user_name`,`photo_sticker`,`email`
                 FROM `users` 
-                WHERE `email` = '{$_SESSION['email']}';";
+                WHERE `email` = '{$_SESSION['email']}'
+                AND `user_name` = '{$_SESSION['user_name']}';";
         $stmt = $pdo->query($sql);
         if ($stmt->rowCount() > 0) {
             foreach ($stmt->fetchAll() as $obj) {
@@ -36,6 +37,7 @@
                             <div class="member_level d-none d-lg-block">一般會員</div>
                         </div>
                     </div>
+                    <!-- </div> -->
         <?php
             }
         }
@@ -68,9 +70,9 @@
 
 
                 <!-- 現有input -->
-                <div class="member_input">
+                <div class="member_input d-block">
                     <form>
-                        <h5 class="d-none d-lg-block">現有會員資訊</h5>
+                        <h5 class="d-none d-lg-block">會員資訊</h5>
                         <hr>
                         <?php
                         if (isset($_SESSION['email'])) {
@@ -128,7 +130,7 @@
                     </form>
                     <br>
                     <form>
-                        <h5 class="d-none d-lg-block">更新會員資訊</h5>
+                        <h5 class="d-none d-lg-block">更新資訊</h5>
                         <hr>
 
 
