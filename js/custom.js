@@ -571,44 +571,109 @@ $(function () {
 
     // member_data_page -----------------------------------------------------
 
-
-
-
     //會員資料頁-儲存地址
-    $('.address_btn').click(function (event) {
-        event.preventDefault();
-        console.log("我想要儲存");
 
-        let input_username = $('input#exampleInputUser1');
-        let input_phonenumber = $('input#exampleInputPhone1');
-        let input_address = $('input#exampleInputAddress1');
+    function isValid() {
+        if ($('#inputA').val() !== '') {
 
-
-
-        let objUser = {
-            user_name: input_username.val(),
-            phone_number: input_phonenumber.val(),
-            address: input_address.val()
+            $('#inputA').addClass('is-valid');
         };
-        // POST
-        $.post('save_address.php', objUser, function (obj) {
-            // console.log(obj11111111);
-            if (obj.success) {
-                alert('儲存成功');
-                location.href = 'member_info1.php';
+        if ($('#inputB').val() !== '') {
+
+            $('#inputB').addClass('is-valid');
+        };
+        if ($('#inputC').val() !== '') {
+
+            $('#inputC').addClass('is-valid');
+        };
+        if ($('#inputD').val() !== '') {
+
+            $('#inputD').addClass('is-valid');
+        };
+        if ($('#inputE').val() !== '') {
+
+            $('#inputE').addClass('is-valid');
+        };
+    }
+
+    isValid();
+
+
+    function noAddress() {
+        Swal.fire(
+            "請輸入地址",
+            "",
+            "warning"
+        );
+    };
+    function trueAddress() {
+        Swal.fire(
+            "地址儲存成功",
+            "",
+            "success"
+        );
+    };
+
+    $('#btn_address').click(function (event) {
+        event.preventDefault();
+        let input_address = $('input#inputF');
+        let input_email = $('input#inputB');
+
+        let setobj = {
+            setAddress: input_address.val(),
+            setEmail: input_email.val()
+        };
+        console.log(setobj)
+        if (input_address.val() == '') {
+            noAddress();
+            return false;
+        };
+        $.post("save_address.php", setobj, function (obj) {
+            if (obj['success']) {
+
+                //成功訊息
+                trueAddress();
+
+                //當成功訊息執行同時，等數秒後，執行自訂程式
+                setTimeout(function () {
+                    location.reload();
+                }, 1000);
             } else {
-                console.log(1)
-                alert(obj.info);
+                // noAddress()
+                // alert(`${obj['info']}`);
             }
-
-        }, 'json');
-    })
-
-
-
+        }, 'json')
+    });
 });
 
 
+// $('.address_btn').click(function (event) {
+//     event.preventDefault();
+//     console.log("我想要儲存");
 
+//     let input_username = $('input#exampleInputUser1');
+//     let input_phonenumber = $('input#exampleInputPhone1');
+//     let input_address = $('input#exampleInputAddress1');
+
+
+
+//     let objUser = {
+//         user_name: input_username.val(),
+//         phone_number: input_phonenumber.val(),
+//         address: input_address.val()
+//     };
+//     // POST
+//     $.post('save_address.php', objUser, function (obj) {
+//         // console.log(obj11111111);
+//         if (obj.success) {
+//             alert('儲存成功');
+//             location.href = 'member_info1.php';
+//         } else {
+//             console.log(1)
+//             alert(obj.info);
+//         }
+
+//     }, 'json');
+// })
 
 

@@ -61,7 +61,7 @@ $mail->SetFrom("iamsophia0903@gmail.com", "SOPHIA");
 // $mail->AddReplyTo("reply-to-email@domain", "reply-to-name");
 // $mail->AddCC("cc-recipient-email@domain", "cc-recipient-name");
 $mail->Subject = "TECHIT-重設密碼";
-$content = "驗證碼: <a href='http://localhost/TECHIT/reset.php?email="
+$content = "驗證碼: <a href='http://localhost/all-tech-it/reset.php?email="
     . $objUser['email'] . "&verified_code=" . $objUser['verified_code']
     . "' target='_blank'>點擊並更新密碼</a>";
 $mail->MsgHTML($content);

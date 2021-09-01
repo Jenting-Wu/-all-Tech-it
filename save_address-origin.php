@@ -16,7 +16,10 @@ if (
 
     //  增加使用者資訊
     try {
-        $sql = "UPDATE users SET `address` = '$setAddress' WHERE `email`='$setEmail'";
+        $sql = "INSERT INTO `users`
+        (`address`,`email`,`created_at`,`updated_at`) 
+        VALUES 
+        ('$setAddress','$setEmail',current_timestamp(),current_timestamp())";
         $stmt = $pdo->query($sql);
 
         if ($stmt->rowCount() > 0) {
