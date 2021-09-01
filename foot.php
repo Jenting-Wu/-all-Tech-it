@@ -17,27 +17,27 @@
 
             <!-- footer_link 品牌專區 -->
             <p class="col ft_tt">
-                <a href="#">品牌專區</a>
+                <a href="./07-1.brand_list02.php">品牌專區</a>
             </p>
 
             <!-- footer_link 商品分類 -->
             <p class="col ft_tt">
-                <a href="#">商品分類</a>
+                <a href="product_list_01_smart.php?cate_id=10&sub_cate_id=21">商品分類</a>
             </p>
 
             <!-- footer_link 智慧專欄 -->
             <p class="col ft_tt">
-                <a href="#">智慧專欄</a>
+                <a href="article_list.php">智慧專欄</a>
             </p>
 
             <!-- footer_link 聯絡客服 -->
             <p class="col ft_tt">
-                <a href="#">聯絡客服</a>
+                <a href="contant.php">聯絡客服</a>
             </p>
 
             <!-- footer_link 會員資料 -->
             <p class="col ft_tt">
-                <a href="#">會員資料</a>
+                <a href="member_info1.php">會員資料</a>
             </p>
         </div>
 

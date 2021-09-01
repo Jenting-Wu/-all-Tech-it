@@ -84,11 +84,9 @@ $_SESSION['form']['recipient_comments'] = $_POST['recipient_comments'];
                                         <h4 class="right">NT$ <?= (int)$item['prod_price'] * (int)$item['prod_qty'] ?></h4>
                                     </div>
                                 </div>
-
-                            <?php } ?>
-
-
-                <?php }
+                <?php
+                            }
+                        }
                     }
                 }
                 ?>
@@ -119,6 +117,8 @@ $_SESSION['form']['recipient_comments'] = $_POST['recipient_comments'];
                     </div>
 
                 </div>
+
+
 
                 <h5 name="transport_payment">請選擇付款方式</h5>
                 <div class="select_tri">

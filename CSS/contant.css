@@ -1,0 +1,31 @@
+.wrap h4 {
+  text-align: center;
+}
+.container_self {
+  width: 50%;
+  margin: 50px auto;
+  padding-bottom: 30px;
+}
+.container_self > h5 {
+  margin-top: 50px;
+}
+.main {
+  display: flex;
+  justify-content: center;
+}
+.r_part {
+  margin-left: 50px;
+  border-bottom: 1px solid rgb(190, 190, 190);
+  /* width: 45%; */
+}
+@media screen and (max-width: 500px) {
+  .main {
+    flex-wrap: wrap;
+  }
+  .container_self {
+    width: 100%;
+  }
+  .r_part {
+    margin-left: 0px;
+  }
+}
