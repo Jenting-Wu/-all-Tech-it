@@ -478,8 +478,9 @@
                                 <div class="card_center">
 
                                     <!-- php : 商品圖片 -->
-                                    <img src="db_img/img_prod_thumbnail/<?= $obj['prod_thumbnail'] ?>" alt="">
-
+                                    <a href="product_detail.php?brand_id=<?= $obj['brand_id'] ?>&cate_id=<?= $_GET['cate_id'] ?>&sub_cate_id=<?= $_GET['sub_cate_id'] ?>&prod_id=<?= $obj['prod_id'] ?>">
+                                        <img src="db_img/img_prod_thumbnail/<?= $obj['prod_thumbnail'] ?>" alt="">
+                                    </a>
 
                                     <div class="r_rpart">
 

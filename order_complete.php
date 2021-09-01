@@ -85,8 +85,8 @@ $_SESSION['form']['recipient_comments'] = $_POST['recipient_comments'];
         <h6 class="right">如需修改訂單請 <span class="red"> 聯絡客服</span></h6>
 
         <div class="l_part">
-            <button class="back">查看訂單</button>
-            <button class="next">繼續購物</button>
+            <a href="member_info3.php"> <button class="back">查看訂單</button></a>
+            <a href="product_list_01_smart.php"><button class="next">繼續購物</button></a>
         </div>
     </div>
 </div>

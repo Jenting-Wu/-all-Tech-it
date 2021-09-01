@@ -76,7 +76,7 @@
 
                     <!-- 品牌專區 -->
                     <div class="hd_title_link t1">
-                        <a href="07-1.brand_list02.php">品牌專區</a>
+                        <a href="./07-1.brand_list02.php">品牌專區</a>
                     </div>
 
                     <!-- 商品分類 -->

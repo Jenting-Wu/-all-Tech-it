@@ -60,7 +60,7 @@
     <header>
         <nav class="navbar fixed-top hd_navbar">
             <!-- logo ------------------------>
-            <a href="01-index.html" class="d-none d-lg-block">
+            <a href="01-index.php" class="d-none d-lg-block">
                 <div class="hd_logo">
                     <img src="./img/logo-png.png" alt="">
                 </div>
@@ -84,7 +84,7 @@
 
                     <!-- 智慧專欄 -->
                     <div class="hd_title_link t3">
-                        <a href="#">智慧專欄</a>
+                        <a href="article_list.php">智慧專欄</a>
                     </div>
 
                     <!-- 窩的智慧 -->
@@ -99,7 +99,7 @@
 
                     <!-- 比較清單 -->
                     <div class="hd_icon_link i1">
-                        <a href="#">
+                        <a href="compare.php">
                             <!-- <img src="./img/icon_compare-list.svg" alt=""> -->
                             <svg class="svg_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37.51 37.51">
                                 <defs>
@@ -177,7 +177,7 @@
 
                     <!-- 會員登入 / 註冊 -->
                     <div class="hd_icon_link i4">
-                        <a href="#">
+                        <a href="member_info1.php">
                             <!-- <img src="./img/icon_member.svg" alt=""> -->
                             <svg class="svg_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42.76 45.4">
                                 <defs>
@@ -227,7 +227,7 @@
             </div>
 
             <!-- LOGO -->
-            <a href="01-index.html" class="d-lg-none">
+            <a href="01-index.php" class="d-lg-none">
                 <div class="hd_logo">
                     <img src="./img/logo-png.png" alt="">
                 </div>
@@ -257,7 +257,7 @@
                         <?php if (isset($_SESSION['user_name'])) { ?>
                             <?php echo $_SESSION['user_name'] ?>｜<a id="logout" class="btn btn-link">登出</a>
                         <?php } else { ?>
-                            <a href="#">登入</a>｜<a href="#">註冊</a>
+                            <a href="login.php">登入</a>｜<a href="signup.php">註冊</a>
                         <?php } ?>
                     </div>
 
@@ -286,7 +286,7 @@
 
                 <!-- 品牌專區 -->
                 <div class="hd_title_link">
-                    <a href="07-1.brand_list.php">品牌專區</a>
+                    <a href="07-1.brand_list02.php">品牌專區</a>
                 </div>
 
                 <!-- 智慧家電商品分類_level_0 -->
@@ -500,12 +500,12 @@
 
                 <!-- 智慧專欄 -->
                 <div class="hd_title_link">
-                    <a href="#">智慧專欄</a>
+                    <a href="article_list.php">智慧專欄</a>
                 </div>
 
                 <!-- 窩的智慧 -->
                 <div class="hd_title_link">
-                    <a href="#">窩的智慧</a>
+                    <a href="08.exhib-origin.php">窩的智慧</a>
                 </div>
 
             </div>
@@ -911,7 +911,7 @@
             $('.hd_toggler').addClass('d-none');
         });
 
-        // tog_lv_0 商品分類
+        // tog_lv_0 商品分類 : 智慧家電
         $('.tog_lv_0').click(function() {
             console.log('商品分類 click');
             if ($('.tog_lv_1').hasClass('d-none')) {
@@ -923,6 +923,21 @@
             // 清除項目點選效果
             $('.lv3-1,.lv3-2,.lv3-3,.lv3-4,.lv3-5').addClass('d-none');
             $('.lv2-1>p, .lv2-2>p, .lv2-3>p, .lv2-4>p, .lv2-5>p').css('color', '#5a5a5a');
+            // $('.tog_lv_0').css('color', 'white').css('background-color', 'wheat');
+        });
+
+        // tog_lv_0 商品分類 : AI機器人
+        $('.tog_lv_0_ai').click(function() {
+            console.log('商品分類 click');
+            if ($('.tog_lv_1_ai').hasClass('d-none')) {
+                $('.tog_lv_1_ai').removeClass('d-none');
+            } else {
+                $('.tog_lv_1_ai').addClass('d-none');
+            }
+
+            // 清除項目點選效果
+            // $('.lv3-1,.lv3-2,.lv3-3,.lv3-4,.lv3-5').addClass('d-none');
+            // $('.lv2-1>p, .lv2-2>p, .lv2-3>p, .lv2-4>p, .lv2-5>p').css('color', '#5a5a5a');
             // $('.tog_lv_0').css('color', 'white').css('background-color', 'wheat');
         });
 
