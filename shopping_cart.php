@@ -236,6 +236,10 @@ if (!$_SESSION['shopping_cart']) {
 <!-- JQ ----------------------------------->
 <script>
     //   this page
+    // this
+    $('.remove').click(function() {
+        $(this).parents('.shopp_list').remove();
+    })
     $('.del').click(function() {
         $('.full').show();
     })
