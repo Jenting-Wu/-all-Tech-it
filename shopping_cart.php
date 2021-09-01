@@ -64,10 +64,10 @@ if (!$_SESSION['shopping_cart']) {
                                                 <h5 class="title"><?= $item['prod_name'] ?></h5>
                                                 <img class="del" src="img/icon_trash.svg" alt="" data-index="<?= $index ?>">
                                             </div>
-                                            <div class="info_spec">
+                                            <!-- <div class="info_spec">
                                                 <h6 class="spec">規格 </h6>
                                                 <h6 class="colour"> 接PHP</h6>
-                                            </div>
+                                            </div> -->
                                             <div class="info_price">
                                                 <h6 class="price">單價 </h6>
                                                 <h6 class="price">NT </h6>
@@ -231,6 +231,10 @@ if (!$_SESSION['shopping_cart']) {
 <!-- JQ ----------------------------------->
 <script>
     //   this page
+    // this
+    $('.remove').click(function() {
+        $(this).parents('.shopp_list').remove();
+    })
     $('.del').click(function() {
         $('.full').show();
     })

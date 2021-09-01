@@ -32,7 +32,7 @@
         <header>
             <nav class="navbar fixed-top hd_navbar">
                 <!-- logo ------------------------>
-                <a href="#" class="d-none d-lg-block">
+                <a href="01-index.php" class="d-none d-lg-block">
                     <div class="hd_logo">
                         <img src="./img/logo-png.png" alt="">
                     </div>
@@ -46,22 +46,22 @@
 
                         <!-- 品牌專區 -->
                         <div class="hd_title_link t1">
-                            <a href="#">品牌專區</a>
+                            <a href="07-1.brand_list02.php">品牌專區</a>
                         </div>
 
                         <!-- 商品分類 -->
                         <div class="hd_title_link t2">
-                            <a href="#">商品分類</a>
+                            <a href="product_list_01_smart.php">商品分類</a>
                         </div>
 
                         <!-- 智慧專欄 -->
                         <div class="hd_title_link t3">
-                            <a href="#">智慧專欄</a>
+                            <a href="article_list.php">智慧專欄</a>
                         </div>
 
                         <!-- 窩的智慧 -->
                         <div class="hd_title_link t4">
-                            <a href="#">窩的智慧</a>
+                            <a href="08.exhib-origin.php">窩的智慧</a>
                         </div>
 
                     </div>
@@ -71,7 +71,7 @@
 
                         <!-- 比較清單 -->
                         <div class="hd_icon_link i1">
-                            <a href="#">
+                            <a href="compare.php">
                                 <!-- <img src="./img/icon_compare-list.svg" alt=""> -->
                                 <svg class="svg_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37.51 37.51">
                                     <defs>
@@ -96,7 +96,7 @@
 
                         <!-- 喜好清單 -->
                         <div class="hd_icon_link i2">
-                            <a href="#">
+                            <a href="follow.php">
                                 <!-- <img src="./img/icon_saved.svg" alt=""> -->
                                 <svg class="svg_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38.14 35.05">
                                     <defs>
@@ -118,9 +118,9 @@
                             </a>
                         </div>
 
-                        <!-- 會員登入 / 註冊 -->
+                        <!-- 會員有data -->
                         <div class="hd_icon_link i3">
-                            <a href="#">
+                            <a href="member_info1.php">
                                 <!-- <img src="./img/icon_member.svg" alt=""> -->
                                 <svg class="svg_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42.76 45.4">
                                     <defs>
@@ -145,7 +145,7 @@
 
                         <!-- 購物車 -->
                         <div class="hd_icon_link i4">
-                            <a href="#">
+                            <a href="shopping_cart.php">
                                 <!-- <img src="./img/icon_shopping-cart.svg" alt=""> -->
                                 <svg class="svg_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.28 39.27">
                                     <defs>
@@ -182,7 +182,7 @@
                 </div>
 
                 <!-- LOGO -->
-                <a href="#" class="d-lg-none">
+                <a href="01-index.php" class="d-lg-none">
                     <div class="hd_logo">
                         <img src="./img/logo-png.png" alt="">
                     </div>
@@ -190,7 +190,7 @@
 
                 <!-- 購物車 -->
                 <div class="hd_icon_link i4 d-lg-none">
-                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.28 39.27">
+                    <a href="shopping_cart.php"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.28 39.27">
                             <defs>
                                 <style>
                                     .cls-1 {
@@ -230,7 +230,7 @@
                     <li class="display_3"><a href="">掃地機器人</a></li>
                     <li class="display_3"><a href="">掃地機器人</a></li>
                 </ul>
-                <a href="product_list_01_smart.php">
+                <a href="./product_list_02_ai.php?cate_id=1&sub_cate_id=3">
                     <p class="display_2">前往商場 >></p>
                 </a>
             </div>
@@ -244,7 +244,7 @@
                     <li class="display_3"><a href="">娛樂與教育</a></li>
                     <li class="display_3"><a href="">智能周邊</a></li>
                 </ul>
-                <a href="product_list_02_ai.php">
+                <a href="./product_list_01_smart.php?cate_id=10&sub_cate_id=21">
                     <p class="display_2 ">前往商場 >></p>
                 </a>
             </div>

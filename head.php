@@ -259,7 +259,7 @@
                         <?php if (isset($_SESSION['user_name'])) { ?>
                             <?php echo $_SESSION['user_name'] ?>｜<a id="logout" class="btn btn-link">登出</a>
                         <?php } else { ?>
-                            <a href="#">登入</a>｜<a href="#">註冊</a>
+                            <a href="login.php">登入</a>｜<a href="signup.php">註冊</a>
                         <?php } ?>
                     </div>
 
@@ -288,11 +288,12 @@
 
                 <!-- 品牌專區 -->
                 <div class="hd_title_link">
-                    <a href="07-1.brand_list.php">品牌專區</a>
+                    <a href="07-1.brand_list02.php">品牌專區</a>
                 </div>
 
                 <!-- 智慧家電商品分類_level_0 -->
                 <div class="hd_title_link tog_lv_0">
+                    <!-- 這邊不能給連結，下拉會打不開 -->
                     <a href="#">智慧家電</a>
                 </div>
 
@@ -468,6 +469,7 @@
 
                 <!-- AI機器人商品分類_level_0 -->
                 <div class="hd_title_link  tog_lv_0_ai">
+                    <!-- 這邊不能給連結，下拉會打不開 -->
                     <a href="#">AI機器人</a>
                 </div>
 
@@ -507,7 +509,7 @@
 
                 <!-- 窩的智慧 -->
                 <div class="hd_title_link">
-                    <a href="#">窩的智慧</a>
+                    <a href="08.exhib-origin.php">窩的智慧</a>
                 </div>
 
             </div>

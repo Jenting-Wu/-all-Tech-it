@@ -44,7 +44,7 @@ if (
             $obj['info'] = '注冊成功';
 
             // 註冊成功時，額外新增優惠券代碼，供結帳時使用
-            $coupon_code = md5(date('YmdHis'));
+            $coupon_code = "TECTIT0903";
             $sqlCoupon = "INSERT INTO `coupon` (`email`, `code`, `percentage`) 
                   VALUES ('{$_POST['email']}', '{$coupon_code}', 0.8)";
             $pdo->query($sqlCoupon);

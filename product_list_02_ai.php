@@ -74,12 +74,13 @@
             <div class="filter">
                 <div class="dropdown">
                     <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        最新上架
+                        排序方式
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">熱門程度</a>
-                        <a class="dropdown-item" href="#">低價優先</a>
-                        <a class="dropdown-item" href="#">評價最高</a>
+                        <a class="dropdown-item _order" href="#" data-order="popular">熱門程度</a>
+                        <a class="dropdown-item _order" href="#" data-order="price_asc">低價優先</a>
+                        <a class="dropdown-item _order" href="#" data-order="price_desc">高價優先</a>
+                        <a class="dropdown-item _order" href="#" data-order="comment">評價最高</a>
                     </div>
                 </div>
             </div>
@@ -253,7 +254,7 @@
 
                                                 <button class="compare" data-prod-id="<?= $obj['prod_id'] ?>" alt=""><img src="img/icon_compare-list.svg" alt="">加入比較</button>
 
-                                                <button class="saved" data-prod-id="<?= $obj['prod_id'] ?>" data-prod-name="<?= $obj['prod_name'] ?>" data-prod-thumbnail="<?= $obj['prod_thumbnail'] ?>" data-prod-price="<?= $obj['prod_price'] ?>"><img src="./img/icon_saved.svg" alt=""></button>
+                                                <button class="saved" data-prod-id="<?= $obj['prod_id'] ?>" data-prod-name="<?= $obj['prod_name'] ?>" data-prod-thumbnail="<?= $obj['prod_thumbnail'] ?>" data-prod-price="<?= $obj['prod_price'] ?>" data-brand_id="<?= $obj['brand_id'] ?>"><img src="./img/icon_saved.svg" alt=""></button>
                                             </div>
 
                                             <!-- php : 商品名稱 -->
@@ -282,7 +283,7 @@
                                                 <p class="price">$<?= $obj['prod_price'] ?></p>
 
                                                 <!-- 加入購物車 -->
-                                                <button class="joincart" data-prod-id="<?= $obj['prod_id'] ?>" data-prod-name="<?= $obj['prod_name'] ?>" data-prod-thumbnail="<?= $obj['prod_thumbnail'] ?>" data-prod-price="<?= $obj['prod_price'] ?>">
+                                                <button class="joincart" data-prod-id="<?= $obj['prod_id'] ?>" data-prod-name="<?= $obj['prod_name'] ?>" data-prod-thumbnail="<?= $obj['prod_thumbnail'] ?>" data-prod-price="<?= $obj['prod_price'] ?>" data-brand_id="<?= $obj['brand_id'] ?>">
                                                     加入購物車</button>
                                             </div>
 
@@ -537,6 +538,33 @@
             $('div.product').fadeIn();
         }
     });
+
+    //排序方式
+    $(document).on('click', 'a._order', function(event) {
+        event.preventDefault();
+
+        let a = $(this);
+        let order = a.attr('data-order')
+
+        let objQS = new URLSearchParams(location.search);
+
+        let query_string = ``;
+        if (objQS.has('cate_id')) {
+            query_string += `cate_id=${objQS.get('cate_id')}&`;
+        }
+        if (objQS.has('sub_cate_id')) {
+            query_string += `sub_cate_id=${objQS.get('sub_cate_id')}&`;
+        }
+
+        if (order !== '') {
+            query_string += `order=${order}`;
+        }
+
+        location.href = `product_list_01_smart.php?${query_string}`;
+
+
+        // alert(objQS.get(''));
+    }); +
 </script>
 
 <!-- sweet alert -->
