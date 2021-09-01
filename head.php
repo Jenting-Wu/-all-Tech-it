@@ -507,7 +507,7 @@
 
                 <!-- 窩的智慧 -->
                 <div class="hd_title_link">
-                    <a href="#">窩的智慧</a>
+                    <a href="08.exhib-origin.php">窩的智慧</a>
                 </div>
 
             </div>
