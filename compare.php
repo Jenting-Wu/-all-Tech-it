@@ -402,8 +402,22 @@ if (!isset($_SESSION['data_compare'])) {
     })
 </script>
 
+<SCript>
+    let moveWidth = $('.cate_area_web').width();
+    console.log(moveWidth)
+    $('.cate_wrap_right_arrow_area').click(function() {
+        event.preventDefault()
+        $('.cate_area_web ul').animate({
+            transform: `translateX(${moveWidth} +px)`
+        })
+    })
+</SCript>
+
 <script>
-    // ------------------------ 雷達卡片 收合展開 ------------------------
+    // ------------------------ [雷達卡片 收合展開 ------------------------
+    $(document).ready(function() {
+        $('.card_wrap').css('width', '30px');
+    })
     $('.fixed_left_arrow_area').hide();
     // 卡片收合
     $('.fixed_right_arrow_area').click(function(event) {

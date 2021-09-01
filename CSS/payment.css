@@ -94,10 +94,13 @@ select:focus {
 .product_info {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
+  
 }
 
 .product_info img{
-  width: 20%;
+  width: 100%;
+  height: 100%;
 }
 
 .l_part {
@@ -117,7 +120,7 @@ select:focus {
 h4.right {
   text-align: right;
   color: #fa8873;
-  font-size: 24px;
+  font-size: 1.5rem;
   margin: 0 0 10px 0;
   font-weight: 600;
   letter-spacing: .1rem;
@@ -162,6 +165,10 @@ select {
   display: none;
   margin-top: 50px;
 }
+#credit{
+  margin-top: 1rem;
+}
+
 .invoice_type {
   display: flex;
   justify-content: flex-start;
@@ -259,14 +266,24 @@ form input[type="text"] {
   h6 {
     font-size: 16px !important;
   }
-  .right {
-    font-size: 22px;
+
+  h4.right {
+    font-size: 1rem;
+    margin-top: .5rem;
   }
+
+
+  form input[type="text"] {
+    height: auto;
+}
 
   .product_info h4 {
     margin: 20px 0;
     font-size: 20px;
   }
+  .list {
+    margin-bottom: 0;
+}
   .product_list {
     margin-top: 20px;
   }
@@ -285,4 +302,5 @@ form input[type="text"] {
   .invoice_type .tri {
     left: 191px;
   }
+
 }

@@ -36,7 +36,7 @@
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 0.4rem;
-    font-family: 'Fira Sans', sans-serif;
+    /* font-family: 'Fira Sans', sans-serif; */
 }
 .display_title_2{
     font-size: 1rem;
@@ -970,7 +970,7 @@ section{
 /* 舒涵的卡片樣式 */
 
 .choose2{
-    margin-top: -8%;
+    margin-top: 0%;
 }
 .section_4 .item_wrap{
     width: 22%;
@@ -1105,9 +1105,9 @@ section{
 
     .display_title{
         font-size: 1.7rem;
-        font-weight: 500;
+        font-weight: 700;
         letter-spacing: 0.4rem;
-        font-family: 'Fira Sans', sans-serif;
+        /* font-family: 'Fira Sans', sans-serif; */
     }
     .display_title_2{
         font-size: 1.2rem;

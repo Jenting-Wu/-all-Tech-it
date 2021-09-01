@@ -243,6 +243,13 @@ ul.slider_dots .dots {
     overflow-x: scroll;
     align-items: center;
 }
+/* scrollbar style*/
+.select_area .img_area::-webkit-scrollbar { width: 0;}
+/* .cate_area_web::-webkit-scrollbar-track { background: rgb(211, 211, 211); }
+.cate_area_web::-webkit-scrollbar-track-piece{ background:#ccc ; }
+.cate_area_web::-webkit-scrollbar-thumb { background:rgb(124, 124, 124); }
+.cate_area_web::-webkit-scrollbar-thumb:hover { background: var(--main-orange); } */
+
 
 
 .plus {
@@ -250,6 +257,10 @@ ul.slider_dots .dots {
     padding: 4rem;
     background: #efefef;
     margin-right: 3rem;
+}
+
+.img9{
+    opacity: .3;
 }
 
 .select_area ul.img_wrap {
@@ -392,7 +403,7 @@ ul.slider_dots .dots {
                 margin-top: 3%;
             }
             .cate_area_title h3{
-                font-size: 1.876rem;
+                font-size: 1.5rem;
                 letter-spacing: 4px;
                 font-weight:700;
                 line-height: 2rem;
@@ -427,6 +438,14 @@ ul.slider_dots .dots {
                 overflow-y: hidden;
                 overflow-x: scroll;
             }
+
+            /* scrollbar style*/
+            .cate_area_web::-webkit-scrollbar { width: 5px; height: 7px;}
+            .cate_area_web::-webkit-scrollbar-track { background: rgb(211, 211, 211); }
+            .cate_area_web::-webkit-scrollbar-track-piece{ background:#ccc ; }
+            .cate_area_web::-webkit-scrollbar-thumb { background:rgb(124, 124, 124); }
+            .cate_area_web::-webkit-scrollbar-thumb:hover { background: var(--main-orange); }
+
             .cate_area_web ul{
                 /* outline: 1px solid yellow; */
                 list-style: none;
@@ -485,7 +504,7 @@ ul.slider_dots .dots {
             /* -------- 快速比較區 (web_only) -------- */
             .card_wrap{
                 position: fixed;
-                bottom: 20px;
+                bottom: 20%;
                 left:0;
                 z-index: 100;
                 width: 70vw;
