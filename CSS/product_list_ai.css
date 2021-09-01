@@ -245,6 +245,13 @@ body {
     margin-right: auto;
 }
 
+h5.card-title{
+    max-width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 .firstline .compare, .firstline .saved{
     border: none;
     background: transparent;
