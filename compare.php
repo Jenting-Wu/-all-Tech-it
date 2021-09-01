@@ -402,64 +402,54 @@ if (!isset($_SESSION['data_compare'])) {
     })
 </script>
 
+
+<!--arrow  -->
 <script>
-    let moveWidth = $('.cate_area_web ul li').width() * 3;
-    let imgMoveWidth = $('.select_area ul li').width();
-    console.log(moveWidth)
-    console.log(imgMoveWidth)
+    let thisList = 0;
 
     $('.cate_wrap_right_arrow_area').click(function() {
-        event.preventDefault()
-
-        $('.cate_area_web ul').css(
-            'transform', `translateX(-${moveWidth}px)`);
-
-        $('.cate_wrap_left_arrow_area').click(function() {
-            event.preventDefault()
-            $('.select_area ul').css(
-                'transform', `translateX(${moveWidth}px)`)
-        })
-
-        // 監聽transition
-        function hasMoved() {
-            console.log('Transition 已完成');
-            $('.cate_wrap_left_arrow_area').click(function() {
-                event.preventDefault()
-                $('.cate_area_web ul').css(
-                    'transform', `translateX(0px)`)
-            })
-        }
-        var element = document.querySelector('.cate_area_web ul');
-        element.addEventListener("transitionend", hasMoved, false);
+        event.preventDefault();
+        thisList = thisList + 1;
+        moveDown()
     })
-
-
     $('.select_right_arrow_area').click(function() {
-        event.preventDefault()
-
-        $('.select_area ul').css(
-            'transform', `translateX(-${imgMoveWidth}px)`);
-
-        $('.select_left_arrow_area').click(function() {
-            event.preventDefault()
-            $('.select_area ul').css(
-                'transform', `translateX(${imgMoveWidth}px)`)
-        })
-
-        // 監聽transition
-        function hasMoved() {
-            console.log('Transition 已完成');
-            $('.select_left_arrow_area').click(function() {
-                event.preventDefault()
-                $('.select_area ul').css(
-                    'transform', `translateX(0px)`)
-            })
-        }
-        var element = document.querySelector('.select_area ul');
-        element.addEventListener("transitionend", hasMoved, false);
+        event.preventDefault();
+        thisList = thisList + 1;
+        imgMoveDown()
     })
+
+
+    $('.cate_wrap_left_arrow_area').click(function() {
+        event.preventDefault();
+        thisList = thisList - 1;
+        moveDown()
+
+        if (thisList === 0) {
+            $('.cate_area_web ul').css('transform', `translateX(0px)`)
+        }
+    })
+    $('.select_left_arrow_area').click(function() {
+        event.preventDefault();
+        thisList = thisList - 1;
+        imgMoveDown()
+    })
+
+    function moveDown() {
+        const moveWidth = $('.cate_area_web ul li').width();
+        const positionX = thisList * -1 * moveWidth;
+        $('.cate_area_web ul').css(
+            'transform', `translateX(${positionX}px)`);
+    }
+
+    function imgMoveDown() {
+        const imgMoveWidth = $('.select_area ul li').width();
+        const positionImgX = thisList * -1 * imgMoveWidth;
+        $('.select_area ul').css(
+            'transform', `translateX(${positionImgX}px)`);
+    }
 </script>
 <!--  -->
+
 
 <script>
     // ------------------------ [雷達卡片 收合展開 ------------------------
