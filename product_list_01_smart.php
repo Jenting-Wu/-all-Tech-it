@@ -74,12 +74,13 @@
             <div class="filter">
                 <div class="dropdown">
                     <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        最新上架
+                        排序方式
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">熱門程度</a>
-                        <a class="dropdown-item" href="#">低價優先</a>
-                        <a class="dropdown-item" href="#">評價最高</a>
+                        <a class="dropdown-item _order" href="#" data-order="popular">熱門程度</a>
+                        <a class="dropdown-item _order" href="#" data-order="price_asc">低價優先</a>
+                        <a class="dropdown-item _order" href="#" data-order="price_desc">高價優先</a>
+                        <a class="dropdown-item _order" href="#" data-order="comment">評價最高</a>
                     </div>
                 </div>
             </div>
@@ -224,9 +225,14 @@
 
                             <?php
                             $sql = "SELECT * FROM `products` 
-                                        INNER JOIN `brands`
-                                        ON `products`.`brand_id`=`brands`.`brand_id`
-                                        WHERE `cate_id` = {$_GET['sub_cate_id']} ";
+                                    INNER JOIN `brands`
+                                    ON `products`.`brand_id`=`brands`.`brand_id`
+                                    WHERE `cate_id` = {$_GET['sub_cate_id']} ";
+                            if (isset($_GET['order']) && $_GET['order'] == 'price_asc') {
+                                $sql .= "ORDER BY `products`.`prod_price` ASC ";
+                            } else if (isset($_GET['order']) && $_GET['order'] == 'price_desc') {
+                                $sql .= "ORDER BY `products`.`prod_price` DESC ";
+                            }
 
 
 
@@ -472,18 +478,19 @@
                                 <div class="card_center">
 
                                     <!-- php : 商品圖片 -->
-                                    <img src="db_img/img_prod_thumbnail/<?= $obj['prod_thumbnail'] ?>" alt="">
-
+                                    <a href="product_detail.php?brand_id=<?= $obj['brand_id'] ?>&cate_id=<?= $_GET['cate_id'] ?>&sub_cate_id=<?= $_GET['sub_cate_id'] ?>&prod_id=<?= $obj['prod_id'] ?>">
+                                        <img src="db_img/img_prod_thumbnail/<?= $obj['prod_thumbnail'] ?>" alt="">
+                                    </a>
 
                                     <div class="r_rpart">
 
                                         <!-- php : 加入喜好清單 -->
-                                        <div class="m_button2 mr-2" data-prod-id="<?= $obj['prod_id'] ?>" alt="">
+                                        <div class="m_button2 mr-2 saved" data-prod-id="<?= $obj['prod_id'] ?>" data-prod-name="<?= $obj['prod_name'] ?>" data-prod-thumbnail="<?= $obj['prod_thumbnail'] ?>" data-prod-price="<?= $obj['prod_price'] ?>" data-brand_id="<?= $obj['brand_id'] ?>">
                                             <img src="./img/icon_saved.svg" alt="">
                                         </div>
 
                                         <!-- php : 加入比較列表 -->
-                                        <div class="m_button2 mr-3" data-prod-id="<?= $obj['prod_id'] ?>" data-prod-name="<?= $obj['prod_name'] ?>" data-prod-thumbnail="<?= $obj['prod_thumbnail'] ?>" data-prod-price="<?= $obj['prod_price'] ?>"><img src="./img/icon_compare-list.svg" alt="">
+                                        <div class="m_button2 mr-3 compare" data-prod-id="<?= $obj['prod_id'] ?>" data-prod-name="<?= $obj['prod_name'] ?>" data-prod-thumbnail="<?= $obj['prod_thumbnail'] ?>" data-prod-price="<?= $obj['prod_price'] ?>"><img src="./img/icon_compare-list.svg" alt="">
                                             比較</div>
 
 
@@ -493,7 +500,7 @@
                                             <div class="m_price mb-2">$<?= $obj['prod_price'] ?></div>
 
                                             <!-- php : 加入購物車 -->
-                                            <button class="m_button1" data-prod-id="<?= $obj['prod_id'] ?>" data-prod-name="<?= $obj['prod_name'] ?>" data-prod-thumbnail="<?= $obj['prod_thumbnail'] ?>" data-prod-price="<?= $obj['prod_price'] ?>">
+                                            <button class="m_button1 joincart" data-brand_id="<?= $obj['brand_id'] ?>" data-prod-id="<?= $obj['prod_id'] ?>" data-prod-name="<?= $obj['prod_name'] ?>" data-prod-thumbnail="<?= $obj['prod_thumbnail'] ?>" data-prod-price="<?= $obj['prod_price'] ?>">
                                                 加入購物車</button>
                                         </div>
 
@@ -539,6 +546,33 @@
         } else {
             $('div.product').fadeIn();
         }
+    });
+
+    //排序方式
+    $(document).on('click', 'a._order', function(event) {
+        event.preventDefault();
+
+        let a = $(this);
+        let order = a.attr('data-order')
+
+        let objQS = new URLSearchParams(location.search);
+
+        let query_string = ``;
+        if (objQS.has('cate_id')) {
+            query_string += `cate_id=${objQS.get('cate_id')}&`;
+        }
+        if (objQS.has('sub_cate_id')) {
+            query_string += `sub_cate_id=${objQS.get('sub_cate_id')}&`;
+        }
+
+        if (order !== '') {
+            query_string += `order=${order}`;
+        }
+
+        location.href = `product_list_01_smart.php?${query_string}`;
+
+
+        // alert(objQS.get(''));
     });
 </script>
 

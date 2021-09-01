@@ -26,13 +26,25 @@
     visibility: hidden;
     line-height: 0;
     height: 0; }
+
+
   .owl-carousel .owl-stage-outer {
     position: relative;
     overflow: hidden;
     height: 40vh;
-    
     /* fix for flashing background */
     -webkit-transform: translate3d(0px, 0px, 0px); }
+
+    @media screen and (max-width: 375px){
+      .owl-carousel .owl-stage-outer {
+        position: relative;
+        overflow: hidden;
+        height: auto;
+        /* fix for flashing background */
+        -webkit-transform: translate3d(0px, 0px, 0px); }
+    }
+
+
   .owl-carousel .owl-wrapper,
   .owl-carousel .owl-item {
     -webkit-backface-visibility: hidden;

@@ -19,10 +19,10 @@
 <div class="promotion">
     新註冊會員可現領100折價券，現領現用！
 </div>
-<h5 class="head">註冊 TECH IT 帳號</h5>
+<h5 class="head display_title">註冊 TECH IT 帳號</h5>
 <div class="main_part">
     <div class="l_part">
-        <img src="./img/icon_member.svg" class="upload_img">
+        <img src="./img/member_none@2x.png" class="upload_img">
         <h5 class="click_me"><u>選擇大頭貼</u> </h5>
         <div class="full">
             <div class="user_img">

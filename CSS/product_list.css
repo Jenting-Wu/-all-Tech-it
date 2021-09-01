@@ -238,6 +238,13 @@
     margin-right: auto;
 }
 
+h5.card-title{
+    max-width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 .mainpart .card-body {
     display: flex;
     justify-content: space-between;

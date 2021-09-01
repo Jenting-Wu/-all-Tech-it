@@ -1,3 +1,11 @@
+:root {
+  --button-inner: inset 0px 5px 8px #dededea3;
+  --button-outer: 5px 5px 15px #bebebeab;
+  --grey-text: #7b7b7b;
+  --main-orange: #fa8873;
+  --main-purple: #5d5d71;
+}
+
 body {
   margin: 0px;
   box-sizing: border-box;
@@ -12,6 +20,16 @@ body {
   margin: 0px auto;
   align-items: center;
 }
+
+h5,
+h6 {
+  letter-spacing: 0.1rem;
+}
+h5 {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
 .circle {
   width: 30px;
   height: 30px;
@@ -27,16 +45,21 @@ body {
   height: 50px;
 }
 .circle h6 {
-  margin-top: 50px;
+  margin-top: 60px;
   text-align: center;
+  width: 85px;
+  /* TEXT-ALIGN: CENTER; */
+  /* MARGIN: 58px AUTO; */
+  margin-left: -1rem;
 }
 .container {
-  width: 600px !important;
+  width: 600px;
   margin: 0px auto;
   min-height: 500px;
 }
 .container h4 {
   text-align: center;
+  margin-top: 2rem;
 }
 .option_method {
   margin-top: 100px;
@@ -60,6 +83,7 @@ select {
 .info {
   display: none;
 }
+
 .tri {
   width: 40px;
   height: 100%;
@@ -67,7 +91,7 @@ select {
   background-color: #a4a0cc;
   position: absolute;
   top: 0;
-  left: 132px;
+  right: 0;
   pointer-events: none;
   background-image: url(../img/angle-down-solid.svg);
   color: white;
@@ -77,6 +101,7 @@ select {
   background-size: 30%;
   transition: all 0.4s;
 }
+
 .tri::after {
   transform: rotateY(180deg);
 }
@@ -85,18 +110,20 @@ select {
   margin: 30px 0 30px 0;
 }
 .info_card {
-  width: 600px;
   margin: 0px auto;
   border: 1px;
-  box-shadow: 1px 1px 11px #9d9d9d;
+  box-shadow: var(--button-outer);
   padding: 20px 30px;
   border-radius: 3px;
+  background-color: #ffffff59;
 }
+
 input[type="text"] {
   width: 80%;
   height: 40px;
   font-size: 20px;
   outline: none;
+  border: 1px solid #ccc;
 }
 
 .group {
@@ -122,14 +149,17 @@ input[type="checkbox"] {
   justify-content: space-between;
   margin: 20px 0 50px;
 }
-#logistics {
-  width: 30%;
+#logistics,
+#logistics1 {
+  width: 100%;
   height: 40px;
   padding-left: 20px;
+  border: 2px;
 }
 textarea {
   width: 80%;
   height: 50px;
+  border: 1px solid #ccc;
 }
 .back {
   background-color: #e8e8e8;
@@ -138,7 +168,13 @@ textarea {
   border-radius: 10px;
   border: 0px;
   color: gray;
-  box-shadow: 2px 4px 7px #9d9d9d;
+  /* box-shadow: 2px 4px 7px #9d9d9d; */
+  text-align: center;
+  padding-top: 0.8rem;
+}
+a:hover.back {
+  color: #ffffff;
+  text-decoration: none;
 }
 .next {
   background-color: #fa8873;
@@ -154,8 +190,12 @@ textarea {
 /* rwd */
 @media screen and (max-width: 500px) {
   .container {
-    width: 100% !important;
+    width: 100%;
     margin: 0px;
+  }
+
+  h4 {
+    margin-top: 3rem;
   }
   .circle > h6 {
     font-size: 12px;
@@ -179,5 +219,9 @@ textarea {
 
   input[type="text"] {
     font-size: 16px;
+  }
+
+  #logistics {
+    padding-left: 0;
   }
 }

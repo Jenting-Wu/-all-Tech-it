@@ -245,7 +245,7 @@
     });
     // this
     $('.del_follow').click(function() {
-        $(this).parents('.col-md-4.col-12').remove();
+        $(this).parents('.col-md-3.col-12').remove();
     })
 
 
