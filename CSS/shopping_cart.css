@@ -1,10 +1,10 @@
 /* button css */
-:root{
-  --button-inner:inset 0px 5px 8px #dededea3;
-  --button-outer:5px 5px 15px #bebebeab;
-  --grey-text:#7B7B7B;
-  --main-orange:#FA8873;
-  --main-purple:#5D5D71;
+:root {
+  --button-inner: inset 0px 5px 8px #dededea3;
+  --button-outer: 5px 5px 15px #bebebeab;
+  --grey-text: #7b7b7b;
+  --main-orange: #fa8873;
+  --main-purple: #5d5d71;
 }
 
 h5 {
@@ -13,12 +13,11 @@ h5 {
 h6 {
   font-size: 14px !important;
 }
-body  h5,body h6{
-  letter-spacing: .1rem;
+body h5,
+body h6 {
+  letter-spacing: 0.1rem;
 }
-
-
-a{
+a {
   color: var(--grey-text);
 }
 /*  */
@@ -89,7 +88,7 @@ input[type="checkbox"] {
   /* border-bottom: 1px solid black; */
   width: 100%;
   margin: 50px auto;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
 }
 .list_head {
   display: flex;
@@ -138,10 +137,10 @@ input[type="checkbox"] {
   justify-content: space-between;
 }
 
-.info_price .price:nth-child(2){
+.info_price .price:nth-child(2) {
   margin-left: auto;
 }
-.single_price{
+.single_price {
   margin: 0;
 }
 
@@ -166,15 +165,14 @@ input[type="checkbox"] {
 .del,
 #remove {
   width: 18px;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
 .remove {
   display: flex;
   align-items: center;
   color: #737373;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
 }
-
 
 /* promotion */
 .promotion {
@@ -182,8 +180,8 @@ input[type="checkbox"] {
   padding: 10px 10px;
   display: flex;
   align-items: center;
-  font-size: .7rem;
-  color:var(--grey-text) ;
+  font-size: 0.7rem;
+  color: var(--grey-text);
 }
 .promotion > p {
   margin: 0px;
@@ -228,16 +226,19 @@ input[type="checkbox"] {
   margin-top: 20px;
 }
 input[type="text"] {
-  width: 110px;
+  width: 200px;
   border-radius: 7px;
   border: 1px solid #b7b7b7;
+}
+#check_coupon_code {
+  text-align: right;
 }
 .amount_promo {
   background-color: #ffd3cb6b;
   padding: 5px 10px;
   text-align: center;
-  font-size: .8rem;
-  letter-spacing: .1rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
 }
 .amount_footer {
   border-top: 1px solid gray;
@@ -305,7 +306,7 @@ input[type="text"] {
     display: none;
     background-color: #fafafa;
   }
-  .m_footer{
+  .m_footer {
     display: none;
   }
 }
