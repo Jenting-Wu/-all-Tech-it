@@ -253,7 +253,7 @@
 
                                                 <button class="compare" data-prod-id="<?= $obj['prod_id'] ?>" alt=""><img src="img/icon_compare-list.svg" alt="">加入比較</button>
 
-                                                <button class="saved" data-prod-id="<?= $obj['prod_id'] ?>" data-prod-name="<?= $obj['prod_name'] ?>" data-prod-thumbnail="<?= $obj['prod_thumbnail'] ?>" data-prod-price="<?= $obj['prod_price'] ?>"><img src="./img/icon_saved.svg" alt=""></button>
+                                                <button class="saved" data-prod-id="<?= $obj['prod_id'] ?>" data-prod-name="<?= $obj['prod_name'] ?>" data-prod-thumbnail="<?= $obj['prod_thumbnail'] ?>" data-prod-price="<?= $obj['prod_price'] ?>" data-brand_id="<?= $obj['brand_id'] ?>"><img src="./img/icon_saved.svg" alt=""></button>
                                             </div>
 
                                             <!-- php : 商品名稱 -->
@@ -282,7 +282,7 @@
                                                 <p class="price">$<?= $obj['prod_price'] ?></p>
 
                                                 <!-- 加入購物車 -->
-                                                <button class="joincart" data-prod-id="<?= $obj['prod_id'] ?>" data-prod-name="<?= $obj['prod_name'] ?>" data-prod-thumbnail="<?= $obj['prod_thumbnail'] ?>" data-prod-price="<?= $obj['prod_price'] ?>">
+                                                <button class="joincart" data-prod-id="<?= $obj['prod_id'] ?>" data-prod-name="<?= $obj['prod_name'] ?>" data-prod-thumbnail="<?= $obj['prod_thumbnail'] ?>" data-prod-price="<?= $obj['prod_price'] ?>" data-brand_id="<?= $obj['brand_id'] ?>">
                                                     加入購物車</button>
                                             </div>
 
