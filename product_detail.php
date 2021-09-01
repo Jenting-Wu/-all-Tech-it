@@ -20,26 +20,32 @@
 
     <!-- path：路徑 -->
     <p class="path">
-
         目前位置：&ensp;
 
         <!-- cate_id_0 -->
         <?php
         if (isset($_GET['cate_id'])) {
-            $sql = "SELECT `cate_id`, cate_name FROM categories WHERE cate_id ={$_GET['cate_id']}";
+            $sql = "SELECT `cate_id`, `cate_name` FROM `categories` WHERE `cate_id` ={$_GET['cate_id']}";
             $obj = $pdo->query($sql)->fetch();
+            if ($_GET['cate_id'] == 1) {
         ?>
-            <a href="#"><?= $obj['cate_name'] ?></a>
-            &ensp;
-        <?php
+                <a href="product_list_02_ai.php?cate_id=1"><?= $obj['cate_name'] ?></a>
+                &ensp;
+            <?php
+            } else {
+            ?>
+                <a href="product_list_01_smart.php?cate_id=<?= $_GET['cate_id'] ?>"><?= $obj['cate_name'] ?></a>
+                &ensp;
+            <?php
+            }
         } else if (isset($_GET['prod_id'])) {
-            $sql = "SELECT `prod_id`, brand_name , `products`.`brand_id` 
-            FROM brands 
-            INNER JOIN products
+            $sql = "SELECT `prod_id`, `brand_name` , `products`.`brand_id` 
+            FROM `brands` 
+            INNER JOIN `products`
             ON `brands`.`brand_id`=`products`.`brand_id` 
-            WHERE prod_id ={$_GET['prod_id']}";
+            WHERE `prod_id` ={$_GET['prod_id']}";
             $obj = $pdo->query($sql)->fetch();
-        ?>
+            ?>
             <a href="07-2.brand_list_item.php?brand_id=<?= $obj['brand_id'] ?>"><?= $obj['brand_name'] ?></a>
             &ensp;
 
@@ -51,22 +57,29 @@
         <!-- 商品分類 -->
         <?php
         if (isset($_GET['sub_cate_id'])) {
-            $sql = "SELECT `cate_id`, cate_name FROM categories WHERE cate_id ={$_GET['sub_cate_id']}";
+            $sql = "SELECT `cate_id`, `cate_name` FROM `categories` WHERE `cate_id` ={$_GET['sub_cate_id']}";
             $obj = $pdo->query($sql)->fetch();
+            if ($_GET['cate_id'] == 1) {
         ?>
-            >&ensp;
-            <a href="#"><?= $obj['cate_name'] ?></a>
-        <?php
+                >&ensp;
+                <a href="product_list_02_ai.php?cate_id=1&sub_cate_id=<?= $_GET['sub_cate_id'] ?>"><?= $obj['cate_name'] ?></a>
+            <?php
+            } else {
+            ?>
+                >&ensp;
+                <a href="product_list_01_smart.php?cate_id=<?= $_GET['cate_id'] ?>&sub_cate_id=<?= $_GET['sub_cate_id'] ?>"><?= $obj['cate_name'] ?></a>
+            <?php
+            }
         } else if (isset($_GET['prod_id'])) {
-            $sql = "SELECT `products`.`cate_id`, cate_name , prod_id ,`products`.`brand_id`
-    FROM categories 
-    INNER JOIN products
-    ON `categories`.`cate_id`=`products`.`cate_id`
-    INNER JOIN brands
-    ON `brands`.`brand_id`=`products`.`brand_id`  
-    WHERE prod_id ={$_GET['prod_id']}";
+            $sql = "SELECT `products`.`cate_id`, `cate_name` , `prod_id` ,`products`.`brand_id`
+                    FROM `categories` 
+                    INNER JOIN `products`
+                    ON `categories`.`cate_id`=`products`.`cate_id`
+                    INNER JOIN `brands`
+                    ON `brands`.`brand_id`=`products`.`brand_id`  
+                    WHERE `prod_id` ={$_GET['prod_id']}";
             $obj = $pdo->query($sql)->fetch();
-        ?>
+            ?>
 
             >&ensp;
             <a href="07-2.brand_list_item.php?brand_id=<?= $obj['brand_id'] ?>"><?= $obj['cate_name'] ?></a>
@@ -79,16 +92,16 @@
         <!-- 商品名稱 -->
         <?php
         if (isset($_GET['sub_cate_id'])) {
-            $sql = "SELECT * FROM products WHERE cate_id = {$_GET['sub_cate_id']} ";
+            $sql = "SELECT * FROM `products` WHERE `cate_id` = {$_GET['sub_cate_id']} ";
             $obj = $pdo->query($sql)->fetch();
         ?>
             >&ensp;
             <a href="#"><?= $obj['prod_name'] ?></a>
         <?php
         } else if (isset($_GET['prod_id'])) {
-            $sql = "SELECT prod_name , prod_id
-    FROM products 
-    WHERE prod_id ={$_GET['prod_id']}";
+            $sql = "SELECT `prod_name` , `prod_id`
+    FROM `products` 
+    WHERE `prod_id` ={$_GET['prod_id']}";
             $obj = $pdo->query($sql)->fetch();
         ?>
             >&ensp;

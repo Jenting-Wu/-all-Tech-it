@@ -179,7 +179,7 @@
 
                     <!-- 會員登入 / 註冊 -->
                     <div class="hd_icon_link i4">
-                        <a href="#">
+                        <a href="member_info1.php">
                             <!-- <img src="./img/icon_member.svg" alt=""> -->
                             <svg class="svg_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42.76 45.4">
                                 <defs>

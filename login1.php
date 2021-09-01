@@ -21,7 +21,7 @@ if (
     $pwd = sha1($_POST['pwd_login']);
     try {
         //加使用者
-        $sql =  "SELECT `user_name`
+        $sql =  "SELECT *
                 FROM `users`
                 WHERE `email` = '$email'
                 AND `pwd` = '$pwd';";
@@ -36,6 +36,7 @@ if (
 
             //session
             $_SESSION['user_name'] = $objUser['user_name'];
+            $_SESSION['email'] = $objUser['email'];
         }
     } catch (PODException $e) {
         switch ($pdo->errorInfo()[1]) {
