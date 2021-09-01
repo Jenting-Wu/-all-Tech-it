@@ -288,7 +288,7 @@
 
                 <!-- 品牌專區 -->
                 <div class="hd_title_link">
-                    <a href="07-1.brand_list.php">品牌專區</a>
+                    <a href="07-1.brand_list02.php">品牌專區</a>
                 </div>
 
                 <!-- 智慧家電商品分類_level_0 -->
