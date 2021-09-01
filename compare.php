@@ -39,7 +39,29 @@ if (!isset($_SESSION['data_compare'])) {
     <!-------- mob版 類別資料夾-------->
     <div class="cate_area">
         <ul>
-            <li class="martop_0"><a class="folder_1" href="">掃地機器人</a></li>
+            <?php
+            $number = 0;
+            if (isset($_SESSION['data_compare']) && count($_SESSION['data_compare']) > 0) {
+                $cateIDArray = [];
+                foreach ($_SESSION['data_compare'] as $key => $obj1) {
+                    $sql = "SELECT `prod_id`, `cate_name`,`categories`.`cate_id` 
+                                    FROM `products` 
+                                    INNER JOIN `categories` 
+                                    ON `products`.`cate_id`=`categories`.`cate_id`
+                                    WHERE `prod_id` = {$obj1['prod_id']};";
+
+                    $arr = $pdo->query($sql)->fetchAll();
+                    foreach ($arr as $obj2) {
+                        if (in_array($obj2['cate_id'], $cateIDArray)) {
+                            // echo "The 'first' element is in the array";
+
+                        } else {
+                            $number++;
+                            $cateIDArray[] = $obj2['cate_id'];
+
+            ?>
+                            <li><a class="folder_<?= $number ?>" href="compare.php?cate_id=<?= $obj2['cate_id'] ?>&prod_id=<?= $obj2['prod_id'] ?>"><?= $obj2['cate_name'] ?></a></li>
+                            <!-- <li class="martop_0"><a class="folder_1" href="">掃地機器人</a></li>
             <li><a class="folder_2" href="">管家機器人</a></li>
             <li><a class="folder_3" href="">烹飪機器人</a></li>
             <li><a class="folder_4" href="">智慧手錶</a></li>
@@ -47,7 +69,13 @@ if (!isset($_SESSION['data_compare'])) {
             <li><a class="folder_6" href="">智慧音箱</a></li>
             <li><a class="folder_7" href="">電子鍋</a></li>
             <li><a class="folder_8" href="">寵物機器人</a></li>
-            <li><a class="folder_9" href="">空氣清淨機機機</a></li>
+            <li><a class="folder_9" href="">空氣清淨機機機</a></li> -->
+            <?php
+                        }
+                    }
+                }
+            }
+            ?>
         </ul>
     </div>
     <!-------- web版 類別資料夾--------->
