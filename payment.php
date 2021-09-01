@@ -74,8 +74,8 @@ $_SESSION['form']['recipient_comments'] = $_POST['recipient_comments'];
                                 <div class="list">
                                     <div class="product_list">
                                         <div class="product_info">
-                                            <img src="<?= $item['prod_thumbnail'] ?>">
-                                            <div class="center">
+                                            <img class="col-4 col-md-3" src="<?= $item['prod_thumbnail'] ?>">
+                                            <div class="center col-8 col-md">
                                                 <h5 class="title"><?= $item['prod_name'] ?></h5>
                                                 <span>數量:</span>
                                                 <input type="text" readonly class="item_price" name="qty[]" value="<?= $item['prod_qty'] ?>">

@@ -258,10 +258,10 @@
     <section class="section_2">
         <div class="container_90">
             <div class="title_wrap text-center text-md-right mt-md-3">
-                <span class="display_title color_brown number">1.</span>
+                <span class="display_title color_brown number">2.</span>
                 <span class="display_title color_brown">窩の智慧</span>
                 <p class="display_title_2 color_brown">小住宅，大方便</p>
-                <p class="display_3 color_brown">有智慧生活的思考 <br> 日子過得更輕鬆</p>
+                <p class="display_3 color_brown">有智慧生活的配置 <br> 日子過得更輕鬆</p>
             </div>
             <h6 class="text-center d-block d-md-none">點擊看看小窩有什麼功能吧！</h6>
             <div class="img_wrap">
@@ -350,10 +350,10 @@
     <section class="section_3">
         <div class="container_90">
             <div class="title_wrap text-center text-md-right mt-3">
-                <span class="display_title color_brown number">1.</span>
-                <span class="display_title color_brown">窩の智慧</span>
-                <p class="display_title_2 color_brown">小住宅，大方便</p>
-                <p class="display_3 color_brown">有智慧生活的思考 <br> 日子過得更輕鬆</p>
+                <span class="display_title color_brown number">3.</span>
+                <span class="display_title color_brown">生活良伴</span>
+                <p class="display_title_2 color_brown">小陪伴，大幸福</p>
+                <p class="display_3 color_brown">有聰明的良伴 <br> 一個人也很幸福</p>
             </div>
             <div class="card-stack">
                 <ul class="card-list">
@@ -566,10 +566,10 @@
     <section class="section_4">
         <div class="container_90">
             <div class="title_wrap text-center text-md-right mt-3">
-                <span class="display_title color_brown number">1.</span>
-                <span class="display_title color_brown">窩の智慧</span>
-                <p class="display_title_2 color_brown">小住宅，大方便</p>
-                <p class="display_3 color_brown">有智慧生活的思考 <br> 日子過得更輕鬆</p>
+                <span class="display_title color_brown number">4.</span>
+                <span class="display_title color_brown">擇你所愛</span>
+                <p class="display_title_2 color_brown">看需求，好選擇</p>
+                <p class="display_3 color_brown">推薦符合預算能力的家電 <br>智慧生活無負擔</p>
             </div>
             <div class="choose_item">
                 <div class="choose1">
