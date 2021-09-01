@@ -48,7 +48,7 @@ h5 {
 }
 
 .promotion {
-  margin-top: 150px;
+  /* margin-top: 150px; */
   height: 60px;
   background-color: rgba(255, 248, 226, .6);
   text-align: center;
@@ -73,7 +73,14 @@ h5 {
 .go_product:focus {
   outline: none;
 }
+
+.profile{
+  width: 50%;
+  margin: 0 auto;
+}
+
 div img {
+  width:100%;
   border-radius: 50%;
 }
 .success_page {

@@ -56,11 +56,9 @@ body {
 }
 .head {
   text-align: center;
-  margin-top: 20px;
   border-bottom: 1px solid var(--grey-text);
   padding-bottom: 20px;
-  display: inline-block;
-  width: 200px;
+  width: fit-content;
   margin: 30px auto;
 }
 a {
@@ -77,7 +75,7 @@ button {
   text-align: center;
   padding: 20px;
   word-spacing: 10px;
-  margin-top: 150px;
+  margin-top: 1rem;
 }
 
 input {
@@ -86,7 +84,7 @@ input {
   border-radius: 10px;
   border: 0;
   box-shadow: var(--button-inner);
-  margin-top: 20px;
+  /* margin-top: 20px; */
   text-indent: 60px;
 }
 input:focus {
@@ -107,7 +105,7 @@ form img {
   width: 15px;
   position: absolute;
   left: 30px;
-  top: 33%;
+  top: 50%;
 }
 #pw {
   position: relative;
@@ -143,6 +141,7 @@ input[type="checkbox"] {
 
 .member_none{
   color: var(--grey-text);
+  margin-bottom: 3rem;
 }
 
 .member_none a {
@@ -183,7 +182,7 @@ input[type="checkbox"] {
 @media screen and (max-width: 500px) {
   .promotion {
     font-size: 14px;
-    margin-top: 100px;
+    margin-top: 2rem;
   }
   input {
     width: 300px;
