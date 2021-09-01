@@ -83,18 +83,18 @@ $_SESSION['feeInfo']['total_amount'] = $_POST['total_amount'];
 
                     <div class="group">
                         <h6>收件人姓名</h6>
-                        <input type="text" name="recipient_name">
+                        <input type="text" name="recipient_name" id="input_name">
                     </div>
 
                     <div class="group">
                         <h6>收件人手機</h6>
-                        <input type="text" class="b_style" name="recipient_phone_number">
+                        <input type="text" class="b_style" name="recipient_phone_number" id="input_phone">
                     </div>
 
                     <div class="group">
 
                         <div class="select_tri">
-                            <select name="transport_type" id="logistics">
+                            <select name="transport_type" id="logistics1">
                                 <option value="0">宅配地方</option>
                                 <option value="1">台灣</option>
                                 <option value="2">外島</option>
@@ -105,17 +105,17 @@ $_SESSION['feeInfo']['total_amount'] = $_POST['total_amount'];
 
                     <div class="group">
                         <h6>地址</h4>
-                            <input type="text" name="recipient_address">
+                            <input type="text" name="recipient_address" id="inpunt_add">
                     </div>
 
                     <div class="group">
                         <h6>郵遞區號</h6>
-                        <input type="text" class="b_style" name="recipient_address_no">
+                        <input type="text" class="b_style" name="recipient_address_no" id="input_no">
                     </div>
 
                     <div class="group">
                         <h6>備註</h6>
-                        <textarea name="recipient_comments"></textarea>
+                        <textarea name="recipient_comments" id="ps"></textarea>
                     </div>
 
                 </div>
@@ -151,6 +151,15 @@ $_SESSION['feeInfo']['total_amount'] = $_POST['total_amount'];
             $('.info2').show();
         }
     });
+    $('#member').click(function() {
+        $('#input_name').val('Sophia');
+        $('#input_phone').val('0987654321');
+        $('#inpunt_add').val('臺北市文山區光復南路129號5樓');
+        $('#input_no').val('116');
+        $('#logistics1 option[value="1"]').prop('selected', true);
+        $('#ps').val('送貨前請撥打手機確認家中有人');
+
+    })
 </script>
 
 <!-- php link -------------------------------------------->
