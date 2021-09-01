@@ -259,7 +259,7 @@
                         <?php if (isset($_SESSION['user_name'])) { ?>
                             <?php echo $_SESSION['user_name'] ?>｜<a id="logout" class="btn btn-link">登出</a>
                         <?php } else { ?>
-                            <a href="#">登入</a>｜<a href="#">註冊</a>
+                            <a href="login.php">登入</a>｜<a href="signup.php">註冊</a>
                         <?php } ?>
                     </div>
 
