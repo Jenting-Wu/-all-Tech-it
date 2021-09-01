@@ -293,6 +293,7 @@
 
                 <!-- 智慧家電商品分類_level_0 -->
                 <div class="hd_title_link tog_lv_0">
+                    <!-- 這邊不能給連結，下拉會打不開 -->
                     <a href="#">智慧家電</a>
                 </div>
 
@@ -468,6 +469,7 @@
 
                 <!-- AI機器人商品分類_level_0 -->
                 <div class="hd_title_link  tog_lv_0_ai">
+                    <!-- 這邊不能給連結，下拉會打不開 -->
                     <a href="#">AI機器人</a>
                 </div>
 

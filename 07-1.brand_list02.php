@@ -18,7 +18,7 @@
     <div class="row cate flex-row-reverse">
         <!-- 我想吃肉了 -->
         <?php
-        $sql = "SELECT `cate_id`,`cate_name` FROM `categories` WHERE `parent_id` = 0;";
+        $sql = "SELECT `cate_id`,`cate_name` FROM categories WHERE parent_id = 0;";
         $arr = $pdo->query($sql)->fetchAll();
 
         foreach ($arr as $index => $obj) {
@@ -51,7 +51,7 @@
     </section>
     <section class="section_2">
         <?php if (isset($_GET['cate_id'])) {
-            $sql = "SELECT * FROM `categories` WHERE `cate_id`={$_GET['cate_id']} ";
+            $sql = "SELECT * FROM categories WHERE `cate_id`={$_GET['cate_id']} ";
             $arr = $pdo->query($sql)->fetchAll();
             foreach ($arr as $obj) {
         ?>
@@ -62,26 +62,34 @@
         }
         ?>
 
-        <?php if (isset($_GET['cate_id'])) { ?>
-            <div class="row brand_icon">
+        <!-- WHERE `hasAI`LIKE '%{$_GET['cate_id']}%' -->
 
-                <?php $sql = "SELECT * FROM `brands` WHERE `hasAI`LIKE '%{$_GET['cate_id']}%' ";
-                $arr = $pdo->query($sql)->fetchAll();
-                foreach ($arr as $obj) {
-                ?>
-                    <div class="col-6 col-md-2 brand_wrap">
-                        <a href="07-2.brand_list_item.php?cate_id=<?= $_GET['cate_id'] ?>&brand_id=<?= $obj['brand_id'] ?>"><img src="./db_img/brands/<?= $obj['brand_img'] ?>" alt=""></a>
-                    </div>
 
-                <?php
-                }
+        <div class="row brand_icon">
 
-                ?>
-            </div>
-        <?php
+            <!-- 所有品牌出現 -->
+            <?php $sql = "SELECT * FROM brands ";
 
-        }
-        ?>
+
+
+            $str = "";
+            if (isset($_GET['cate_id'])) {
+                $sql .= "WHERE `hasAI`LIKE '%{$_GET['cate_id']}%' ";
+                $str = "cate_id={$_GET['cate_id']}&";
+            }
+            $arr = $pdo->query($sql)->fetchAll();
+            foreach ($arr as $obj) {
+            ?>
+                <div class="col-6 col-md-2 brand_wrap">
+                    <a href="07-2.brand_list_item.php?<?= $str ?>brand_id=<?= $obj['brand_id'] ?>"><img src="./db_img/brands/<?= $obj['brand_img'] ?>" alt=""></a>
+                </div>
+
+            <?php
+            }
+
+            ?>
+        </div>
+
 
     </section>
 

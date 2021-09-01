@@ -177,54 +177,54 @@ $_SESSION['form']['recipient_comments'] = $_POST['recipient_comments'];
         <!-- ↑↑↑ 測試區域可刪 ↑↑↑ -->
 
     </div>
+</div>
+<!-- 在這裡結束網頁撰寫 ----------------------->
 
-    <!-- 在這裡結束網頁撰寫 ----------------------->
 
+<script>
+    // this
+    $('#select_select').change(function() {
+        if ($(this).val() == 1) {
+            $('.credit').show();
+            console.log(1)
 
-    <script>
-        // this
-        $('#select_select').change(function() {
-            if ($(this).val() == 1) {
-                $('.credit').show();
-                console.log(1)
-
-            } else {
-                $('.credit').hide();
-                console.log(2)
-            }
-        });
-        $('.bill_type').change(function() {
-            $('.bill_3').val('');
-            if ($(this).val() == 1) {
-                var o1 = `<option value="0">浪浪之家（85314880）</option>
+        } else {
+            $('.credit').hide();
+            console.log(2)
+        }
+    });
+    $('.bill_type').change(function() {
+        $('.bill_3').val('');
+        if ($(this).val() == 1) {
+            var o1 = `<option value="0">浪浪之家（85314880）</option>
                <option value="1">11111（85314880）</option>
                <option value="2">2222（85314880）</option>
                <option value="3">3333（85314880）</option>
                <option value="4">浪4之家（85314880）</option>`;
-                $('.bill_2').html(o1).show();
-                $('.bill_3').hide();
-            } else if ($(this).val() == 0) {
-                $('.bill_2').html('').hide();
-                $('.bill_3').hide();
-            } else {
-                $('.bill_2').html('').hide();
-                $('.bill_3').show();
-            }
+            $('.bill_2').html(o1).show();
+            $('.bill_3').hide();
+        } else if ($(this).val() == 0) {
+            $('.bill_2').html('').hide();
+            $('.bill_3').hide();
+        } else {
+            $('.bill_2').html('').hide();
+            $('.bill_3').show();
+        }
 
-        })
-        $(function() {
-            $('#credit').card({
-                // a selector or DOM element for the container
-                // where you want the card to appear
-                container: '.card-wrapper', // *required*
+    })
+    $(function() {
+        $('#credit').card({
+            // a selector or DOM element for the container
+            // where you want the card to appear
+            container: '.card-wrapper', // *required*
 
-                // all of the other options from above
-            });
-        })
-    </script>
+            // all of the other options from above
+        });
+    })
+</script>
 
 
-    <script src="plug-in/jquery.card.js"></script>
+<script src="plug-in/jquery.card.js"></script>
 
-    <!-- php link -------------------------------------------->
-    <?php require_once 'foot.php' ?>
+<!-- php link -------------------------------------------->
+<?php require_once 'foot.php' ?>
