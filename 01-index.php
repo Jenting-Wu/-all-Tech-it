@@ -416,7 +416,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="product_list_02_ai.php">
+                                <a href="product_list_02_ai.php?cate_id=1&sub_cate_id=5">
                                     <div class="btn col-5 col-md-12 d-block">
                                         看更多
                                     </div>
@@ -484,7 +484,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="product_list_02_ai.php">
+                                <a href="product_list_02_ai.php?cate_id=1&sub_cate_id=6">
                                     <div class="btn col-5 col-md-12 d-block">
                                         看更多
                                     </div>
@@ -550,7 +550,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="product_list_01_smart.php">
+                                <a href="product_list_01_smart.php?cate_id=7&sub_cate_id=12">
                                     <div class="btn col-5 col-md-12 d-block">
                                         看更多
                                     </div>
