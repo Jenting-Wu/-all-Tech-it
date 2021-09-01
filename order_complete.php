@@ -25,7 +25,7 @@ $_SESSION['form']['recipient_comments'] = $_POST['recipient_comments'];
         </div>
         <div class="circle circle3"></div>
         <div class="circle circle1">
-            <h4>確認訂單</h4>
+            <h6>確認訂單</h6>
         </div>
     </div>
     <div class="container">

@@ -1,3 +1,51 @@
+/* button css */
+:root{
+  --button-inner:inset 0px 5px 8px #dededea3;
+  --button-outer:5px 5px 15px #bebebeab;
+  --grey-text:#7B7B7B;
+  --main-orange:#FA8873;
+  --main-purple:#5D5D71;
+}
+  /* 
+  標題層級：
+
+  .display_1(主標
+  .display_2(副標
+  .display_3(小標
+  .display_4(內文
+
+  */
+
+.display_1{
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 0.5rem;
+    }
+
+.display_2{
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    line-height: 1.2rem;
+    }
+.display_3{
+    font-size: .8rem;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    line-height: 1.5rem;
+    }
+.display_title{
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    font-family: 'Fira Sans', sans-serif;
+    }
+    .display_title_2{
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    }
+
 body {
   background-color: #fafafa;
   margin: 0;
@@ -8,6 +56,8 @@ body {
 .l_part {
   margin-right: 100px;
   text-align: center;
+  margin-top: 3rem
+
 }
 .l_part img {
   margin-bottom: 30px;
@@ -64,7 +114,7 @@ body {
   margin: 10px;
 }
 .upload_img {
-  border: 1px solid rgb(236, 236, 236);
+  /* border: 1px solid rgb(236, 236, 236); */
   width: 50px;
 }
 .head {
@@ -79,7 +129,7 @@ body {
 .main_part {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 a {
@@ -104,7 +154,7 @@ input[type="password"] {
   height: 50px;
   border-radius: 10px;
   border: 0;
-  box-shadow: inset 0px 5px 8px #a2a2a2;
+  box-shadow: var(--button-inner)
 }
 .form_div {
   margin-top: 15px;
