@@ -94,7 +94,7 @@ $('div.wrap_li:nth-child(1), .item_button').click(function () {
 
     $.post("08.location_api.php", { locationID: "2" }, function (obj) {
         console.log(obj.result);
-        
+
 
         let html = '';
 
@@ -130,7 +130,7 @@ $('div.wrap_li:nth-child(4)').click(function () {
     $('.wrapForPosition a:nth-child(3)').attr('data-cateid', '14');
     $('.wrapForPosition a:nth-child(2)').attr('data-cateid', '13');
 
-    
+
 
     $.post("08.location_api.php", { locationID: "1" }, function (obj) {
         console.log(obj.result);
@@ -203,7 +203,7 @@ $('.wrap_item').on('click', '.item_button', function (event) {
         let cardhtml = '';
         for (let i = 0; i < obj.result.length; i++) {
 
-            cardhtml += `<div class="item wrap_svg" data-url="product_detail.php">
+            cardhtml += `<div class="item wrap_svg" data-url="product_detail.php?prod_id=${obj.result[i].prod_id}">
                         <div class="hight">
                             <a href="product_detail.php">
                                 <img src="db_img/img_prod_thumbnail/${obj.result[i].prod_id}" alt="">
@@ -330,7 +330,7 @@ $('.wrapForPosition a').click(function () {
     let cateID = itembtn.attr('data-cateid');
     $.post("08.categories_api.php", { postCateID: cateID }, function (obj) {
         let cardhtml = '';
-        console.log('obj',obj.result);
+        console.log('obj', obj.result);
         for (let i = 0; i < obj.result.length; i++) {
             cardhtml += `<div class="item wrap_svg" data-url="product_detail.php?prod_id=${obj.result[i].prod_id}">
             <div class="hight">
@@ -364,12 +364,12 @@ $('.wrapForPosition a').click(function () {
                 loop: true,
                 margin: 10,
                 nav: true,
-    
+
             });
             return false;
         });
 
-        
+
 
     }, "json");
 

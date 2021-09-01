@@ -38,10 +38,10 @@ $(function () {
             console.log(1);
             input_pwd.addClass("border border-danger border-2")
             input_check.addClass("border border-danger border-2")
-            .tooltip({
-                title: '兩次密碼不相符',
-                placement: 'top'
-            })
+                .tooltip({
+                    title: '兩次密碼不相符',
+                    placement: 'top'
+                })
         } else if (!re.test(input_email.val())) {
             //兩次密碼一樣 接著檢查email 不正確
             console.log(input_email.val());
@@ -73,7 +73,7 @@ $(function () {
             input_phone_number.removeClass("border border-danger border-5")
                 .tooltip()
                 .tooltip('dispose');
-                
+
             let objUser = {
                 email: input_email.val(),
                 pwd: input_pwd.val(),
@@ -96,7 +96,7 @@ $(function () {
             }, 'json');
         }
     });
-    
+
     //登入
     $('button#btn_login').click(function (event) {
         //避免元素的預設事件被觸發
@@ -125,11 +125,11 @@ $(function () {
         };
         $.post("login1.php", objUser, function (obj) {
             if (obj['success']) {
-                
+
                 //成功訊息
                 alert('登入成功');
 
-                location.href = "product_list_01_smart.php";
+                location.href = "product_list_01_smart.php?cate_id=10&sub_cate_id=21";
             } else {
                 alert(`${obj['info']}`);
             }
@@ -168,7 +168,7 @@ $(function () {
         }
 
         // $('#forgot_form').submit();
- 
+
         //送出 post 請求，註冊帳號
         let objUser = {
             email_login: input_email.val()
@@ -179,7 +179,7 @@ $(function () {
                 alert('驗證信已寄出');
 
                 // setTimeout(function () {
-                    location.href = 'login.php';
+                location.href = 'login.php';
                 // }, 1000);
 
             } else {
@@ -188,57 +188,57 @@ $(function () {
             console.log(obj);
         }, 'json')
     });
-// 更改密碼
-    $('#pwd_change').click(function(event){
+    // 更改密碼
+    $('#pwd_change').click(function (event) {
         event.preventDefault();
         if ($('#pwd_again').val() != $('#pwd_again2').val()) {
-          
+
             console.log(1)
             $('#pwd_again').addClass("border border-danger border-2")
             $('#pwd_again2').addClass("border border-danger border-2")
-            .tooltip({
-                title: '兩次密碼不相符',
-                placement: 'top'
-            })
-        } else{
+                .tooltip({
+                    title: '兩次密碼不相符',
+                    placement: 'top'
+                })
+        } else {
             $('#pwd_again2').removeClass("border border-danger border-5")
-            .tooltip()
-            .tooltip('dispose');
+                .tooltip()
+                .tooltip('dispose');
 
             var email_str = location.search.split('&')[0].split('=')[1];
             var ver = location.search.split('&')['1'].split('=')[1];
 
-        let objUserReset = {
-            pwd: $('#pwd_again').val(),
-            email:email_str,
-            verified_code:ver
-        };
-       
-        $.post('pwd_reset.php', objUserReset, function (obj) {
-            if (obj.success) {
-                alert('SUCCESS');
-                location.href = 'success_signup.php';
-            } else {
-                alert(obj.info);
-            }
+            let objUserReset = {
+                pwd: $('#pwd_again').val(),
+                email: email_str,
+                verified_code: ver
+            };
 
-        }, 'json');
+            $.post('pwd_reset.php', objUserReset, function (obj) {
+                if (obj.success) {
+                    alert('SUCCESS');
+                    location.href = 'success_signup.php';
+                } else {
+                    alert(obj.info);
+                }
+
+            }, 'json');
 
         }
-       
+
     })
 
     //計算數量+
     $('button.btn_plus').click(function () {
         let nowCount = Number($(this).parents('.list').find('.item_price').val());
-        $(this).parents('.list').find('.item_price').val(Number(nowCount)+1);
+        $(this).parents('.list').find('.item_price').val(Number(nowCount) + 1);
         count_total();
     });
 
     //計算數量-
     $('button.btn_minus').click(function (event) {
         let nowCount = Number($(this).parents('.list').find('.item_price').val());
-        if(nowCount > 0){
+        if (nowCount > 0) {
             nowCount--;
         }
         $(this).parents('.list').find('.item_price').val(nowCount);
@@ -246,53 +246,53 @@ $(function () {
     });
 
     //計算總計
-    function count_total(){
+    function count_total() {
         let total = 0;
         let item_total = 0;
-        $('.list').each(function(){
-            item_total =  Number($(this).find('.single_price').text().replace('NT$',''))*Number($(this).find('.item_price').val());
-            total +=item_total;
+        $('.list').each(function () {
+            item_total = Number($(this).find('.single_price').text().replace('NT$', '')) * Number($(this).find('.item_price').val());
+            total += item_total;
         });
-        
-        if(hasCoupon){
+
+        if (hasCoupon) {
             $('.logistic_fee').text('0');
             $('.logistic_fee_val').val('0');
-        }else{
-            if(total>10000){
+        } else {
+            if (total > 10000) {
                 $('.logistic_fee').text('0');
                 $('.logistic_fee_val').val('0');
-            }else{
+            } else {
                 $('.logistic_fee').text('60');
                 $('.logistic_fee_val').val('60');
             }
         }
-      
+
 
         $('.subtotal p, .total').text(`NT$ ${total}`);
         $('.amount_val').val(total);
 
         $('.total_amount').text(`NT$ ${Number($('.logistic_fee').text()) + total}`);
-        $('.total_amount_val').val(total +Number($('.logistic_fee_val').val()));
+        $('.total_amount_val').val(total + Number($('.logistic_fee_val').val()));
     }
-    
-        
-  
+
+
+
     //follow加購物車
-     $('.follow_shopping_cart').click(function(event){
+    $('.follow_shopping_cart').click(function (event) {
         let btn = $(this);
         var prod_name = $(this).parents('.card1').find('.card_title').text();
         // var brand_id = $(this).parents('.card1').find('.brand_id').text();
         var prod_thumbnail = $(this).parents('.card1').find('.prod_thumbnail').attr('src');
         var prod_price = ($(this).parents('.card1').find('.price').text().split('NT$ '))[1];
         var brand_id = $(this).data('brand_id');
-        
+
         //送出 post 請求，加入購物車
         let objProduct = {
             brand_id: brand_id,
             prod_name: prod_name,
             prod_thumbnail: prod_thumbnail,
             prod_price: prod_price,
-            prod_qty:'1'      
+            prod_qty: '1'
         };
         console.log(objProduct);
         // $('#aa').submit();
@@ -303,16 +303,16 @@ $(function () {
 
                 //將網頁上的購物車商品數量更新
                 $('span#count_products').text(obj['count_products']);
-            }else{
+            } else {
                 console.log(obj);
             }
-            
+
         }, 'json');
     });
 
 
-    
-     $('.del').click(function (event) {
+
+    $('.del').click(function (event) {
         //避免元素的預設事件被觸發
         event.preventDefault();
 
@@ -331,248 +331,248 @@ $(function () {
 
     //加入商品至購物車/喜好清單/比較列表
 
-//加入商品至購物車
-$('button.joincart').click(function(){
-    //取得 button 的 jQuery 物件
-    let btn = $(this);
+    //加入商品至購物車
+    $('button.joincart').click(function () {
+        //取得 button 的 jQuery 物件
+        let btn = $(this);
 
-    //送出 post 請求，加入購物車
-    let objProduct = {
-        brand_id: btn.attr('data-brand_id'),
-        prod_id: btn.attr('data-prod-id'),
-        prod_name: btn.attr('data-prod-name'),
-        prod_thumbnail: `db_img/img_prod_thumbnail/${btn.attr('data-prod-thumbnail')}`,
-        prod_price: btn.attr('data-prod-price'),
-        prod_qty:'1' 
-    };
-    console.log(objProduct);
-    $.post("ShoppingCart.php", objProduct, function(obj){
-        if(obj['success']){
-            //成功訊息
-            alert('加入購物車成功');
+        //送出 post 請求，加入購物車
+        let objProduct = {
+            brand_id: btn.attr('data-brand_id'),
+            prod_id: btn.attr('data-prod-id'),
+            prod_name: btn.attr('data-prod-name'),
+            prod_thumbnail: `db_img/img_prod_thumbnail/${btn.attr('data-prod-thumbnail')}`,
+            prod_price: btn.attr('data-prod-price'),
+            prod_qty: '1'
+        };
+        console.log(objProduct);
+        $.post("ShoppingCart.php", objProduct, function (obj) {
+            if (obj['success']) {
+                //成功訊息
+                alert('加入購物車成功');
+            }
+            console.log(obj);
+        }, 'json');
+
+
+    });
+
+    //加入喜好清單
+    $('button.saved').click(function (event) {
+        //避免元素的預設事件被觸發
+        event.preventDefault();
+
+        //取得 button 的 jQuery 物件
+        let btn = $(this);
+
+        //送出 post 請求，加入購物車
+        let objProduct = {
+            prod_name: btn.data('prod-name'),
+            prod_thumbnail: btn.data('prod-thumbnail'),
+            prod_price: btn.data('prod-price'),
+            brand_id: btn.data('brand_id')
+        };
+        $.post("toFollow.php", objProduct, function (obj) {
+            if (obj['success']) {
+                //成功訊息
+                alert('商品追蹤成功');
+            } else {
+                alert(`${obj['info']}`);
+            }
+        }, 'json');
+    });
+
+
+
+
+    //確認優惠代碼是否可以使用
+    $('#check_coupon_code').click(function (event) {
+        //避免元素的預設事件被觸發
+        event.preventDefault();
+
+        //取得優惠代碼
+        let code = $('input[name="coupon_code"]').val();
+
+        //如果代碼為空，就不往下執行
+        if (code == '') {
+            alert('請輸入優惠代碼');
+            return false;
         }
-        console.log(obj);
-    }, 'json');
 
-    
-});
+        $.post("checkCoupon.php", { code: code }, function (obj) {
+            if (obj['success']) {
+                alert(`${obj['info']}`);
+                $('.logistic_fee').text('0');
+                $('.coupon_div').hide();
+                hasCoupon = true;
+                count_total();
+            } else {
+                alert(`${obj['info']}`);
+            }
+        }, 'json');
+    });
+    // $('button.joincart').click(function(event){
+    //     //取得 button 的 jQuery 物件
+    //    let btn = $(this);
 
-//加入喜好清單
-$('button.saved').click(function(event){
-    //避免元素的預設事件被觸發
-    event.preventDefault();
+    //     //送出 post 請求，加入購物車
+    //    let objProduct = {
+    //        prod_id: btn.attr('data-prod-id'),
+    //        prod_name: btn.attr('data-prod-name'),
+    //        prod_thumbnail: btn.attr('data-prod-thumbnail'),
+    //        prod_price: btn.attr('data-prod-price'),
+    //        };
 
-    //取得 button 的 jQuery 物件
-    let btn = $(this);
-
-    //送出 post 請求，加入購物車
-    let objProduct = {
-        prod_name: btn.data('prod-name'),
-        prod_thumbnail:btn.data('prod-thumbnail'),
-        prod_price:btn.data('prod-price'),
-        brand_id:btn.data('brand_id')
-    };
-    $.post("toFollow.php", objProduct, function(obj){
-        if(obj['success']){
-            //成功訊息
-            alert('商品追蹤成功');
-        } else {
-            alert(`${obj['info']}`);
-        }
-    }, 'json');
-});
+    //    $.post("setCart.php", objProduct, function(obj){
+    //        if(obj['success']){
+    //        //成功訊息
+    //        alert('加入購物車成功');
+    //        }
+    //        console.log(obj);
+    // }, 'json');
 
 
+    // });
 
 
-  //確認優惠代碼是否可以使用
-  $('#check_coupon_code').click(function (event) {
-    //避免元素的預設事件被觸發
-    event.preventDefault();
+    // 購買數量_PC -----------------------------------------------------
+    //增加商品數量
+    $('button#btn_plus').click(function (event) {
+        console.log('hi');
+        let input_qty = $('input#qty');
+        input_qty.val(parseInt(input_qty.val()) + 1);
+        console.log('val', input_qty.val());
+    });
 
-    //取得優惠代碼
-    let code = $('input[name="coupon_code"]').val();
+    //減少商品數量
+    $('button#btn_minus').click(function (event) {
+        let input_qty = $('input#qty');
+        if (parseInt(input_qty.val()) - 1 < 1) return false;
+        input_qty.val(parseInt(input_qty.val()) - 1);
+    });
 
-    //如果代碼為空，就不往下執行
-    if (code == '') {
-        alert('請輸入優惠代碼');
-        return false;
+    // 購買數量_mb -----------------------------------------------------
+    //增加商品數量
+    $('button#btn_plus_mb').click(function (event) {
+        console.log('hi');
+        let input_qty = $('input#qty_mb');
+        input_qty.val(parseInt(input_qty.val()) + 1);
+        console.log('val', input_qty.val());
+    });
+
+    //減少商品數量
+    $('button#btn_minus_mb').click(function (event) {
+        let input_qty = $('input#qty_mb');
+        if (parseInt(input_qty.val()) - 1 < 1) return false;
+        input_qty.val(parseInt(input_qty.val()) - 1);
+    });
+
+
+    // compare -------------------------------------------------------------
+
+    function alertCompare() {
+        Swal.fire(
+            "成功加入比較清單!",
+            "",
+            "success"
+        );
     }
 
-    $.post("checkCoupon.php", { code: code }, function (obj) {
-        if (obj['success']) {
-            alert(`${obj['info']}`);
-            $('.logistic_fee').text('0');
-            $('.coupon_div').hide();
-            hasCoupon = true;
-            count_total();
-        } else {
-            alert(`${obj['info']}`);
-        }
-    }, 'json');
-});
-// $('button.joincart').click(function(event){
-//     //取得 button 的 jQuery 物件
-//    let btn = $(this);
- 
-//     //送出 post 請求，加入購物車
-//    let objProduct = {
-//        prod_id: btn.attr('data-prod-id'),
-//        prod_name: btn.attr('data-prod-name'),
-//        prod_thumbnail: btn.attr('data-prod-thumbnail'),
-//        prod_price: btn.attr('data-prod-price'),
-//        };
-
-//    $.post("setCart.php", objProduct, function(obj){
-//        if(obj['success']){
-//        //成功訊息
-//        alert('加入購物車成功');
-//        }
-//        console.log(obj);
-// }, 'json');
+    function alertNoCompare() {
+        Swal.fire(
+            "此商品已在比較清單中",
+            "",
+            "error"
+        );
+    }
 
 
-// });
+    //加入比較列表
+    $('.compare').click(function (event) {
+        event.preventDefault();
+        // console.log('hihihihihihihihi');
+        //取得 button 的 jQuery 物件
+        let btn = $(this);
 
+        //送出 post 請求，加入購物車
+        let objProduct = {
+            prod_id: btn.attr('data-prod-id'),
+            // prod_name: btn.attr('data-prod-name'),
+            // prod_thumbnail: btn.attr('data-prod-thumbnail'),
+            // prod_price: btn.attr('data-prod-price'),
+        };
 
-// 購買數量_PC -----------------------------------------------------
-//增加商品數量
-$('button#btn_plus').click(function(event) {
-    console.log('hi');
-    let input_qty = $('input#qty');
-    input_qty.val(parseInt(input_qty.val()) + 1);
-    console.log('val', input_qty.val());
- });
- 
- //減少商品數量
- $('button#btn_minus').click(function(event) {
-    let input_qty = $('input#qty');
-    if (parseInt(input_qty.val()) - 1 < 1) return false;
-    input_qty.val(parseInt(input_qty.val()) - 1);
- });
-
- // 購買數量_mb -----------------------------------------------------
-//增加商品數量
-$('button#btn_plus_mb').click(function(event) {
-    console.log('hi');
-    let input_qty = $('input#qty_mb');
-    input_qty.val(parseInt(input_qty.val()) + 1);
-    console.log('val', input_qty.val());
- });
- 
- //減少商品數量
- $('button#btn_minus_mb').click(function(event) {
-    let input_qty = $('input#qty_mb');
-    if (parseInt(input_qty.val()) - 1 < 1) return false;
-    input_qty.val(parseInt(input_qty.val()) - 1);
- });
-
-
-// compare -------------------------------------------------------------
-
- function alertCompare() {
-    Swal.fire(
-        "成功加入比較清單!",
-        "",
-        "success"
-    );
-}
-
-function alertNoCompare() {
-    Swal.fire(
-        "此商品已在比較清單中",
-        "",
-        "error"
-    );
-}
-
-
-//加入比較列表
-$('.compare').click(function (event) {
-    event.preventDefault();
-    // console.log('hihihihihihihihi');
-    //取得 button 的 jQuery 物件
-    let btn = $(this);
-
-    //送出 post 請求，加入購物車
-    let objProduct = {
-        prod_id: btn.attr('data-prod-id'),
-        // prod_name: btn.attr('data-prod-name'),
-        // prod_thumbnail: btn.attr('data-prod-thumbnail'),
-        // prod_price: btn.attr('data-prod-price'),
-    };
-
-    $.post("setCompare.php", objProduct, function (obj) {
-        // if (obj['success']) {
-        //成功訊息
-        // alert(obj.info);
-        console.log('wwwwwwwwww');
-        if (obj['info'] == "加入比較清單成功") {
-            alertCompare();
-        } else if (obj['info'] == "已加入比較") {
-            alertNoCompare();
-        }
-
-        // }
-
-    }, 'json');
-
-
-});
- 
- 
-
-
-//商品細節頁 加入購物車
-$('.go_shop').click(function(){
-    //取得 button 的 jQuery 物件
-    let btn = $(this);
-
-    //送出 post 請求，加入購物車
-    var brand_id = location.search.split('&')[0].split('=')[1];
-    let objProduct = {
-        brand_id: brand_id,
-        prod_name:btn.data('prod-name'),
-        prod_thumbnail:btn.data('prod-thumbnail'),
-        prod_price:btn.data('prod-price'),
-        prod_qty:1
-    };
-    console.log(objProduct);
-    $.post("ShoppingCart.php", objProduct, function(obj){
-        if(obj['success']){
+        $.post("setCompare.php", objProduct, function (obj) {
+            // if (obj['success']) {
             //成功訊息
-            alert('加入購物車成功');
-        }
-        console.log(obj);
-    }, 'json');
-});
-//商品細節頁 加入follow
-$('.go_follow').click(function(){
-    //取得 button 的 jQuery 物件
-    let btn = $(this);
+            // alert(obj.info);
+            console.log('wwwwwwwwww');
+            if (obj['info'] == "加入比較清單成功") {
+                alertCompare();
+            } else if (obj['info'] == "已加入比較") {
+                alertNoCompare();
+            }
 
-    //送出 post 請求，加入購物車
-    var brand_id = location.search.split('&')[0].split('=')[1];
-    let objProduct = {
-        brand_id: brand_id,
-        prod_name:btn.data('prod-name'),
-        prod_thumbnail:btn.data('prod-thumbnail'),
-        prod_price:btn.data('prod-price'),
-    };
-    console.log(objProduct);
-    $.post("toFollow.php", objProduct, function(obj){
-        if(obj['success']){
-            //成功訊息
-            alert('加入喜愛清單成功');
-        }
-        console.log(obj);
-    }, 'json');
-});
+            // }
 
-// member_data_page -----------------------------------------------------
+        }, 'json');
 
 
-   
+    });
+
+
+
+
+    //商品細節頁 加入購物車
+    $('.go_shop').click(function () {
+        //取得 button 的 jQuery 物件
+        let btn = $(this);
+
+        //送出 post 請求，加入購物車
+        var brand_id = location.search.split('&')[0].split('=')[1];
+        let objProduct = {
+            brand_id: brand_id,
+            prod_name: btn.data('prod-name'),
+            prod_thumbnail: btn.data('prod-thumbnail'),
+            prod_price: btn.data('prod-price'),
+            prod_qty: 1
+        };
+        console.log(objProduct);
+        $.post("ShoppingCart.php", objProduct, function (obj) {
+            if (obj['success']) {
+                //成功訊息
+                alert('加入購物車成功');
+            }
+            console.log(obj);
+        }, 'json');
+    });
+    //商品細節頁 加入follow
+    $('.go_follow').click(function () {
+        //取得 button 的 jQuery 物件
+        let btn = $(this);
+
+        //送出 post 請求，加入購物車
+        var brand_id = location.search.split('&')[0].split('=')[1];
+        let objProduct = {
+            brand_id: brand_id,
+            prod_name: btn.data('prod-name'),
+            prod_thumbnail: btn.data('prod-thumbnail'),
+            prod_price: btn.data('prod-price'),
+        };
+        console.log(objProduct);
+        $.post("toFollow.php", objProduct, function (obj) {
+            if (obj['success']) {
+                //成功訊息
+                alert('加入喜愛清單成功');
+            }
+            console.log(obj);
+        }, 'json');
+    });
+
+    // member_data_page -----------------------------------------------------
+
+
+
 
     //會員資料頁-儲存地址
     $('.address_btn').click(function (event) {
