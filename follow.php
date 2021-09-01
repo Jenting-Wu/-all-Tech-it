@@ -6,7 +6,7 @@
 
 <style>
     .wrap {
-        padding-top: 0px;
+        /* padding-top: 0px; */
     }
 </style>
 <!-- 從這裡開始進行網頁撰寫 ------------------->
@@ -14,7 +14,7 @@
 <div class="wrap">
     <div class="r_part">
         <div class="main_head">
-            <h3>商品種類</h3>
+            <h3 class="display_1">商品種類</h3>
 
             <div class="splide">
                 <div class="splide__track">
@@ -57,7 +57,7 @@
                     $arr = $stmt->fetchAll();
                     foreach ($arr as $obj) {
                 ?>
-                        <div class="col-md-4 col-12">
+                        <div class="col-md-3 col-12">
                             <div class="card1 ">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="149.945" height="36" viewBox="0 0 149.945 36">
                                     <g id="Group_650" data-name="Group 650" transform="translate(-364.442 -1080)">
@@ -94,7 +94,7 @@
                 if (isset($_SESSION['follow_list'])) {
                     foreach ($_SESSION['follow_list'] as $follow) {
                 ?>
-                        <div class="col-md-4 col-12">
+                        <div class="col-md-3 col-12">
                             <div class="card1 ">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="149.945" height="36" viewBox="0 0 149.945 36">
                                     <g id="Group_650" data-name="Group 650" transform="translate(-364.442 -1080)">

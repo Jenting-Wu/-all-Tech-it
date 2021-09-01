@@ -5,15 +5,15 @@
 }
 
 .display_2{
-    font-size: 1rem;
-    font-weight: 400;
-    letter-spacing: 0.3rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
     line-height: 1.2rem;
 }
 .display_3{
     font-size: 1rem;
     font-weight: 300;
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.1rem;
     line-height: 1.5rem;
 }
 
@@ -86,6 +86,25 @@
     background-color: #d9f3ff8c;
     border-radius: 0px 20px 20px 0px;
     padding-left: 20px;
+    position: sticky;
+    left: 0;
+    top: 0;
+    margin-bottom: 5rem;
+}
+
+.l_part>h3{
+    font-size: 1.2rem;
+    letter-spacing: .2rem;
+}
+
+.l_part>h5 {
+    font-size: 1rem;
+    color: #5c5c5c;
+    letter-spacing: .1rem;
+}
+
+.l_part label{
+    color: #737373;
 }
 
 .l_part input {
@@ -101,7 +120,7 @@
 .l_part div {
     margin-top: 5px;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .l_part img {
@@ -119,6 +138,7 @@
 
 .r_part {
     width: 100%;
+    margin-bottom: 5rem;
 }
 
 /* 右上部分類選單 */
@@ -157,11 +177,15 @@
     border: none;
     border-radius: 20px 20px;
     margin: 20px 0px 10px 0px;
-}
+    box-shadow: 0 15px 20px rgb(204 204 204 / 30%);
+}   
 
 
 .maincards a {
     /* margin-top: 10px; */
+    width: 70%;
+    display: block;
+    margin: 0 auto;
     color: black;
     text-decoration: underline;
 }
@@ -175,14 +199,43 @@
 }
 
 /* 卡片 */
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    color: inherit;
+    background-color: rgb(0 0 0 / 4%);
+    border-bottom:none
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #495057;
+    background-color: #fff;
+    /* border-color: #dee2e6 #dee2e6 #fff; */
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+
+
 .firstline {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: .5rem;
 }
 
 .firstline button{
     border: none;
     background: transparent;
+    color: #737373;
+}
+
+.firstline .card-title{
+    margin-bottom: 0;
+    margin-right: auto;
 }
 
 .mainpart .card-body {
@@ -191,9 +244,12 @@
 }
 
 .mainpart .card-body .price {
-
-    text-decoration: underline;
+    /* text-decoration: underline; */
     font-size: 1.2rem;
+    letter-spacing: .1rem;
+    font-weight: 700;
+    margin-bottom: 0;
+    border-bottom: 1px solid black;
 }
 
 .mainpart .card-body .price:hover {
@@ -206,15 +262,23 @@
 }
 
 .firstline img {
-    color: gray;
-    width: 14px;
-    height: 14px;
-    padding-right: 2px;
+    color: #737373;
+    width: 16px;
+    /* height: 14px; */
+    /* padding-right: 3PX; */
+    MARGIN-RIGHT: .5REM;
 }
 
 .joincart {
-    text-decoration: underline;
+    text-decoration: none;
     font-size: 1.2rem;
+    border: none;
+    background: transparent;
+    color: #000000;
+    /* padding-bottom: 1px; */
+    letter-spacing: .1rem;
+    font-weight: 300;
+    border-bottom: 1px solid black;
 }
 
 .joincart:hover {
@@ -234,17 +298,28 @@ svg {
 
 /* MOBILES */
 @media screen and (max-width: 375px) {
+    .display_1{
+        letter-spacing: .3rem;
+    }
+    
+    .btn-group-lg>.btn, .btn-lg {
+        padding: .5rem;
+        margin-top: 2rem;
+    }
 
     .lgbtn .btn-group a {
         font-size: 1rem;
     }
 
     .lgtitle h4 {
-        font-size: 1.5rem;
+        letter-spacing: .2rem;
+        font-weight: 500;
     }
 
-    .path a {
+
+    .path a, .path P {
         font-size: 0.5rem;
+        color: #737373;
     }
 
     .path {
@@ -277,9 +352,8 @@ svg {
         width: 80%;
         margin: 20px auto;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
-        align-self: center;
 
     }
 
@@ -289,12 +363,12 @@ svg {
         text-align: center;
         width: 80px;
         min-height: 10px;
-        box-shadow: 0 3px 6px grey;
+        box-shadow:5px 5px 15px #bebebeab;
         border-radius: 5px;
         border: 0;
-        padding: 1px;
         font-size: 10px;
     }
+
 
     .s_select {
         position: absolute;
@@ -312,7 +386,7 @@ svg {
         margin: 5px;
     }
 
-    .s_select input {
+    .s_select  {
         appearance: none;
         height: 15px;
         width: 15px;
@@ -327,11 +401,25 @@ svg {
         text-align: center;
         width: 80px;
         min-height: 10px;
-        box-shadow: 0 3px 6px grey;
+        box-shadow:5px 5px 15px #bebebeab;
         border-radius: 5px;
         border: 0;
-        padding: 1px;
         font-size: 10px;
+        margin-left: .3rem;
+    }
+
+    .dropdown-item {
+        display: block;
+        width: 100%;
+        padding: .25rem 1.5rem;
+        clear: both;
+        font-weight: 300;
+        color: #212529;
+        text-align: inherit;
+        white-space: nowrap;
+        background-color: transparent;
+        border: 0;
+        font-size: .8rem;
     }
 
     /* 
@@ -347,6 +435,19 @@ svg {
     justify-content: space-between;
     }
 
+    .m_card_head > h6{
+        max-width: 60%;
+        font-size: .8rem;
+        letter-spacing: .1rem;
+        font-weight: 500;
+        border-bottom: 1px solid black;
+        padding-bottom: .2rem;
+        display : inline-block;
+        overflow : hidden;
+        text-overflow : ellipsis;
+        white-space : nowrap;
+        }
+
     .m_card_head img{
     width: 15px;
     margin-left: 10px;
@@ -357,13 +458,16 @@ svg {
     margin: 0px auto;
     }
 
-    .m_card{
-        width: 320px;
+    .m_card {
+        width: 100%;
         height: 126px;
-        box-shadow:0 6px 8px #777777;
+        box-shadow: 5px 5px 15px #a0a0a0e8;
         padding: 8px;
         border-radius: 10px;
+        background: #ffffff73;
+        margin-bottom: .6rem;
     }
+
     .card_center{
         display: flex;
         justify-content: space-between;
@@ -376,10 +480,10 @@ svg {
     .r_rpart{
         display: flex;
         align-items: flex-end; 
+        justify-content: flex-end;
     }
     .r_rpart img{
         width: 10px;
-        margin-right: 10px;
     }
     .m_rpart{
         display: flex;
@@ -388,29 +492,28 @@ svg {
         
     }
     
-    .m_button1{
-        min-width: 10px!important;
-        height: 25px;
+    .m_button1 {
+        min-height: 30px;
         text-align: center;
-        padding: 5px 10px;
-        border-radius: 10px!important;
+        border-radius: 7px;
         border: none;
         background-color: #FFFFFF;
-        box-shadow: 0 15px 20px #BEBEBE;
+        box-shadow: 0 5px 10px #bebebe;
         display: flex;
         align-items: center;
         font-size: 10px;
-       
     }
 
     .m_button2{
-        min-width: 10px!important;
-        height: 25px;
-        text-align: center;
-        padding: 5px 5px;
-        display: flex;
-        align-items: center;
         font-size: 10px;
+        margin-bottom: 2%;
+    }
+
+    .m_price {
+        margin-bottom: 0;
+        letter-spacing: .1rem;
+        font-weight: 600;
+        font-size: .8rem;
     }
 }
 

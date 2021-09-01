@@ -220,7 +220,7 @@
 
                     <?php if (isset($_GET['sub_cate_id'])) { ?>
 
-                        <div class="row justify-content-between">
+                        <div class="row justify-content-start">
 
                             <?php
                             $sql = "SELECT * FROM `products` 
@@ -249,15 +249,15 @@
 
                                             <div class="firstline">
 
-                                                <h4 class="card-title"><?= $obj['brand_name'] ?></h4>
+                                                <h4 class="card-title display_2"><?= $obj['brand_name'] ?></h4>
 
-                                                <button class="compare" data-prod-id="<?= $obj['prod_id'] ?>" alt="">比較</button>
+                                                <button class="compare" data-prod-id="<?= $obj['prod_id'] ?>" alt=""><img src="img/icon_compare-list.svg" alt="">加入比較</button>
 
-                                                <button class="saved" data-prod-id="<?= $obj['prod_id'] ?>" data-prod-name="<?= $obj['prod_name'] ?>" data-prod-thumbnail="<?= $obj['prod_thumbnail'] ?>" data-prod-price="<?= $obj['prod_price'] ?>"><img src="./img/icon_saved.svg" alt="">喜愛清單</button>
+                                                <button class="saved" data-prod-id="<?= $obj['prod_id'] ?>" data-prod-name="<?= $obj['prod_name'] ?>" data-prod-thumbnail="<?= $obj['prod_thumbnail'] ?>" data-prod-price="<?= $obj['prod_price'] ?>"><img src="./img/icon_saved.svg" alt=""></button>
                                             </div>
 
                                             <!-- php : 商品名稱 -->
-                                            <h5 class="card-title"><?= $obj['prod_name'] ?></h5>
+                                            <h5 class="card-title display_3"><?= $obj['prod_name'] ?></h5>
 
                                             <!-- php : 商品圖片 -->
                                             <a href="product_detail.php?cate_id=<?= $_GET['cate_id'] ?>&sub_cate_id=<?= $_GET['sub_cate_id'] ?>&prod_id=<?= $obj['prod_id'] ?>">
@@ -351,14 +351,14 @@
         <!--兩大分頁-->
         <div class="lgbtn">
             <div class="btn-group btn-group-lg col-12" style="padding: 0;">
-                <a href="./product_list_01_smart.php?cate_id=10&sub_cate_id=21" class="btn btn-light active" aria-current="page">智慧家電</a>
-                <a href="./product_list_02_ai.php?cate_id=1&sub_cate_id=3" class="btn btn-light">Ai 機器人</a>
+                <a href="./product_list_01_smart.php?cate_id=10&sub_cate_id=21" class="col-6 btn btn-light active display_1" aria-current="page">智慧家電</a>
+                <a href="./product_list_02_ai.php?cate_id=1&sub_cate_id=3" class="col-6 btn btn-light display_1">Ai 機器人</a>
             </div>
         </div>
 
         <!-- title : 熱門商品 -->
         <div class="lgtitle">
-            <h4>熱門商品</h4>
+            <h4 class="display_1">熱門商品</h4>
         </div>
 
         <hr>
@@ -475,21 +475,21 @@
                                     <div class="r_rpart">
 
                                         <!-- php : 加入喜好清單 -->
-                                        <div class="m_button2 mr-2" data-prod-id="<?= $obj['prod_id'] ?>" alt="">
-                                            收藏</div>
+                                        <div class="m_button2 mr-2" data-prod-id="<?= $obj['prod_id'] ?>" alt=""><img src="./img/icon_saved.svg" alt="">
+                                        </div>
 
                                         <!-- php : 加入比較列表 -->
-                                        <div class="m_button2 mr-2" data-prod-id="<?= $obj['prod_id'] ?>" data-prod-name="<?= $obj['prod_name'] ?>" data-prod-thumbnail="<?= $obj['prod_thumbnail'] ?>" data-prod-price="<?= $obj['prod_price'] ?>"><img src="./img/icon_compare-list.svg" alt="">
+                                        <div class="m_button2 mr-3" data-prod-id="<?= $obj['prod_id'] ?>" data-prod-name="<?= $obj['prod_name'] ?>" data-prod-thumbnail="<?= $obj['prod_thumbnail'] ?>" data-prod-price="<?= $obj['prod_price'] ?>"><img src="./img/icon_compare-list.svg" alt="">
                                             比較</div>
 
 
                                         <div class="m_rpart">
 
                                             <!-- php : price -->
-                                            <div class="m_price mb-3">$<?= $obj['prod_price'] ?></div>
+                                            <div class="m_price mb-2">$<?= $obj['prod_price'] ?></div>
 
                                             <!-- php : 加入購物車 -->
-                                            <button class="m_button1" data-prod-id="<?= $obj['prod_id'] ?>" data-prod-name="<?= $obj['prod_name'] ?>" data-prod-thumbnail="<?= $obj['prod_thumbnail'] ?>" data-prod-price="<?= $obj['prod_price'] ?>"><img src="./img/icon_shopping-cart.svg" alt="">
+                                            <button class="m_button1" data-prod-id="<?= $obj['prod_id'] ?>" data-prod-name="<?= $obj['prod_name'] ?>" data-prod-thumbnail="<?= $obj['prod_thumbnail'] ?>" data-prod-price="<?= $obj['prod_price'] ?>">
                                                 加入購物車</button>
                                         </div>
 

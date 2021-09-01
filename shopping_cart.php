@@ -73,6 +73,7 @@ if (!$_SESSION['shopping_cart']) {
                                             </div>
                                             <div class="info_price">
                                                 <h6 class="price">單價 </h6>
+                                                <h6 class="price">NT </h6>
                                                 <h6 class="p_rice single_price"><?= $item['prod_price'] ?></h6>
                                                 <div class="counter">
                                                     <button class="btn btn_minus" type="button" data-index="<?= $prod_qty ?>" data-prod-price="<?= $item['prod_price'] ?>"> <img src="img/minus.svg" alt=""></button>
@@ -99,7 +100,7 @@ if (!$_SESSION['shopping_cart']) {
 
 
                     <div class="promotion">
-                        <h5>商品折扣</h5>
+                        <h6>商品折扣</h6>
                         <p>消費商品金額滿 NT$ 1,000 ，現折 NT$ 100 ！</p>
                     </div>
                     <div class="subtotal">
@@ -166,9 +167,9 @@ if (!$_SESSION['shopping_cart']) {
                                 <div class="card">
                                     <div class="l_card">
                                         <h6 class="title"><?= $obj['prod_name'] ?></h6>
-                                        <p>about product</p>
+                                        <!-- <p>about product</p> -->
                                         <!-- <div class="flex"> -->
-                                        <h6 class="pr">NT$ <?= $obj['prod_price'] ?></h6>
+                                        <h6 class="pr">NT <?= $obj['prod_price'] ?></h6>
                                         <a href="" class="add">加入購物車</a>
                                         <!-- </div> -->
                                     </div>

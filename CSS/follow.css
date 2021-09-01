@@ -1,3 +1,37 @@
+.display_1{
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.3rem;
+}
+
+.display_2{
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  line-height: 1.2rem;
+}
+.display_3{
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  line-height: 1.5rem;
+}
+
+.display_title{
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: 0.4rem;
+  font-family: 'Fira Sans', sans-serif;
+}
+.display_title_2{
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.4rem;
+}
+
+/*---font style */
+
+
 /* 正文開始 */
 .wrap {
   background-color: white !important;
@@ -28,7 +62,7 @@
 .r_part {
   width: 90%;
   margin: 0px auto;
-  box-shadow: 1px 1px 10px #bebebe;
+  /* box-shadow: 1px 1px 10px #bebebe; */
 }
 .main_head {
   text-align: center;
@@ -46,8 +80,13 @@ li {
 }
 .splide {
   cursor: pointer;
-  margin: 20px auto;
+  margin: 3rem auto;
 }
+
+.splide a{
+  color: #000000;
+}
+
 .active-menu {
   font-weight: 800;
   font-size: 24px;
@@ -81,12 +120,22 @@ li {
 
 .card1 {
   width: 300px;
-  height: 450px;
+  /* height: 450px; */
   background-color: #fafbfd;
   margin: 30px auto;
   border-radius: 20px !important;
   box-shadow: 0 15px 20px #cacaca;
 }
+
+.card1 .card_title{
+  font-size: 1.25rem;
+    max-width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    letter-spacing: .1rem;
+}
+
 .card1 > svg {
   margin-top: 20px;
 }
@@ -105,6 +154,7 @@ li {
 .card_footer {
   display: flex;
   justify-content: space-around;
+  padding-bottom: 1rem;
 }
 .card_footer > button {
   width: 125px;
@@ -127,7 +177,8 @@ li {
 }
 .price {
   text-align: right;
-  color: #fa8873;
+  color: #000000;
+  font-weight: 500;
 }
 .follow_shopping_cart {
   background-color: #fa8873 !important;
