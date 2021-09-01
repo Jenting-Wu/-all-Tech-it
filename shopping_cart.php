@@ -23,12 +23,9 @@ if (!$_SESSION['shopping_cart']) {
 <!-- ↓↓↓ 測試區域可刪 ↓↓↓ -->
 <div class="wrap">
 
-
-
     <div class="container">
         <h4>購物車</h4>
         <form name="myForm" action="logistics.php" method="post" class="cart">
-
             <div class="l_part">
                 <div class="shopp_list">
                     <?php
@@ -184,7 +181,6 @@ if (!$_SESSION['shopping_cart']) {
                     </div>
                 </div>
             </div>
-
             <div class="m_footer ">
                 <div class="footer_head">
                     <div class="f_l">
@@ -222,7 +218,6 @@ if (!$_SESSION['shopping_cart']) {
 
 <!-- </div> -->
 <!-- ↑↑↑ 測試區域可刪 ↑↑↑ -->
-
 </div>
 <!-- 在這裡結束網頁撰寫 ----------------------->
 

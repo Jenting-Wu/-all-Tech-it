@@ -1,8 +1,23 @@
+:root{
+  --button-inner:inset 0px 5px 8px #dededea3;
+  --button-outer:5px 5px 15px #bebebeab;
+  --grey-text:#7B7B7B;
+  --main-orange:#FA8873;
+  --main-purple:#5D5D71;
+}
+
 body {
   margin: 0px;
   box-sizing: border-box;
   height: 2000px;
   background-color: #fafafa;
+}
+h5,h6{
+  letter-spacing: .1rem;
+}
+h5{
+  font-size: 1rem;
+  /* margin-bottom: 1.5rem; */
 }
 .wrap {
   min-height: auto !important;
@@ -34,30 +49,57 @@ select:focus {
   height: 50px;
 }
 .circle h6 {
-  margin-top: 50px;
+  margin-top: 60px;
   text-align: center;
+  width: 85PX;
+  /* TEXT-ALIGN: CENTER; */
+  /* MARGIN: 58px AUTO; */
+  margin-left: -1rem;
 }
 .container {
-  width: 800px !important;
+  width: 80%;
   margin: 0px auto;
 }
 .container h4 {
   text-align: center;
+  margin-top: 2rem;
+  letter-spacing: .1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 .option_method {
   margin-top: 100px;
 }
+
+.list{
+  margin-bottom: 5rem;
+}
+
+.list_head{
+  display: inline-block;
+  margin-bottom: .5rem;
+  MARGIN-TOP: 3REM;
+}
+
+.brand{
+  font-size: 1.2rem;
+  color: var(--grey-text);
+}
+
 .product_list {
-  border-bottom: 1px solid gray;
+  border-bottom: 1px dashed gray;
   margin-top: 50px;
 }
+
 .product_info {
   display: flex;
   justify-content: flex-start;
 }
-.product_list h4 {
-  text-align: right;
+
+.product_info img{
+  width: 20%;
 }
+
 .l_part {
   display: flex;
   justify-content: space-between;
@@ -66,25 +108,32 @@ select:focus {
 }
 .center {
   margin-left: 30px;
+  margin-top: 2rem;
 }
-.right {
-  text-align: right !important;
+.center span{
+  color: var(--grey-text);
+  letter-spacing: .1rem;
+}
+h4.right {
+  text-align: right;
   color: #fa8873;
   font-size: 24px;
   margin: 0 0 10px 0;
+  font-weight: 600;
+  letter-spacing: .1rem;
 }
 /* 第一個select */
 select {
   width: 30%;
   height: 40px;
   padding: 0px 10px;
-  border: none;
+  border: 1px solid #ccc;
   outline: none;
   appearance: none;
   background-color: white;
   cursor: pointer;
   border-radius: 2px;
-  box-shadow: 0 3px 6px #959595;
+  /* box-shadow: 0 3px 6px #959595; */
 }
 .select_tri {
   position: relative;
@@ -96,7 +145,7 @@ select {
   background-color: #a4a0cc;
   position: absolute;
   top: 0;
-  left: 191px;
+  left: calc(30% - 40px);
   pointer-events: none;
   background-image: url(../img/angle-down-solid.svg);
   color: white;
@@ -138,18 +187,20 @@ select {
   background-color: #f4f4f4;
   color: #959595;
   padding: 10px 20px;
-  margin-bottom: 10px;
+  margin-bottom: 2rem;
 }
 .info {
   margin-top: 30px;
 }
 .info h5 {
   margin-top: 0px;
+  margin-bottom: .5rem;
 }
-input[type="text"] {
-  margin: 8px;
-  width: 100px;
-  height: 38px;
+
+.info>p {
+  background-color: #ffd3cb8f;
+  padding: .5rem 0;
+  color: #d84444;
 }
 
 .back {
@@ -159,11 +210,11 @@ input[type="text"] {
   border-radius: 10px;
   border: 0px;
   color: gray;
-  box-shadow: 2px 4px 7px #9d9d9d;
+  /* box-shadow: var(--button-outer); */
 }
 .next {
   background-color: #fa8873;
-  box-shadow: 2px 4px 7px #9d9d9d;
+  box-shadow: var(--button-outer);
   width: 150px;
   height: 50px;
   border-radius: 10px;
@@ -178,9 +229,15 @@ input[type="text"] {
 }
 /* credit card */
 form input[type="text"] {
-  width: 300px;
-  margin: 0px auto;
+  max-width: 35%;
+  margin: 0px .5rem;
+  height: 38px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #ffffff;
+  padding-left: 1rem;
 }
+
 .jp-card-front {
   background: linear-gradient(45deg, #f7cdcd, #a4a0cc) !important;
 }
