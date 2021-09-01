@@ -176,7 +176,7 @@ if (!isset($_SESSION['data_compare'])) {
             </ul>
         </div>
         <div class="plus d-none d-md-block">
-            <a href="">
+            <a href="product_list_01_smart.php?cate_id=2&sub_cate_id=21">
                 <img class="img9" src="img/icon_compare-list.svg" alt="">
             </a>
             </li>
@@ -188,11 +188,11 @@ if (!isset($_SESSION['data_compare'])) {
             <i class="fas fa-chevron-right"></i>
         </button>
     </div>
-    <ul class="slider_dots">
+    <!-- <ul class="slider_dots">
         <li class="dots dot1"></li>
         <li class="dots dot2"></li>
         <li class="dots dot3"></li>
-    </ul>
+    </ul> -->
 
     <!-------- 比較表格 -------->
     <div class="compare_table_title">
@@ -402,16 +402,64 @@ if (!isset($_SESSION['data_compare'])) {
     })
 </script>
 
-<SCript>
-    let moveWidth = $('.cate_area_web').width();
+<script>
+    let moveWidth = $('.cate_area_web ul li').width() * 3;
+    let imgMoveWidth = $('.select_area ul li').width();
     console.log(moveWidth)
+    console.log(imgMoveWidth)
+
     $('.cate_wrap_right_arrow_area').click(function() {
         event.preventDefault()
-        $('.cate_area_web ul').animate({
-            transform: `translateX(${moveWidth} +px)`
+
+        $('.cate_area_web ul').css(
+            'transform', `translateX(-${moveWidth}px)`);
+
+        $('.cate_wrap_left_arrow_area').click(function() {
+            event.preventDefault()
+            $('.select_area ul').css(
+                'transform', `translateX(${moveWidth}px)`)
         })
+
+        // 監聽transition
+        function hasMoved() {
+            console.log('Transition 已完成');
+            $('.cate_wrap_left_arrow_area').click(function() {
+                event.preventDefault()
+                $('.cate_area_web ul').css(
+                    'transform', `translateX(0px)`)
+            })
+        }
+        var element = document.querySelector('.cate_area_web ul');
+        element.addEventListener("transitionend", hasMoved, false);
     })
-</SCript>
+
+
+    $('.select_right_arrow_area').click(function() {
+        event.preventDefault()
+
+        $('.select_area ul').css(
+            'transform', `translateX(-${imgMoveWidth}px)`);
+
+        $('.select_left_arrow_area').click(function() {
+            event.preventDefault()
+            $('.select_area ul').css(
+                'transform', `translateX(${imgMoveWidth}px)`)
+        })
+
+        // 監聽transition
+        function hasMoved() {
+            console.log('Transition 已完成');
+            $('.select_left_arrow_area').click(function() {
+                event.preventDefault()
+                $('.select_area ul').css(
+                    'transform', `translateX(0px)`)
+            })
+        }
+        var element = document.querySelector('.select_area ul');
+        element.addEventListener("transitionend", hasMoved, false);
+    })
+</script>
+<!--  -->
 
 <script>
     // ------------------------ [雷達卡片 收合展開 ------------------------
@@ -432,9 +480,9 @@ if (!isset($_SESSION['data_compare'])) {
         $('.card_wrap').css('width', '30px');
     })
     // 卡片展開
-    $('.fixed_left_arrow_area').click(function(event) {
+    $('.fixed_left_arrow_area , .img1, .img2, .img3').click(function(event) {
         event.preventDefault();
-        $(this).hide();
+        $('.fixed_left_arrow_area').hide();
         $('.fixed_right_arrow_area').show();
         $('.card_wrap').css('width', '70vw');
 
@@ -632,6 +680,7 @@ if (!isset($_SESSION['data_compare'])) {
     //     console.log(str_box2)
     // })
 </script>
+
 
 <!-- foot.php -->
 <?php require_once 'foot.php' ?>

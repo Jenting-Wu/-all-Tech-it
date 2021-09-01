@@ -41,9 +41,13 @@ body{
     font-family: "Noto Sans", sans-serif;
     background-color: #FAFAFA;    
 }
+
+button{
+    outline:none;
+}
 ::-webkit-scrollbar {
     /*隱藏滾輪*/
-    /* display: none; */
+    display: none;
 }
 
 ul{
@@ -234,6 +238,11 @@ ul.slider_dots .dots {
     margin-bottom: 1%;
     position: relative;
 }
+
+.select_area ul{
+    transition: .2s;
+}
+
 .select_area .img_area{
     display: flex;
     width: calc(90vw - 60px);
@@ -243,12 +252,7 @@ ul.slider_dots .dots {
     overflow-x: scroll;
     align-items: center;
 }
-/* scrollbar style*/
-.select_area .img_area::-webkit-scrollbar { width: 0;}
-/* .cate_area_web::-webkit-scrollbar-track { background: rgb(211, 211, 211); }
-.cate_area_web::-webkit-scrollbar-track-piece{ background:#ccc ; }
-.cate_area_web::-webkit-scrollbar-thumb { background:rgb(124, 124, 124); }
-.cate_area_web::-webkit-scrollbar-thumb:hover { background: var(--main-orange); } */
+
 
 
 
@@ -295,8 +299,7 @@ ul.slider_dots .dots {
 
 .select_area ul.img_wrap li img{
     /* outline: 1px solid rgb(26, 153, 75); */
-    width: 90%;
-    height: 90%;
+    width: 60%;
     object-fit:contain;
 }
 #right_card img, #middle_card img, #middle2_card img{
@@ -426,7 +429,6 @@ ul.slider_dots .dots {
                 width: 75vw;
                 height: 10vh;
                 margin: 0 auto;
-                margin-top: 2%;
                 margin-bottom: 3%;
                 position:relative;
             }
@@ -440,11 +442,8 @@ ul.slider_dots .dots {
             }
 
             /* scrollbar style*/
-            .cate_area_web::-webkit-scrollbar { width: 5px; height: 7px;}
-            .cate_area_web::-webkit-scrollbar-track { background: rgb(211, 211, 211); }
-            .cate_area_web::-webkit-scrollbar-track-piece{ background:#ccc ; }
-            .cate_area_web::-webkit-scrollbar-thumb { background:rgb(124, 124, 124); }
-            .cate_area_web::-webkit-scrollbar-thumb:hover { background: var(--main-orange); }
+            .cate_area_web::-webkit-scrollbar {display: none;}
+
 
             .cate_area_web ul{
                 /* outline: 1px solid yellow; */
@@ -455,7 +454,7 @@ ul.slider_dots .dots {
                 align-items: center;
                 margin-bottom: 0;
                 padding: 0;
-
+                transition: .2s;
             }
             .cate_area_web ul li{
                 /* outline: 1px solid purple; */
@@ -490,7 +489,7 @@ ul.slider_dots .dots {
                 width: 30px;
                 background-color: black;
                 /* opacity: .1; */
-                /* cursor: pointer; */
+                cursor: pointer;
             }
     
             .cate_wrap_left_arrow_area {
@@ -507,7 +506,7 @@ ul.slider_dots .dots {
                 bottom: 20%;
                 left:0;
                 z-index: 100;
-                width: 70vw;
+                width: 30px;
                 height: 50vh; 
                 display: block;
                 background: linear-gradient(to bottom, #cfe2e675, #ffffff00); 
@@ -535,9 +534,9 @@ ul.slider_dots .dots {
                 /* outline: 1px solid rgb(0, 255, 21); */
                 list-style: none;
                 transition: all 0.5s cubic-bezier(0.5, 0, 0, 1);
-                width: calc(70vw - 30px);
+                /* width: calc(70vw - 30px); */
                 height:  50vh;
-                background-color: white;
+                background-color: #f9f9f9ed;
                 /* padding: 2rem 0 0 0rem; */
                 /* border-radius: 0 6rem 6rem 0; */
             }     
@@ -635,7 +634,6 @@ ul.slider_dots .dots {
                 bottom: 0;
                 width: 30px;
                 background-color: var(--main-purple);
-                opacity: .9;
                 cursor: pointer;    
                 border: none;
             }
@@ -685,7 +683,7 @@ ul.slider_dots .dots {
             }
 
             .select_area_title h3{
-                font-size: 1.876rem;
+                font-size: 1.5rem;
                 line-height: 2rem;
                 margin-bottom: 12px;
             }
@@ -712,7 +710,7 @@ ul.slider_dots .dots {
             }
             
             .compare_table_title h3{        
-                font-size: 1.876rem;
+                font-size: 1.5rem;
                 line-height: 2rem;
                 margin-bottom:0;    
             }
@@ -747,11 +745,13 @@ ul.slider_dots .dots {
                 background-color: #DBE1E4;
             }
             .compare_table .box_pic{
-                /* outline: 1px solid red; */
+                    /* outline: 1px solid red; */
                 border-top: 1px solid #ccc;
                 line-height: 16rem;
                 margin-bottom: 0;
                 padding: 0rem;
+                FONT-WEIGHT: 700;
+                COLOR: #4c4c4c;
             }
             .compare_table .box_pic1{
                 /* outline: 1px solid green; */
