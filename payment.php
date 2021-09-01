@@ -83,95 +83,95 @@ $_SESSION['form']['recipient_comments'] = $_POST['recipient_comments'];
                                         </div>
                                         <h4 class="right">NT$ <?= (int)$item['prod_price'] * (int)$item['prod_qty'] ?></h4>
                                     </div>
-                                <?php } ?>
+                                </div>
+
+                            <?php } ?>
 
 
-                    <?php }
+                <?php }
                     }
                 }
-                    ?>
+                ?>
 
 
-                    <!-- 接運送方式 -->
-                    <div class="info">
-                        <h5>運送方式：郵局掛號 免運(購物車達NT$10,000)</h5>
-                        <div class="logistics_info">
-                            <input type="hidden" name="recipient_name" value="<?php echo $_POST['recipient_name']; ?>">
-                            <input type="hidden" name="recipient_phone_number" value="<?php echo $_POST['recipient_phone_number']; ?>">
-                            <input type="hidden" name="recipient_phone_number" value="<?php echo $_POST['recipient_phone_number']; ?>">
-                            <input type="hidden" name="recipient_address" value="<?php echo $_POST['recipient_address_no'] . ' ' . $_POST['recipient_address']; ?>">
-                            <input type="hidden" name="recipient_address_no" value="<?php echo $_POST['recipient_address']; ?>">
-                            <input type="hidden" name="recipient_comments" value="<?php echo $_POST['recipient_comments']; ?>">
+                <!-- 接運送方式 -->
+                <div class="info">
+                    <h5>運送方式：郵局掛號 免運(購物車達NT$10,000)</h5>
+                    <div class="logistics_info">
+                        <input type="hidden" name="recipient_name" value="<?php echo $_POST['recipient_name']; ?>">
+                        <input type="hidden" name="recipient_phone_number" value="<?php echo $_POST['recipient_phone_number']; ?>">
+                        <input type="hidden" name="recipient_phone_number" value="<?php echo $_POST['recipient_phone_number']; ?>">
+                        <input type="hidden" name="recipient_address" value="<?php echo $_POST['recipient_address_no'] . ' ' . $_POST['recipient_address']; ?>">
+                        <input type="hidden" name="recipient_address_no" value="<?php echo $_POST['recipient_address']; ?>">
+                        <input type="hidden" name="recipient_comments" value="<?php echo $_POST['recipient_comments']; ?>">
 
-                            <h6>訂購人姓名：<?php echo $_POST['recipient_name']; ?></h6>
-                            <h6>訂購人聯絡電話：<?php echo $_POST['recipient_phone_number']; ?></h6>
-                            <h6>送貨地址：<?php echo $_POST['recipient_address_no'] . ' ' . $_POST['recipient_address']; ?></h6>
-                            <h6>備注：<?php echo $_POST['recipient_comments']; ?></h6>
-
-                        </div>
-                        <div class="right">
-                            <h5>商品總計：NT$ <?= $_SESSION['feeInfo']['amount'] ?></h5>
-                            <!-- <h5>商品折扣：NT$ php</h5> -->
-                            <h5>運費總計：NT$ <?= $_SESSION['feeInfo']['logistic_fee'] ?></h5>
-                            <h4 class="right">結帳總額 NT$ <?= $_SESSION['feeInfo']['total_amount'] ?></h4>
-                        </div>
+                        <h6>訂購人姓名：<?php echo $_POST['recipient_name']; ?></h6>
+                        <h6>訂購人聯絡電話：<?php echo $_POST['recipient_phone_number']; ?></h6>
+                        <h6>送貨地址：<?php echo $_POST['recipient_address_no'] . ' ' . $_POST['recipient_address']; ?></h6>
+                        <h6>備注：<?php echo $_POST['recipient_comments']; ?></h6>
 
                     </div>
-                                </div>
+                    <div class="right">
+                        <h5>商品總計：NT$ <?= $_SESSION['feeInfo']['amount'] ?></h5>
+                        <!-- <h5>商品折扣：NT$ php</h5> -->
+                        <h5>運費總計：NT$ <?= $_SESSION['feeInfo']['logistic_fee'] ?></h5>
+                        <h4 class="right">結帳總額 NT$ <?= $_SESSION['feeInfo']['total_amount'] ?></h4>
+                    </div>
+
+                </div>
+
+                <h5 name="transport_payment">請選擇付款方式</h5>
+                <div class="select_tri">
+                    <select id="select_select">
+                        <option value="0">請選擇</option>
+                        <option value="1">信用卡付款</option>
+                    </select>
+                    <div class="tri"></div>
+                </div>
+                <div class="credit">
+                    <div class='card-wrapper'></div>
+                    <div id="credit">
+                        <input type="text" name="number" placeholder="請填入信用卡號">
+                        <input type="text" name="name" placeholder="請填入持卡人姓名">
+                        <input type="text" name="expiry" placeholder="請填入到期年限">
+                        <input type="text" name="cvc" placeholder="請填入CVC">
+                    </div>
+                </div>
+
+                <div class=" info">
+                    <h5>發票選項</h5>
+                    <p>發票一經開立後不可更改，請確定資訊是否填寫正確喔！</p>
+                    <div class="invoice">
+                        <div class="invoice_type">
+
+                            <h6>發票類型</h6>
+                            <div class="select_tri">
+                                <select class="bill_type ">
+                                    <option value="0">請選擇</option>
+                                    <option value="1">捐贈發票</option>
+                                    <option value="2">電子發票</option>
+                                </select>
+
+                                <div class="tri"></div>
+                            </div>
+                            <div class="select_tri">
+                                <select class="bill_2"></select>
+                                <div class="tri"></div>
+                            </div>
+                            <input type="text" class="bill_3">
+                        </div>
+                        <h6>統一編號：<input type="text"></h6>
+                        <h6>發票抬頭：<input type="text"></h6>
+
+                    </div>
+
+                </div>
 
 
-                                <h5 name="transport_payment">請選擇付款方式</h5>
-                                <div class="select_tri">
-                                    <select id="select_select">
-                                        <option value="0">請選擇</option>
-                                        <option value="1">信用卡付款</option>
-                                    </select>
-                                    <div class="tri"></div>
-                                </div>
-                                <div class="credit">
-                                    <div class='card-wrapper'></div>
-                                    <div id="credit">
-                                        <input type="text" name="number" placeholder="請填入信用卡號">
-                                        <input type="text" name="name" placeholder="請填入持卡人姓名">
-                                        <input type="text" name="expiry" placeholder="請填入到期年限">
-                                        <input type="text" name="cvc" placeholder="請填入CVC">
-                                    </div>
-                                </div>
-
-                                <div class=" info">
-                                    <h5>發票選項</h5>
-                                    <p>發票一經開立後不可更改，請確定資訊是否填寫正確喔！</p>
-                                    <div class="invoice">
-                                        <div class="invoice_type">
-
-                                            <h6>發票類型</h6>
-                                            <div class="select_tri">
-                                                <select class="bill_type ">
-                                                    <option value="0">請選擇</option>
-                                                    <option value="1">捐贈發票</option>
-                                                    <option value="2">電子發票</option>
-                                                </select>
-
-                                                <div class="tri"></div>
-                                            </div>
-                                            <div class="select_tri">
-                                                <select class="bill_2"></select>
-                                                <div class="tri"></div>
-                                            </div>
-                                            <input type="text" class="bill_3">
-                                        </div>
-                                        <h6>統一編號：<input type="text"></h6>
-                                        <h6>發票抬頭：<input type="text"></h6>
-
-                                    </div>
-
-                                </div>
-
-
-                                <div class="l_part">
-                                    <button class="back">回到購物車</button>
-                                    <button class="next">確認付款</button>
-                                </div>
+                <div class="l_part">
+                    <button class="back">回到購物車</button>
+                    <button class="next">確認付款</button>
+                </div>
 
             </div>
         </form>
