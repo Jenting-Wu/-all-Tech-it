@@ -14,6 +14,7 @@ $(function () {
             "error"
         );
     };
+
     function noAddress() {
         Swal.fire(
             "請輸入地址",
@@ -43,13 +44,7 @@ $(function () {
             "success"
         );
     };
-    function welcome() {
-        Swal.fire(
-            "歡迎加入TECH IT",
-            "",
-            "success"
-        );
-    };
+
     let input_email = $('input#email');
     let input_user_name = $('input#user_name');
     let input_birthday = $('input#birthday');

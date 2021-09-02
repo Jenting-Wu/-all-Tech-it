@@ -83,27 +83,34 @@
 
 form {
     /* outline: 1px solid red; */
-    width: 80px; 
+    width: 80%; 
     margin-left: 30%;
 }
 
-/* Mobile */
 .m_personal {
     display: flex;
     justify-content: flex-start;
     margin-left: 20px;
 }
-
-.m_member_level {
-    /* width: 70%; */
+.member_level{
     background-color: #fa8873;
     color: white;
     border-radius: 20px 20px;
-    /* padding: 4px 20px; */
-    margin-left: 10px;
-    padding: 0 1rem;
-    padding-top: 3px;
+    padding: 5px 20px;
+    width: 20%;
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
+.m_member_level {
+    background-color: #fa8873;
+    color: white;
+    border-radius: 20px 20px;
+    padding: 5px 20px;
+    width: 20%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+.member_level
 
 /* .address_btn{
   
@@ -153,5 +160,9 @@ input#btn_address{
         display: flex;
         justify-content: center;
         width: 100%;
+    }
+    .m_member_level {
+        padding: 0 1rem;
+        padding-top: 3px;
     }
 }

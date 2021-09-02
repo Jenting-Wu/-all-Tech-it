@@ -424,7 +424,7 @@
 
         <!-- p1:商品介紹 active-->
         <div class="p1_prod_AD p11">
-            <img src="detail_img/sample_長圖_小米.png" alt="">
+            <img src="detail_img/2101_long.png" alt="">
         </div>
 
         <!-- p2:商品規格 -->

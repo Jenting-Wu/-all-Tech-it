@@ -175,11 +175,30 @@ if (!isset($_SESSION['data_compare'])) {
                     <li data-id="1.8"><a href=""><img class="img1" src="./img_prod_thumbnail/0312.png" alt=""></a></li> -->
             </ul>
         </div>
+
         <div class="plus d-none d-md-block">
-            <a href="product_list_01_smart.php?cate_id=2&sub_cate_id=21">
-                <img class="img9" src="img/icon_compare-list.svg" alt="">
-            </a>
-            </li>
+            <?php
+            if (isset($_GET['cate_id'])) {
+
+                $sql = "SELECT `cate_id`,`parent_id`
+                        FROM `categories` 
+                        WHERE `cate_id`={$_GET['cate_id']};";
+                $arr = $pdo->query($sql)->fetchAll();
+                foreach ($arr as $obj2)
+            ?>
+                <a href="product_list_01_smart.php?sub_cate_id=<?= $obj2['cate_id'] ?>&cate_id=<?= $obj2['parent_id'] ?>">
+                    <img class="img9" src="img/icon_compare-list.svg" alt="">
+                </a>
+            <?php
+            } else {
+            ?>
+                <a href="product_list_01_smart.php?sub_cate_id=21&cate_id=2">
+                    <img class="img9" src="img/icon_compare-list.svg" alt="">
+                </a>
+            <?php
+            }
+            ?>
+
         </div>
         <button class="select_left_arrow_area">
             <i class="fas fa-chevron-left"></i>
@@ -278,7 +297,7 @@ if (!isset($_SESSION['data_compare'])) {
                 <!-- 商品圖 -->
                 <div class="itemcard">
                     <a href="#">
-                        <img src="db_img/img_prod_thumbnail/0301.png" alt="">
+                        <img src="" alt="">
                     </a>
                 </div>
                 <!-------- 雷達圖  -------->
@@ -407,6 +426,7 @@ if (!isset($_SESSION['data_compare'])) {
 
     })
 
+
     $('.trash_can').click(function() {
         //避免元素的預設事件被觸發
         event.preventDefault();
@@ -415,14 +435,17 @@ if (!isset($_SESSION['data_compare'])) {
         console.log(tra_index);
         $.get("deleteItem.php", {
             tra_index: tra_index
-        }, function(dbj) {
-            if (dbj['success']) {
+        }, function(obj) {
+            if (obj['success']) {
+                alert('刪除成功');
                 location.reload();
+
             } else {
-                alert(`${dbj['info']}`);
+                // alert(`${lbj['info']}`);
+                alert('失敗');
             }
-            console.log(dbj);
-        }, 'html');
+            console.log(obj);
+        }, 'json');
     });
 </script>
 
