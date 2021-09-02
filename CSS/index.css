@@ -689,7 +689,7 @@ section{
     background-position: 80% 0%;
 }
 .baby:nth-child(2) .item{
-    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(../index_img/jpg/baby-2.jpeg);
+    background:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),url(../index_img/jpg/baby-2.png);
     background-size: cover;
     background-position: 80% 0%;
 }

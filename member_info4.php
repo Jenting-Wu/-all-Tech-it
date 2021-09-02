@@ -15,7 +15,8 @@
     if (isset($_SESSION['email'])) {
         $sql = "SELECT `user_name`,`photo_sticker`,`email`
                 FROM `users` 
-                WHERE `email` = '{$_SESSION['email']}';";
+                WHERE `email` = '{$_SESSION['email']}'
+                GROUP BY `email`;";
         $stmt = $pdo->query($sql);
         if ($stmt->rowCount() > 0) {
             foreach ($stmt->fetchAll() as $obj) {

@@ -371,13 +371,13 @@ $(function () {
         //取得選定刪除的購物車索引
         let index = $(this).attr('data-index');
 
-        $.get("delete.php", { index: index }, function (obj) {
-            if (obj['success']) {
+        $.get("delete.php", { index: index }, function (lbj) {
+            if (lbj['success']) {
                 location.reload();
             } else {
-                alert(`${obj['info']}`);
+                alert(`${lbj['info']}`);
             }
-            console.log(obj);
+            console.log(lbj);
         }, 'json');
     });
 
@@ -674,7 +674,23 @@ $(function () {
 
 
 
+    //刪除購物車內商品
+    $('a.delete').click(function (event) {
+        //避免元素的預設事件被觸發
+        event.preventDefault();
 
+        //取得選定刪除的購物車索引
+        let index = $(this).attr('data-index');
+
+        $.get("deleteItem.php", { index: index }, function (obj) {
+            if (obj['success']) {
+                location.reload();
+            } else {
+                alert(`${obj['info']}`);
+            }
+            console.log(obj);
+        }, 'json');
+    });
 });
 
 

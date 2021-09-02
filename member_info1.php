@@ -20,7 +20,8 @@
         $sql = "SELECT `user_name`,`photo_sticker`,`email`
                 FROM `users` 
                 WHERE `email` = '{$_SESSION['email']}'
-                AND `user_name` = '{$_SESSION['user_name']}';";
+                AND `user_name` = '{$_SESSION['user_name']}'
+                GROUP BY `email`;";
         $stmt = $pdo->query($sql);
         if ($stmt->rowCount() > 0) {
             foreach ($stmt->fetchAll() as $obj) {
@@ -70,7 +71,7 @@
 
 
                 <!-- 現有input -->
-                <div class="member_input d-block">
+                <div class="member_input d-flex flex-column ">
                     <form>
                         <h5 class="d-none d-lg-block">會員資訊</h5>
                         <hr>

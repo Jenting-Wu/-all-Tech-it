@@ -226,9 +226,9 @@
                 <p class="display_2">（AI機器人）</p>
                 <ul class="item_content list-unstyled ">
                     <li class="display_3"><a href="">掃地機器人</a></li>
-                    <li class="display_3"><a href="">掃地機器人</a></li>
-                    <li class="display_3"><a href="">掃地機器人</a></li>
-                    <li class="display_3"><a href="">掃地機器人</a></li>
+                    <li class="display_3"><a href="">烹飪機器人</a></li>
+                    <li class="display_3"><a href="">管家機器人</a></li>
+                    <li class="display_3"><a href="">陪伴機器人</a></li>
                 </ul>
                 <a href="./product_list_02_ai.php?cate_id=1&sub_cate_id=3">
                     <p class="display_2">前往商場 >></p>
@@ -493,12 +493,12 @@
                         </div>
                     </li>
                     <li class="card ori_card_3">
-                        <h3 class="display_1">3.晚歸人良伴-智能電子鍋</h3>
+                        <h3 class="display_1">3.晚歸人良伴-烹飪機器人</h3>
                         <div class="card_wrap d-flex flex-column flex-md-row justify-content-end align-items-center">
                             <div class="card_left col-12 col-md-7">
-                                <h2>忙到走不開 , 毛小孩來亂</h2>
-                                <p><b>三重A小姐：</b>
-                                    因為是編輯的關係，每次截稿前都會<span class="highline">瘋狂忙碌</span>，沒時間和我家的<b>狗小孩傑克</b>玩，自從有了寵物機器人後，終於可以<b>安心工作沒有罪惡感了!</b>
+                                <h2>肚子咕咕叫，晚餐在哪裡</h2>
+                                <p><b>六家陳小姐：</b>
+                                    科技業加班常態讓我總是<span class="highline">無法好好吃晚餐</span>，到家都快九點，再從零開始備菜根本就是肥胖根源，更別提累得像狗一樣，有了<b>烹飪機器人</b>之後，可以天天專心上班，期待熱騰騰飯菜到家就上桌！
                                 </p>
                                 <div class="img_wrap row align-self-md-center align-items-center align-items-md-start m-0 m-md-1">
                                     <div class="person d-none d-md-block col-md-4">
@@ -550,7 +550,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="product_list_01_smart.php?cate_id=7&sub_cate_id=12">
+                                <a href="product_list_02_ai.php?cate_id=1&sub_cate_id=4">
                                     <div class="btn col-5 col-md-12 d-block">
                                         看更多
                                     </div>

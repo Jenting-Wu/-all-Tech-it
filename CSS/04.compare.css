@@ -303,12 +303,16 @@ ul.slider_dots .dots {
     object-fit:contain;
 }
 #right_card img, #middle_card img, #middle2_card img{
-    width: 80%;
-    height: 80%;
+    width: 70%;
+    height: 70%;
     object-fit: contain;
 }
 
 .compare_table #right_card li,.compare_table #middle_card li,.compare_table #middle2_card li{
+    /* outline: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     list-style: none;
 }
 
@@ -556,7 +560,10 @@ ul.slider_dots .dots {
                 display: flex;
                 justify-content: space-around;
             }
-
+            .trash_can{
+                width: 3%;
+                height: 3%;
+            }
             .card_title a{
                 width: 3rem;
             }

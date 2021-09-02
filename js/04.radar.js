@@ -31,7 +31,9 @@
             canvas.width = this.width;
             canvas.height = this.height;
             $(canvas).css({
-                'position': 'absolute'
+                'position': 'absolute',
+                'transform': `scale(1.4)`
+
             });
             this.canvases[name] = canvas;
             this.ele.appendChild(canvas);

@@ -271,7 +271,7 @@ if (!isset($_SESSION['data_compare'])) {
                     <h4 class="display_2">NT$ 9999</h4>
                 </div>
                 <!-- icon 垃圾桶 -->
-                <a href="#"><img src="./img/icon_trash.svg" alt=""></a>
+                <div class="trash_can"><a href="#"><img src="./img/icon_trash.svg" alt=""></a></div>
             </div>
             <!-------- 下半卡片  -------->
             <div class="outerwrap">
@@ -396,10 +396,34 @@ if (!isset($_SESSION['data_compare'])) {
             };
             $('.itemcard').html(cardimg);
 
+
+
         }, "json");
 
 
+        let trash = '';
+        trash += ` <a href="#" data-prod-id="${prodID}"><img src="./img/icon_trash.svg" alt=""></a>`
+        $('.trash_can').html(trash);
+
     })
+
+    $('.trash_can').click(function() {
+        //避免元素的預設事件被觸發
+        event.preventDefault();
+        //取得選定刪除的購物車索引
+        let tra_index = $('.trash_can a').attr('data-prod-id');
+        console.log(tra_index);
+        $.get("deleteItem.php", {
+            tra_index: tra_index
+        }, function(dbj) {
+            if (dbj['success']) {
+                location.reload();
+            } else {
+                alert(`${dbj['info']}`);
+            }
+            console.log(dbj);
+        }, 'html');
+    });
 </script>
 
 

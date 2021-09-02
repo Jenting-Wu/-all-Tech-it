@@ -83,7 +83,8 @@
 }
 
 form {
-    width: 80%;
+    /* outline: 1px solid red; */
+    width: 80px; 
     margin-left: 30%;
 }
 
@@ -95,11 +96,14 @@ form {
 }
 
 .m_member_level {
+    /* width: 70%; */
     background-color: #fa8873;
     color: white;
     border-radius: 20px 20px;
     /* padding: 4px 20px; */
-    margin-left: 10px
+    margin-left: 10px;
+    padding: 0 1rem;
+    padding-top: 3px;
 }
 
 /* .address_btn{
@@ -133,10 +137,11 @@ input#btn_address{
 /* RWD */
 @media screen and (max-width: 375px) {
     form {
-        width: 100%;
+        width: 80%;
         /* display: flex; */
         justify-content: center;
-        margin: 0 10% 0 10%;
+        margin: 0 auto;
+
     }
 
     .member_input {
