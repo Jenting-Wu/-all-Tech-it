@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="./CSS/signup.css">
 
 <!-- JS link ----------------------------------->
-<script src="JS/custom.js?time=<?php echo time(); ?>"></script>
+
 
 
 

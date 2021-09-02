@@ -50,7 +50,6 @@ body {
   margin-top: 20px;
   border-bottom: 1px solid var(--grey-text);
   padding-bottom: 20px;
-  display: inline-block;
   width: 200px;
   margin: 30px auto;
 }
@@ -66,7 +65,6 @@ button {
   padding: 20px;
   font-size: 16px;
   word-spacing: 10px;
-  margin-top: 150px;
 }
 input {
   width: 400px;
@@ -94,7 +92,7 @@ form img {
   width: 15px;
   position: absolute;
   left: 30px;
-  top: 33%;
+  top: 53%;
 }
 #pw,
 #pw2 {
@@ -123,7 +121,7 @@ form img {
 @media screen and (max-width: 500px) {
   .promotion {
     font-size: 14px;
-    margin-top: 100px;
+ 
   }
   input {
     width: 300px;

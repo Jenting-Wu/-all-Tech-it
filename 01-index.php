@@ -51,7 +51,7 @@
 
                         <!-- 商品分類 -->
                         <div class="hd_title_link t2">
-                            <a href="product_list_01_smart.php">商品分類</a>
+                            <a href="product_list_01_smart.php?cate_id=10&sub_cate_id=21">商品分類</a>
                         </div>
 
                         <!-- 智慧專欄 -->
@@ -178,7 +178,10 @@
                 <!-- mobile_nav d-lg-none------------------------------>
                 <!-- 三明治選單 -->
                 <div class="hd_icon_link d-lg-none btn_toggler">
-                    <img src="./img/icon_menu2_black_24dp.svg" alt="">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="white">
+                        <path d="M0 0h24v24H0V0z" fill="none" />
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+                    </svg>
                 </div>
 
                 <!-- LOGO -->
