@@ -75,7 +75,6 @@ button {
   text-align: center;
   padding: 20px;
   word-spacing: 10px;
-  margin-top: 1rem;
 }
 
 input {
@@ -105,7 +104,7 @@ form img {
   width: 15px;
   position: absolute;
   left: 30px;
-  top: 50%;
+  top: 30%;
 }
 #pw {
   position: relative;
@@ -182,7 +181,6 @@ input[type="checkbox"] {
 @media screen and (max-width: 500px) {
   .promotion {
     font-size: 14px;
-    margin-top: 2rem;
   }
   input {
     width: 300px;

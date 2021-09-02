@@ -62,7 +62,7 @@
 
 
                 <div class="m_personal">
-                    <div class="d-sm-block d-md-none row justify-content-start">
+                    <div class="d-sm-block d-md-none row justify-content-start align-baseline">
                         <h5>Sophia</h5>
                         <div class="m_member_level">一般會員</div>
                     </div>
