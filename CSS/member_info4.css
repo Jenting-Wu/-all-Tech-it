@@ -58,7 +58,11 @@ ul {
 .d-flex.center {
   display: flex;
   align-items: center;
-  margin-right: 20px;
+}
+
+.stars_div {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* 右半部 */
@@ -105,10 +109,13 @@ form {
 .com_card1 {
   position: relative;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: white;
   width: 100%;
   border-radius: 20px;
   margin-bottom: 20px;
+  padding-right: 15px;
 }
 ul {
   padding-left: 20px;
@@ -118,6 +125,10 @@ ul {
 }
 .com_card-intro {
   margin-left: 50px;
+}
+.com_card_photo {
+  width: 20%;
+  text-align: center;
 }
 
 .com_card_photo img {
@@ -158,7 +169,8 @@ span::after {
 
 /* 評價按鈕 */
 .btn_com_send {
-  padding: 2px 50px;
+  padding: 10px;
+  width: 100px;
   box-shadow: 0 10px 20px #cacaca;
 }
 
@@ -189,15 +201,66 @@ span::after {
   border: 1px solid black;
 }
 
-@media screen and (max-width: 500px) {
+.star_title {
+  width: 150px;
+}
+.ul_wrap {
+  width: 50%;
+  display: inline-block;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .ul_wrap {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .com_card1 {
+    display: block !important;
+  }
+  .com_card_photo {
+    width: 100%;
+    text-align: center;
+  }
+  ul {
+    padding-left: 0px;
+  }
+  .com_card-intro {
+    margin: 0px;
+  }
+  .com_card-intro > h5 {
+    text-align: center;
+  }
+  .end_ul {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .stars li {
+    font-size: 18px;
+  }
+
+  .ul_wrap {
+    width: 100%;
+    margin: 5px 0px;
+    text-align: center;
+  }
+  .star_title {
+    width: 150px;
+  }
+
+  .com_card_bottom {
+    text-align: center;
+  }
+}
+
+/* @media screen and (max-width: 500px) {
   .com_card-intro {
     width: 100%;
   }
   .com_card1 {
     flex-direction: column;
-  }
-  .com_card_photo {
-    text-align: center;
   }
 
   ul {
@@ -208,4 +271,4 @@ span::after {
   }
   .com_card1 {
   }
-}
+} */
