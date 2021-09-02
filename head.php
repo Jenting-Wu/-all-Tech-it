@@ -48,7 +48,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
 
     <!-- sweet aler -->
-    <script src="JS/alert.js"></script>
+    <!-- <script src="JS/alert.js"></script> -->
 
     <style>
         * {

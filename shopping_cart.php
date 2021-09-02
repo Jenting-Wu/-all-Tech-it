@@ -80,9 +80,9 @@ if (!$_SESSION['shopping_cart']) {
                                                     <button class="btn btn_plus" type="button" data-index="<?= $prod_qty ?>" data-prod-price="<?= $item['prod_price'] ?>"> <img src="img/plus.svg" alt=""></button>
                                                 </div>
                                             </div>
-                                            <div class="remove">
+                                            <!-- <div class="remove">
                                                 <img src="img/icon_saved.svg" id="remove"> 移回喜愛清單
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                 <?php } ?>
