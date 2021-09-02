@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="CSS/success_signup.css">
 
 <!-- JS link ----------------------------------->
-<script src="JS/custom.js?time=<?php echo time(); ?>"></script>
+
 
 
 
