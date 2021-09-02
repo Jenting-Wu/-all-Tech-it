@@ -2,7 +2,7 @@
 <?php session_start() ?>
 <?php require_once 'head.php' ?>
 
-<link rel="stylesheet" href="./CSS/member_info4.css">
+<link rel="stylesheet" href="./CSS/member_info4.css?v20210903">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
@@ -77,6 +77,10 @@
                         <div class="com_cards">
 
                             <div class="com_card1">
+                                <div class="hasSubmit">
+                                    <div class="hasSubmitContent">已評論</div>
+                                </div>
+
                                 <div class="com_card_photo">
                                     <img src="./db_img/img_prod_thumbnail/<?= $obj['prod_thumbnail'] ?>">
                                 </div>
@@ -84,10 +88,10 @@
                                 <div class="com_card-intro">
                                     <h5><?= $obj['prod_name'] ?></h5>
                                     <div class="give_stars">
-                                        <div class="row">
-                                            <div class="d-flex center col ul_wrap">
-                                                <p class="col-4"><?= $obj['rate_A_name'] ?>： </p>
-                                                <ul class="stars col-8" style="list-style: none;" id="ul_1">
+                                        <div class="stars_div">
+                                            <div class="d-flex center ul_wrap">
+                                                <p class="star_title"><?= $obj['rate_A_name'] ?>： </p>
+                                                <ul class="stars" style="list-style: none;" id="ul_1" data-isclick="0">
                                                     <li>★</li>
                                                     <li>★</li>
                                                     <li>★</li>
@@ -95,9 +99,9 @@
                                                     <li>★</li>
                                                 </ul>
                                             </div>
-                                            <div class="d-flex center col ul_wrap">
-                                                <p class="col-4"><?= $obj['rate_B_name'] ?>： </p>
-                                                <ul class="stars col-8" style="list-style: none;" id="ul_2">
+                                            <div class="d-flex center ul_wrap">
+                                                <p class="star_title"><?= $obj['rate_B_name'] ?>： </p>
+                                                <ul class="stars" style="list-style: none;" id="ul_2" data-isclick="0">
                                                     <li>★</li>
                                                     <li>★</li>
                                                     <li>★</li>
@@ -105,12 +109,9 @@
                                                     <li>★</li>
                                                 </ul>
                                             </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="d-flex center col ul_wrap">
-                                                <p class="col-4"><?= $obj['rate_C_name'] ?>： </p>
-                                                <ul class="stars col-8" style="list-style: none;" id="ul_3">
+                                            <div class="d-flex center ul_wrap">
+                                                <p class="star_title"><?= $obj['rate_C_name'] ?>： </p>
+                                                <ul class="stars" style="list-style: none;" id="ul_3" data-isclick="0">
                                                     <li>★</li>
                                                     <li>★</li>
                                                     <li>★</li>
@@ -118,9 +119,9 @@
                                                     <li>★</li>
                                                 </ul>
                                             </div>
-                                            <div class="d-flex center col ul_wrap">
-                                                <p class="col-4"><?= $obj['rate_D_name'] ?>： </p>
-                                                <ul class="stars col-8" style="list-style: none;" id="ul_4">
+                                            <div class="d-flex center ul_wrap">
+                                                <p class="star_title"><?= $obj['rate_D_name'] ?>： </p>
+                                                <ul class="stars" style="list-style: none;" id="ul_4" data-isclick="0">
                                                     <li>★</li>
                                                     <li>★</li>
                                                     <li>★</li>
@@ -128,11 +129,9 @@
                                                     <li>★</li>
                                                 </ul>
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="d-flex col-6 ul_wrap">
-                                                <p class="col-4"><?= $obj['rate_E_name'] ?>： </p>
-                                                <ul class="stars col-8" style="list-style: none;" id="ul_5">
+                                            <div class="d-flex ul_wrap end_ul">
+                                                <p class="star_title"><?= $obj['rate_E_name'] ?>： </p>
+                                                <ul class="stars" style="list-style: none;" id="ul_5" data-isclick="0">
                                                     <li>★</li>
                                                     <li>★</li>
                                                     <li>★</li>
@@ -169,6 +168,9 @@
                         <div class="com_cards">
 
                             <div class="com_card1">
+                                <div class="hasSubmit">
+                                    <div class="hasSubmitContent">已評論</div>
+                                </div>
 
                                 <div class="com_card_photo">
                                     <img src="./db_img/img_prod_thumbnail/<?= $obj['prod_thumbnail'] ?>">
@@ -177,10 +179,10 @@
                                 <div class="com_card-intro">
                                     <h5><?= $obj['prod_name'] ?></h5>
                                     <div class="give_stars">
-                                        <div class="row">
-                                            <div class="d-flex center col ul_wrap">
-                                                <p class="col-4"><?= $obj['rate_A_name'] ?>： </p>
-                                                <ul class="stars col-8" style="list-style: none;" id="ul_1">
+                                        <div class="stars_div">
+                                            <div class="d-flex center ul_wrap">
+                                                <p class="star_title"><?= $obj['rate_A_name'] ?>： </p>
+                                                <ul class="stars" style="list-style: none;" id="ul_1" data-isclick="0">
                                                     <li>★</li>
                                                     <li>★</li>
                                                     <li>★</li>
@@ -188,9 +190,9 @@
                                                     <li>★</li>
                                                 </ul>
                                             </div>
-                                            <div class="d-flex center col ul_wrap">
-                                                <p class="col-4"><?= $obj['rate_B_name'] ?>： </p>
-                                                <ul class="stars col-8" style="list-style: none;" id="ul_2">
+                                            <div class="d-flex center ul_wrap">
+                                                <p class="star_title"><?= $obj['rate_B_name'] ?>： </p>
+                                                <ul class="stars" style="list-style: none;" id="ul_2" data-isclick="0">
                                                     <li>★</li>
                                                     <li>★</li>
                                                     <li>★</li>
@@ -198,11 +200,9 @@
                                                     <li>★</li>
                                                 </ul>
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="d-flex center col ul_wrap">
-                                                <p class="col-4"><?= $obj['rate_C_name'] ?>： </p>
-                                                <ul class="stars col-8" style="list-style: none;" id="ul_3">
+                                            <div class="d-flex center ul_wrap">
+                                                <p class="star_title"><?= $obj['rate_C_name'] ?>： </p>
+                                                <ul class="stars" style="list-style: none;" id="ul_3" data-isclick="0">
                                                     <li>★</li>
                                                     <li>★</li>
                                                     <li>★</li>
@@ -210,9 +210,9 @@
                                                     <li>★</li>
                                                 </ul>
                                             </div>
-                                            <div class="d-flex center col ul_wrap">
-                                                <p class="col-4"><?= $obj['rate_D_name'] ?>： </p>
-                                                <ul class="stars col-8" style="list-style: none;" id="ul_4">
+                                            <div class="d-flex center ul_wrap">
+                                                <p class="star_title"><?= $obj['rate_D_name'] ?>： </p>
+                                                <ul class="stars" style="list-style: none;" id="ul_4" data-isclick="0">
                                                     <li>★</li>
                                                     <li>★</li>
                                                     <li>★</li>
@@ -220,11 +220,9 @@
                                                     <li>★</li>
                                                 </ul>
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="d-flex col-6 ul_wrap">
-                                                <p class="col-4"><?= $obj['rate_E_name'] ?>： </p>
-                                                <ul class="stars col-8" style="list-style: none;" id="ul_5">
+                                            <div class="d-flex ul_wrap">
+                                                <p class="star_title"><?= $obj['rate_E_name'] ?>： </p>
+                                                <ul class="stars" style="list-style: none;" id="ul_5" data-isclick="0">
                                                     <li>★</li>
                                                     <li>★</li>
                                                     <li>★</li>
@@ -277,12 +275,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 <script>
-    let isClicked = false;
-
     // hover星星
     $('.stars li').hover(
         function() {
-            if (!isClicked) {
+            if ($(this).parent().attr('data-isclick') == '0') {
                 let index = $(this).index();
                 // 依序將星星變成黃色
                 for (let i = 0; i <= index; i++) {
@@ -292,18 +288,17 @@
         },
         function() {
             // 滑鼠移開時變回灰色
-            if (!isClicked) {
-                $(this).css('color', '#adadad');
+            if ($(this).parent().attr('data-isclick') == '0') {
+                $(this).parent('.stars').find('li').css('color', '#adadad');
             }
         }
     );
 
     // 點擊星星
     $('.stars li').click(function() {
-        isClicked = true;
+        $(this).parent().attr('data-isclick', '1');
         $(this).parent('.stars').find('li').css('color', '#adadad');
         let index = $(this).index();
-        // let value = ($(this).index()) + 1;
         // 依序將星星變成黃色
         for (let i = 0; i <= index; i++) {
             $(this).parent('.stars').find('li').eq(i).css('color', '#f0ad4e');
@@ -317,58 +312,59 @@
 
 <script>
     $('.btn_com_send').click(function(event) {
-        event.preventDefault();
+        $(this).parents('.com_card1').find('.hasSubmit').css('display', 'flex');
+        // event.preventDefault();
 
-        let count1 = 0;
-        let count2 = 0;
-        let count3 = 0;
-        let count4 = 0;
+        // let count1 = 0;
+        // let count2 = 0;
+        // let count3 = 0;
+        // let count4 = 0;
 
-        for (let i = 0; i < 5; i++) {
-            if ($('#ul_1').find('li').eq(i).css('color') == 'rgb(240, 173, 78)') {
-                count1 = count1 + 1;
-            }
-        }
-        for (let i = 0; i < 5; i++) {
-            if ($('#ul_2').find('li').eq(i).css('color') == 'rgb(240, 173, 78)') {
-                count2 = count2 + 1;
-            }
-        }
-        for (let i = 0; i < 5; i++) {
-            if ($('#ul_3').find('li').eq(i).css('color') == 'rgb(240, 173, 78)') {
-                count3 = count3 + 1;
-            }
-        }
-        for (let i = 0; i < 5; i++) {
-            if ($('#ul_4').find('li').eq(i).css('color') == 'rgb(240, 173, 78)') {
-                count4 = count4 + 1;
-            }
-        }
-        for (let i = 0; i < 5; i++) {
-            if ($('#ul_5').find('li').eq(i).css('color') == 'rgb(240, 173, 78)') {
-                count5 = count5 + 1;
-            }
-        }
-        console.log(count1);
+        // for (let i = 0; i < 5; i++) {
+        //     if ($('#ul_1').find('li').eq(i).css('color') == 'rgb(240, 173, 78)') {
+        //         count1 = count1 + 1;
+        //     }
+        // }
+        // for (let i = 0; i < 5; i++) {
+        //     if ($('#ul_2').find('li').eq(i).css('color') == 'rgb(240, 173, 78)') {
+        //         count2 = count2 + 1;
+        //     }
+        // }
+        // for (let i = 0; i < 5; i++) {
+        //     if ($('#ul_3').find('li').eq(i).css('color') == 'rgb(240, 173, 78)') {
+        //         count3 = count3 + 1;
+        //     }
+        // }
+        // for (let i = 0; i < 5; i++) {
+        //     if ($('#ul_4').find('li').eq(i).css('color') == 'rgb(240, 173, 78)') {
+        //         count4 = count4 + 1;
+        //     }
+        // }
+        // for (let i = 0; i < 5; i++) {
+        //     if ($('#ul_5').find('li').eq(i).css('color') == 'rgb(240, 173, 78)') {
+        //         count5 = count5 + 1;
+        //     }
+        // }
+        // console.log(count1);
 
-        // 送出 post 請求
-        let objRate = {
-            order_id: 1,
-            prod_id: 1,
-            rate_A_score: count1,
-            rate_B_score: count2,
-            rate_C_score: count3,
-            rate_D_score: count4,
-            rate_E_score: count5
+        // // 送出 post 請求
+        // let objRate = {
+        //     order_id: 1,
+        //     prod_id: 1,
+        //     rate_A_score: count1,
+        //     rate_B_score: count2,
+        //     rate_C_score: count3,
+        //     rate_D_score: count4,
+        //     rate_E_score: count5
 
-        };
-        $.post("setRate.php", objRate, function(rbj) {
-            if (rbj['success']) {
-                //成功訊息
-                alert('評論成功');
-            }
-            console.log(rbj);
-        }, 'json');
+        // };
+        // $.post("setRate.php", objRate, function(rbj) {
+        //     if (rbj['success']) {
+        //         //成功訊息
+        //         alert('評論成功');
+        //     }
+        //     console.log(rbj);
+        // }, 'json');
     });
 </script>
 <script>

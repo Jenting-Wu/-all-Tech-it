@@ -58,7 +58,7 @@ $_SESSION['form']['recipient_comments'] = $_POST['recipient_comments'];
                 <div class="a_content">
 
                     <h6>收件人：<?php echo $_POST['recipient_name']; ?></h6>
-                    <h6>寄送地址：<?php echo $_POST['recipient_address_no'] . ' ' . $_POST['recipient_address']; ?></h6>
+                    <h6>寄送地址：<?php echo $_POST['recipient_address']; ?></h6>
 
                 </div>
             </div>
